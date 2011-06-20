@@ -29,4 +29,6 @@ gem 'capistrano'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'rspec-rails'
+  gem 'capybara'
 end
