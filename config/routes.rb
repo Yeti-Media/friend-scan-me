@@ -1,13 +1,8 @@
 Friendscan::Application.routes.draw do
  
-  
-  resources :cards
-  
-  match '/' => 'cards#show', :constraints => {:subdomain => /.+/ }
+  root :to => "home#index"
   match 'auth/:provider/callback' => 'sessions#create'
   match "/signout" => "sessions#destroy", :as => :signout
-  
-  root :to => "home#index"
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

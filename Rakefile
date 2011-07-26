@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Friendscan::Application.load_tasks
+Friendcard::Application.load_tasks

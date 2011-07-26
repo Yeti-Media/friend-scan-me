@@ -45,10 +45,5 @@ module Friendscan
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    
-    config.generators do |g|
-      g.template_engine :haml
-    end
-    
   end
 end
