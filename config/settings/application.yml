@@ -1,0 +1,28 @@
+defaults: &defaults
+  omniauth:
+    facebook:
+      app_id: 131951090214210
+      app_secret: f98cd378657bda1c60e9ee561aa29468
+    twitter:
+      consumer_key: 5T4pHIO2jnxqmwwn4kE5w
+      consumer_secret: KGMCHC0pi1rKPzj9OETJXX4gigYkZe5iuckKZDA
+    linkedin:
+      api_key: eh65xvmj536i
+      api_secret: w6ipurJaKfSEQWRj
+  domain: my.local
+  site:
+    url: http://my.local:3000
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  omniauth:
+    facebook:
+      app_id: "129816637097234"
+      app_secret: "72493a8a4deb0787c52493834fdcbcdd"
+  domain: rentsbooks.com
+  site:
+    url: http://www.rentsbooks.com
+

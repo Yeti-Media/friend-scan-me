@@ -10,6 +10,7 @@ class User
   embeds_one :card
   embeds_one :facebook_setting
   embeds_one :twitter_setting
+  embeds_one :linked_in_setting
 
 
   def self.new_with_omniauth(auth)
@@ -40,6 +41,12 @@ class User
   def self.add_twitter(user , auth)
     setting = TwitterSetting.new(uid: auth["user_info"]["nickname"])
     user.facebook_setting = setting
+  end
+
+   def self.add_linked_in(user , auth)
+    setting = LinkedInSetting.new(uid: auth["user_info"]["name"],
+                                  profile_url: auth["user_info"]["public_profile_url"])
+    user.linked_in_setting = setting
   end
 
 

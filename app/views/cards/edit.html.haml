@@ -1,0 +1,40 @@
+%h1 Edit your page
+
+
+
+
+= form_for @user, :url => card_path(@user) do |form|
+  = form.label :name
+  = form.text_field :name
+  = form.submit "User"
+
+%h1 Your linked accounts
+
+%ul
+  %li
+    - if @user.facebook_setting
+      = link_to_facebook(@user)
+    - else
+      = link_to "Sign in with Facebook", "/auth/facebook"
+  %li
+    - if @user.twitter_setting
+      = link_to_twitter(@user)
+    - else
+      = link_to "Sign in with Twitter", "/auth/twitter"
+  %li
+    - if @user.linked_in_setting
+      = link_to_linkedin(@user)
+    - else
+      = link_to "Sign in with Linkedin", "/auth/linked_in"
+
+
+
+
+
+
+
+
+= link_to "Your FS.me page" , card_landing_path(@user.slug), :popup => true
+
+= link_to_qr_code(@user)
+

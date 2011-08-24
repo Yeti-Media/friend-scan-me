@@ -24,6 +24,9 @@ module CardsHelper
     link_to "Twitter", "https://twitter.com/#{user.twitter_setting.uid}" , popup: true
   end
 
+  def link_to_linkedin(user)
+    link_to "Linkedin", user.linked_in_setting.profile_url , popup: true
+  end
 
 
 end
