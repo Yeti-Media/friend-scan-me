@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc1'
+gem 'rails', '3.1.0.rc6'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem "mongoid", "~> 2.1"
+gem "bson_ext", "~> 1.3"
 gem 'omniauth', '0.2.6'
 # Asset template engines
 gem 'sass'
@@ -14,7 +15,9 @@ gem 'uglifier'
 gem 'haml'
 gem 'compass'
 gem 'jquery-rails'
-
+gem 'therubyracer'
+gem 'mongoid_slug'
+gem 'settingslogic'
 
 gem 'bitly'
 # Use unicorn as the web server
@@ -36,3 +39,4 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
 end
+

@@ -1,13 +1,17 @@
 Friendscan::Application.routes.draw do
- 
-  
+
+
   resources :cards
-  
-  match '/' => 'cards#show', :constraints => {:subdomain => /.+/ }
+
+  match '/' => 'cards#index', :constraints => {:subdomain => /.+/ }
   match 'auth/:provider/callback' => 'sessions#create'
-  match "/signout" => "sessions#destroy", :as => :signout
-  
+  match "/sessions/signout" => "sessions#destroy", :as => :signout
+
+  resources :cards
+
   root :to => "home#index"
+
+  match '/:slug_id' => 'cards#show', :as => :card_landing
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -60,3 +64,4 @@ Friendscan::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+

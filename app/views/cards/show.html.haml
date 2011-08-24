@@ -1,2 +1,6 @@
-%h1 Cards#show
-%p Find me in app/views/cards/show.html.haml
+- if @user.facebook_setting
+  = link_to_add_facebook_friend(@user)
+
+- if @user.twitter_setting
+  = link_to_twitter_follow(@user)
+
