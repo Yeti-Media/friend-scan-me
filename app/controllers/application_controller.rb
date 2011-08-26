@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def authenticate_user
+    unless signed_in?
+       render :status => 404
+    end
+  end
 end
 

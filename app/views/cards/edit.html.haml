@@ -12,21 +12,30 @@
 
 %ul
   %li
-    - if @user.facebook_setting
+    - if @user.facebook_info
       = link_to_facebook(@user)
     - else
       = link_to "Sign in with Facebook", "/auth/facebook"
   %li
-    - if @user.twitter_setting
+    - if @user.twitter_info
       = link_to_twitter(@user)
     - else
       = link_to "Sign in with Twitter", "/auth/twitter"
   %li
-    - if @user.linked_in_setting
+    - if @user.linked_in_info
       = link_to_linkedin(@user)
     - else
       = link_to "Sign in with Linkedin", "/auth/linked_in"
-
+  %li
+    - if @user.last_fm_info
+      = link_to_last_fm(@user)
+    - else
+      = link_to "Sign in with Last.fm", "/auth/last_fm"
+  %li
+    - if @user.github_info
+      = link_to_github(@user)
+    - else
+      = link_to "Sign in with Github", "/auth/github"
 
 
 

@@ -1,5 +1,6 @@
-class LinkedInSetting
+class LastFmInfo
   include Mongoid::Document
+
 
   field :uid , type: String
   field :profile_url , type: String

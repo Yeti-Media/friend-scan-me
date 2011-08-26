@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"]
+#    raise auth.inspect
     if signed_in?
       current_user.associate_provider(auth)
       redirect_to edit_card_path(current_user.slug), :notice => "Signed in!"

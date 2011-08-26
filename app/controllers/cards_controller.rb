@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  before_filter :authenticate_user , :except => [:show]
+
   def new
   end
 
@@ -12,11 +14,17 @@ class CardsController < ApplicationController
   end
 
   def edit
-    @user = User.find_by_slug(params[:id])
+    @user = current_user
   end
 
 
   def update
+    if current_user.update_attributes(params[:user])
+      flash[:notice] = "Saved"
+    else
+      flash[:notice] = "Oooops!"
+    end
+    redirect_to :back
   end
 
 end

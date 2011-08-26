@@ -1,8 +1,8 @@
-class TwitterSetting
+class LinkedInInfo
   include Mongoid::Document
 
-
   field :uid , type: String
+  field :profile_url , type: String
 
   embedded_in :user
 

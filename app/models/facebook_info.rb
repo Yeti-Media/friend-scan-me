@@ -1,4 +1,4 @@
-class FacebookSetting
+class FacebookInfo
   include Mongoid::Document
 
   field :uid , type: String
