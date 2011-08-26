@@ -4,6 +4,7 @@ class User
   include Mongoid::Slug
 
   field :name , type: String
+  field :bio , type: String
 
   slug :name
 
