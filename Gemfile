@@ -9,11 +9,11 @@ gem "mongoid", "~> 2.1"
 gem "bson_ext", "~> 1.3"
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 # Asset template engines
-gem 'sass'
-gem 'coffee-script'
+gem 'sass-rails', "~> 3.1.0.rc"
+gem 'coffee-rails', "~> 3.1.0.rc"
 gem 'uglifier'
 gem 'haml'
-gem 'compass'
+gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
 gem 'jquery-rails'
 gem 'therubyracer'
 gem 'mongoid_slug'
