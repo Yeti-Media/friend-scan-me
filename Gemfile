@@ -14,6 +14,7 @@ gem 'coffee-rails', "~> 3.1.0.rc"
 gem 'uglifier'
 gem 'haml'
 gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
+gem  'compass-susy-plugin', '0.9', :require => 'susy'
 gem 'jquery-rails'
 gem 'therubyracer'
 gem 'mongoid_slug'
