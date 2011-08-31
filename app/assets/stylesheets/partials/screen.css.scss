@@ -1,0 +1,45 @@
+
+// Imports --------------------------------------------------------------
+
+@import "base";
+
+/* Layout -------------------------------------------------------------- */
+
+#wrap {
+  @include container;
+  @include susy-grid-background;
+  #top_bar {
+		@include full;
+    background-color: black;
+    height: 5px;
+}}
+
+#title {
+	@include full;
+  @include prefix(0);
+  font-family: 'Maven Pro', 'Helvetica Neue', 'Arial';
+	font-size: 3em;
+}
+
+nav ul {
+	padding: 0px;
+	@include columns(3);
+	@include prefix(8);
+	@include alpha;
+  li {
+    list-style-type: none; 
+}}
+
+h2.left {
+	font: 25px 'Maven Pro', arial;
+	clear: both;
+	@include alpha;
+	@include columns(3);
+}
+
+p.left {
+	font: 15px 'Maven Pro', arial;
+	clear: both;
+	@include alpha;
+	@include columns(3);
+}
