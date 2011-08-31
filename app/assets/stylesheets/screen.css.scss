@@ -1,9 +1,15 @@
 
 // Imports --------------------------------------------------------------
 
-@import "base";
+@import "partials/base";
+@import "partials/shared";
 
 /* Layout -------------------------------------------------------------- */
+
+body {
+  font-family: $font-family;
+  font-size: 100%;
+}
 
 #wrap {
   @include container;
@@ -31,14 +37,12 @@ nav ul {
 }}
 
 h2.left {
-	font: 25px 'Maven Pro', arial;
 	clear: both;
 	@include alpha;
 	@include columns(3);
 }
 
 p.left {
-	font: 15px 'Maven Pro', arial;
 	clear: both;
 	@include alpha;
 	@include columns(3);

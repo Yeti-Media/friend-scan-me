@@ -1,0 +1,103 @@
+/* Shared classes ********************************** rnt@yeti-media.com */
+
+
+// Same layout but dont want the element 
+.hide-from-new-ui {
+  display: none;
+}
+
+.left {
+  @include float("left");
+}
+ 
+.right {
+  @include float("right");
+}
+.clear-it {
+  @include clear-it;
+}
+
+.small {
+  font-size: $font-size-small;
+}
+
+.large {
+  font-size: $font-size-large;
+}
+
+.xl {
+  font-size: $font-size-xl;
+}
+
+.shadow {
+  @include box-shadow( #999, 0px,  3px, 3px);
+}
+
+a.big {
+  font-size: $font-size-xl;
+  color: $blue!important;
+}
+
+.single-column {
+ @include column(6);
+ }
+ 
+.three-column {
+  @include column(2);
+  clear: none;
+}
+
+.two-column {
+  @include column(1.5);
+  clear: none;
+}
+ 
+.four-column {
+  @include column(1);
+  clear: none;
+}
+
+.align-right {
+   text-align:right;
+   padding-right:20px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+   text-align:left;
+}
+
+a.remove_child {
+  display: inline-block;
+  margin: 15px 5px;
+}
+
+#sortable li.sort, #sortable li.sort label {
+  cursor: pointer;
+}
+
+#sortable li span {
+   left: 35px;
+   position: relative;
+   top: 30px;
+}
+
+
+.inline-tip {
+  color: white;
+  margin: 10px 0;
+  padding: 20px 10px;
+  @include shed($width: auto, $gradient: false, $background: #666);
+}
+
+
+.loader {
+  background: url(/images/elements/ajax-loader.gif);
+  background-position: center center;background-repeat: no-repeat;
+  display:none;
+  height: 200px;
+  width: 766px;
+}
