@@ -13,8 +13,8 @@
 .right {
   @include float("right");
 }
-.clear-it {
-  @include clear-it;
+.clear {
+  /*@include clear-it;*/
 }
 
 .small {
@@ -35,25 +35,24 @@
 
 a.big {
   font-size: $font-size-xl;
-  color: $blue!important;
 }
 
 .single-column {
- @include column(6);
+ @include columns(6);
  }
  
 .three-column {
-  @include column(2);
+  @include columns(2);
   clear: none;
 }
 
 .two-column {
-  @include column(1.5);
+  @include columns(1.5);
   clear: none;
 }
  
 .four-column {
-  @include column(1);
+  @include columns(1);
   clear: none;
 }
 
@@ -90,7 +89,7 @@ a.remove_child {
   color: white;
   margin: 10px 0;
   padding: 20px 10px;
-  @include shed($width: auto, $gradient: false, $background: #666);
+  /*@include shed($width: auto, $gradient: false, $background: #666);*/
 }
 
 

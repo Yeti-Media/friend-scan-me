@@ -37,7 +37,7 @@ class User
   private
 
   def self.add_facebook(user , auth)
-    info = FacebookInfo.new(uid: auth["uid"])
+    info = FacebookInfo.new(uid: auth["uid"], user_name: auth["user_info"]["name"])
     user.facebook_info = info
   end
 
