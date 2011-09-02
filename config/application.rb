@@ -53,6 +53,8 @@ module Friendscan
     config.generators do |g|
       g.template_engine :haml
       g.orm :mongoid
+      g.test_framework :rspec, :views => false, :fixture => true
+      g.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
 
   end
