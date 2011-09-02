@@ -1,6 +1,6 @@
 - if current_user
   Welcome
-  = current_user.name
+  = current_user.facebook_info.user_name
   = link_to "Sign Out", signout_path , :method => :delete
 - else
   = link_to "Sign in with Facebook", "/auth/facebook"

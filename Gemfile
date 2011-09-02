@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc8'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -9,8 +9,8 @@ gem "mongoid", "~> 2.1"
 gem "bson_ext", "~> 1.3"
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 # Asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
-gem 'coffee-rails', "~> 3.1.0.rc"
+gem 'sass-rails', "~> 3.1.0"
+gem 'coffee-rails', "~> 3.1.0"
 gem 'uglifier'
 gem 'haml'
 gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
@@ -33,6 +33,7 @@ gem 'capistrano'
 
 group :development do
   gem 'rspec-rails'
+  gem 'foreman'
 end
 
 group :test do
