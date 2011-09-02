@@ -37,7 +37,6 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rails3-generators' #mainly for factory_girl at this point
   # Pretty printed test output
