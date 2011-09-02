@@ -16,37 +16,67 @@ body {
 
 #wrap {
   @include container;
-  @include susy-grid-background;
-  #top_bar {
-		@include full;
-    background-color: black;
-    height: 5px;
-}}
+  //@include susy-grid-background;
+	background-color: #eaeaea
+}
+
+.logo {
+	@include columns(5);
+	@include suffix(7);
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
 
 #title {
 	@include full;
   @include prefix(0);
-  font-family: 'Maven Pro', 'Helvetica Neue', 'Arial';
 	font-size: 3em;
 }
 
-nav ul {
-	padding: 0px;
-	@include columns(3);
-	@include prefix(8);
-	@include alpha;
-  li {
-    list-style-type: none; 
-}}
+.banner {
+	@include columns(2);
+	@include pad(3,2);
+	margin-bottom: 40px;
+}
 
-h2.left {
+h1 {
+	@include columns(5);
+	font-size: 30px;
+	font-weight: normal;
+}
+
+nav.right_splash {
+  ul {
+	  padding: 0px;
+    li {
+			@include columns(3);
+			@include prefix(0);
+			@include alpha;
+      list-style-type: none; 
+}}}
+
+section.bg_white {
+	@include full;
+	background-color: white;
+}
+
+h2 {
+	font-size: 23px;
+	font-weight: normal;
+}
+
+.left {
 	clear: both;
 	@include alpha;
 	@include columns(3);
 }
 
-p.left {
-	clear: both;
-	@include alpha;
-	@include columns(3);
+.middle {
+		@include prefix(1);
+		@include columns(3);
+}
+
+.right {
+		@include prefix(1);
+		@include columns(3);
 }
