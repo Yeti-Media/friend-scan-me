@@ -1,12 +1,7 @@
 = image_tag ("friendscanmelogo.gif"), :class => "logo"
-- if current_user
-  Welcome
-  = current_user.facebook_info.user_name
-  = link_to "Sign Out", signout_path , :method => :delete
-- else
 .left_splash
   = image_tag ("iphone4_qrcode.gif"), :class => "banner"
-	
+
 %h1 Get your QR code now!
 %nav.right_splash
   %ul
@@ -15,6 +10,10 @@
     %li= link_to "Sign in with Linkedin", "/auth/linked_in"
     %li= link_to "Sign in with Last.fm", "/auth/last_fm"
     %li= link_to "Sign in with Github", "/auth/github"
+    %li= link_to "Sign in with Foursquare", "/auth/foursquare"
+    %li= link_to "Sign in with Instagram", "/auth/instagram"
+    %li= link_to "Sign in with Tumblr", "/auth/tumblr"
+    %li= link_to "Sign in with Flickr", "/auth/flickr"
 
 %section.bg_white
   .left
@@ -27,8 +26,7 @@
     %h2 What is a QR Code?
     %p QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern.
 
-  .right 
+  .right
     %h2 How do I use it?
     %p Just click one of the links above and a personalized QR code will be generated for you. Show this code to your friends and they will be able to add you with a simple scan!
-
 

@@ -5,6 +5,7 @@ Friendscan::Application.routes.draw do
 
   match '/' => 'cards#index', :constraints => {:subdomain => /.+/ }
   match 'auth/:provider/callback' => 'sessions#create'
+  match 'auth/failure' => 'sessions#failure'
   match "/sessions/signout" => "sessions#destroy", :as => :signout
 
   resources :cards

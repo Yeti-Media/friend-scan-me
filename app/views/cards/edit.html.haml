@@ -8,6 +8,8 @@
   = form.text_field :name
   = form.label :bio
   = form.text_area :bio
+  = form.label :blog_url
+  = form.url_field :blog_url
   = form.submit "User"
 
 %h1 Your linked accounts
@@ -38,6 +40,26 @@
       = link_to_github(@user)
     - else
       = link_to "Sign in with Github", "/auth/github"
+  %li
+    - if @user.foursquare_info
+      = link_to_foursquare(@user)
+    - else
+      = link_to "Sign in with Foursquare", "/auth/foursquare"
+  %li
+    - if @user.instagram_info
+      = link_to_instagram(@user)
+    - else
+      = link_to "Sign in with Instagram", "/auth/instagram"
+  %li
+    - if @user.tumblr_info
+      = link_to_tumblr(@user)
+    - else
+      = link_to "Sign in with Tumblr", "/auth/tumblr"
+  %li
+    - if @user.flickr_info
+      = link_to_flickr(@user)
+    - else
+      = link_to "Sign in with Flickr", "/auth/flickr"
 
 
 

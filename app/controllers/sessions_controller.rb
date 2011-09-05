@@ -15,7 +15,9 @@ class SessionsController < ApplicationController
         redirect_to root_path, :notice => "Try Again!"
       end
     end
+  end
 
+  def failure
   end
 
   def destroy
