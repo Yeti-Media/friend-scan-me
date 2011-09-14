@@ -1,7 +1,7 @@
 !!! 5
 
 %html{:lang => "en"}
-  = render :partial => 'layouts/head'
+  = render :partial => 'head'
   %body{:class => "#{controller.controller_name}"}
     %header.admin
       /= render :partial => 'layouts/header'
@@ -11,6 +11,4 @@
         %article.main
           = yield
     %footer
-      /=render :partial => 'layouts/admin/footer'
-    = render :partial => 'layouts/javascripts'
 
