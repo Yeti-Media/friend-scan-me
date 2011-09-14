@@ -8,8 +8,17 @@
   /*margin: 0 auto;*/
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
-  box-shadow: 0 1px 3px #489CC6; 
+  box-shadow: 0 1px 3px #489CC6;
   @include columns(9);}
+
+
+.starburst {
+  background: url(/assets/bg-starburst.png) no-repeat top center;
+  height: 600px;
+  padding: 50px;
+  margin: 0 auto;
+  @include full(10);
+}
 
 .layer {
   background: #f8f8f8;
@@ -19,7 +28,7 @@
   -moz-border-radius-topright: 8px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding-top: 15px; 
+  padding-top: 15px;
   }
 
 h1.name {
@@ -43,7 +52,7 @@ img.avatar {
   margin: 0 15px 15px 15px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px; 
+  border-radius: 8px;
   @include columns(1.2);
 }
 
@@ -63,7 +72,7 @@ a.download-vcard {
   padding: 0;}
 
 .coda-slider {
-  background: #fff; 
+  background: #fff;
   }
 
 .coda-slider-no-js .coda-slider {
