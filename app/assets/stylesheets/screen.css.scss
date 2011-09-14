@@ -32,8 +32,8 @@ body {
 
 .user_name {
 	@include alpha;
-	@include columns(3);
-  @include prefix(9);
+	@include columns(4);
+  @include prefix(8);
 	margin-top: 10px;
 }
 
