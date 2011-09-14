@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 
 gem "mongoid", "~> 2.1"
 gem "bson_ext", "~> 1.3"
-gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
+gem "omniauth", ">= 0.3.0.rc1", :git => "git://github.com/intridea/omniauth.git", :branch => "0-3-stable"
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0"
 gem 'coffee-rails', "~> 3.1.0"
