@@ -2,6 +2,7 @@
 - if current_user
   Welcome
   = current_user.facebook_info.user_name
+  = link_to "Account", edit_card_path(current_user.slug)
   = link_to "Sign Out", signout_path , :method => :delete
 - else
 .left_splash
