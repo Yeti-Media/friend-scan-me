@@ -1,73 +1,29 @@
-%h1 Edit your page
-
-
-
-
-= form_for @user, :url => card_path(@user) do |form|
-  = form.label :name
-  = form.text_field :name
-  = form.label :bio
-  = form.text_area :bio
-  = form.label :blog_url
-  = form.url_field :blog_url
-  = form.submit "User"
-
-%h1 Your linked accounts
-
-%ul
-  %li
-    - if @user.facebook_info
-      = link_to_facebook(@user)
-    - else
-      = link_to "Sign in with Facebook", "/auth/facebook"
-  %li
-    - if @user.twitter_info
-      = link_to_twitter(@user)
-    - else
-      = link_to "Sign in with Twitter", "/auth/twitter"
-  %li
-    - if @user.linked_in_info
-      = link_to_linkedin(@user)
-    - else
-      = link_to "Sign in with Linkedin", "/auth/linked_in"
-  %li
-    - if @user.last_fm_info
-      = link_to_last_fm(@user)
-    - else
-      = link_to "Sign in with Last.fm", "/auth/last_fm"
-  %li
-    - if @user.github_info
-      = link_to_github(@user)
-    - else
-      = link_to "Sign in with Github", "/auth/github"
-  %li
-    - if @user.foursquare_info
-      = link_to_foursquare(@user)
-    - else
-      = link_to "Sign in with Foursquare", "/auth/foursquare"
-  %li
-    - if @user.instagram_info
-      = link_to_instagram(@user)
-    - else
-      = link_to "Sign in with Instagram", "/auth/instagram"
-  %li
-    - if @user.tumblr_info
-      = link_to_tumblr(@user)
-    - else
-      = link_to "Sign in with Tumblr", "/auth/tumblr"
-  %li
-    - if @user.flickr_info
-      = link_to_flickr(@user)
-    - else
-      = link_to "Sign in with Flickr", "/auth/flickr"
-
-
-
-
-
-
-
-= link_to "Your FS.me page" , card_landing_path(@user.slug), :popup => true
-
-= link_to_qr_code(@user)
-
+.starburst
+  .vcard-container
+    .coda-slider-wrapper
+      .layer
+        / = link_to "Your card" , card_landing_path(@user.slug), :popup => true
+        / |
+        / = link_to_qr_code(@user)
+        = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
+        %h1.name= current_user.facebook_info.user_name
+        %br{:style => "clear:both;"}/
+        #coda-slider-1.coda-slider.preload
+          .panel
+            .panel-wrapper.social
+              .social-container
+                %ul
+                  %li.twitter
+                    %a{:href => "#"} Twitter
+                  %li.linkedin
+                    %a{:href => "#"} Linkedin
+                  %li.lastfm.last-left
+                    %a{:href => "#"} Last.fm
+                %ul
+                  %li.facebook
+                    %a{:href => "#"} Facebook
+                  %li.myspace
+                    %a{:href => "#"} Myspace
+                  %li.flickr.last-right
+                    %a{:href => "#"} Flickr
+                %br{:style => "clear:both"}/
