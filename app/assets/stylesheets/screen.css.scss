@@ -11,7 +11,7 @@
 /* Layout -------------------------------------------------------------- */
 
 body {
-  background: #3399cc url(/assets/bg.png) fixed repeat-x;
+  background: #3399cc url(/assets/bg.png) repeat-x;
   font-size: 13px;
   font-family: $font-family;
   color: #333;
@@ -19,66 +19,96 @@ body {
 
 #wrap {
   @include container;
-  @include susy-grid-background;
+  //@include susy-grid-background;
 }
 
-.logo {
+.starburst {
+  background: url(/assets/bg-starburst.png) no-repeat top center;
+  height: 600px;
+  padding: 50px;
+  margin: 0 auto;
+  @include full(10);
+}
+
+.user_name {
+	@include alpha;
+	@include columns(3);
+  @include prefix(9);
+	margin-top: 10px;
+}
+
+.left_splash #banner {
+  clear: both;
+	margin: 0px 40px 40px 0px;
+	@include columns(3);
+	@include prefix(1.5);
+	@include suffix(1);
+	@include alpha;
+}
+
+.left_splash #logo {
 	@include columns(5);
-	@include suffix(7);
-	margin-top: 20px;
-	margin-bottom: 40px;
-}
-
-#title {
-	@include full;
-  @include prefix(0);
-	font-size: 3em;
-}
-
-.banner {
-	@include columns(2);
-	@include pad(3,2);
-	margin-bottom: 40px;
-}
-
-h1 {
-	@include columns(5);
-	font-size: 30px;
-	font-weight: normal;
+	margin-top: 80px;
+	margin-bottom: 30px;
 }
 
 nav.right_splash {
+	@include columns(5);
+	@include prefix(0);
   ul {
 	  padding: 0px;
+		list-style-type: none;
     li {
-			@include columns(3);
-			@include prefix(0);
-			@include alpha;
-      list-style-type: none; 
+			display: inline;
 }}}
 
-section.bg_white {
-	@include full;
-	background-color: white;
+#bg_blog {
+  background-color: #D5D5FF;
+  border: 1px solid black;
+  clear: both;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  @include border-radius(15px, 15px);
+  @include columns(10.2);
 }
 
 h2 {
-	font-size: 23px;
+	font-size: 1.25em;
 	font-weight: normal;
+	padding-bottom: 22px;
+	//@include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
 }
 
 .left {
-	clear: both;
-	@include alpha;
-	@include columns(3);
+  clear: both;
+  padding: 1% 1% 1% 5%;
+  @include alpha;
+  @include columns(3.5);
+  h2 {
+    padding: 0px;
+    }
 }
 
 .middle {
-		@include prefix(1);
-		@include columns(3);
+  padding: 1%;
+	@include columns(3.5);
+	@include prefix(0);
 }
 
 .right {
-		@include prefix(1);
-		@include columns(3);
+  padding: 1%;
+	@include columns(3.5);
+	@include prefix(0);
+}
+
+footer {
+  clear: both;
+  margin-bottom: 10px;
+  @include prefix(5);
+  span {
+    font-size: 12px;
+  }
+  #footer_img {
+  vertical-align: text-top;
+  }
 }
