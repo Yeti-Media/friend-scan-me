@@ -17,3 +17,18 @@
 - if @user.github_info
   = link_to_github(@user)
 
+- if @user.foursquare_info
+  = link_to_foursquare(@user)
+
+- if @user.instagram_info
+  = link_to_instagram(@user)
+
+- if @user.tumblr_info
+  = link_to_tumblr_follow(@user)
+
+- if @user.flickr_info
+  = link_to_flickr(@user)
+
+- if @user.blog_url
+  = link_to "Blog", @user.blog_url
+

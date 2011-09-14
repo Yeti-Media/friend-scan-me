@@ -20,8 +20,8 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'mongoid_slug'
 gem 'settingslogic'
+gem 'zazzle'
 
-gem 'bitly'
 # Use unicorn as the web server
 gem 'unicorn'
 
