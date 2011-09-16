@@ -1,41 +1,40 @@
-.starburst
-  - if current_user
-    .user_name
-      Welcome
-      = current_user.facebook_info.user_name
-      = link_to "Sign Out", signout_path , :method => :delete
-  - else
-  .left_splash
-    = image_tag ("phone_android.png"), :id => "banner"
-    = image_tag ("fsm_logo1.png"), :id => "logo"
+- if current_user
+  .user_name
+    Welcome
+    = current_user.facebook_info.user_name
+    = link_to "Sign Out", signout_path , :method => :delete
+- else
+.left_splash
+  = image_tag ("phone_android.png"), :id => "banner"
+  = image_tag ("fsm_logo1.png"), :id => "logo"
 
-  %nav.right_splash
-    %ul
-      //%li= link_to (image_tag ("icn-appstore.png")), "/auth/facebook"
-      %li= link_to (image_tag ("icn-androidstore.png")), "/auth/facebook"
-      //%li= link_to (image_tag ("icn-blackberrystore.png")), "/auth/facebook"
-    
-  %section#bg_blog
-    .left
-      %h2 What is friend scan me?
-      %p Friend Scan Me is a new way to add friends on Facebook. Friend Scan Me simplifies your life by translating your user name into a QR code.
+%nav.right_splash
+  %ul
+    //%li= link_to (image_tag ("icn-appstore.png")), "/auth/facebook"
+    %li= link_to (image_tag ("icn-androidstore.png")), "/auth/facebook"
+    //%li= link_to (image_tag ("icn-blackberrystore.png")), "/auth/facebook"
+  
+%section#bg_blog
+  .left
+    %h2 What is friend scan me?
+    %p Friend Scan Me is a new way to add friends on Facebook. Friend Scan Me simplifies your life by translating your user name into a QR code.
 
-      %p Others can scan your QR code and add you as a friend instantly! No more fumbling with email addresses or spelling names, just scan, confirm, and you're done!
+    %p Others can scan your QR code and add you as a friend instantly! No more fumbling with email addresses or spelling names, just scan, confirm, and you're done!
 
-    .middle
-      %h2 What is a QR Code?
-      %p QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern.
+  .middle
+    %h2 What is a QR Code?
+    %p QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern.
 
-    .right
-      %h2 How do I start?
-      %p Just click the link above to get your personalized QR code. Your friends can add you by simply scanning your QR code.
+  .right
+    %h2 How do I start?
+    %p Just click the link above to get your personalized QR code. Your friends can add you by simply scanning your QR code.
 
-      %p QR code scanners can be found in any application store or marketplace.
-    -#     	%li= link_to (image_tag ("icn-twitter.png"))  + " Twitter", "/auth/twitter"
-    -#     	%li= link_to (image_tag ("icn-linkedin.png"))  + " Linkedin", "/auth/linked_in"
-    -#     	%li= link_to (image_tag ("icn-lastfm.png"))  + " Last.fm", "/auth/last_fm"
-    -#     	%li= link_to "Sign in with Github", "/auth/github"
-    -#    	%li= link_to "Sign in with Foursquare", "/auth/foursquare"
-    -#    	%li= link_to "Sign in with Instagram", "/auth/instagram"
-    -#	    %li= link_to "Sign in with Tumblr", "/auth/tumblr"
-      %li= link_to "Sign in with Flickr", "/auth/flickr"
+    %p QR code scanners can be found in any application store or marketplace.
+  -#     	%li= link_to (image_tag ("icn-twitter.png"))  + " Twitter", "/auth/twitter"
+  -#     	%li= link_to (image_tag ("icn-linkedin.png"))  + " Linkedin", "/auth/linked_in"
+  -#     	%li= link_to (image_tag ("icn-lastfm.png"))  + " Last.fm", "/auth/last_fm"
+  -#     	%li= link_to "Sign in with Github", "/auth/github"
+  -#    	%li= link_to "Sign in with Foursquare", "/auth/foursquare"
+  -#    	%li= link_to "Sign in with Instagram", "/auth/instagram"
+  -#	    %li= link_to "Sign in with Tumblr", "/auth/tumblr"
+    %li= link_to "Sign in with Flickr", "/auth/flickr"

@@ -6,9 +6,10 @@
     %header.admin
       /= render :partial => 'layouts/header'
     #wrap
-      %section.content
-        = render :partial => 'flash', :locals => {:flash => flash}
-        %article.main
-          = yield
-    %footer
-      =render :partial => 'layouts/footer'
+      .starburst
+        %section.content
+          = render :partial => 'flash', :locals => {:flash => flash}
+          %article.main
+            = yield
+        %footer
+          =render :partial => 'layouts/footer'

@@ -1,29 +1,29 @@
-.starburst
-  .vcard-container
-    .coda-slider-wrapper
-      .layer
-        / = link_to "Your card" , card_landing_path(@user.slug), :popup => true
-        / |
-        / = link_to_qr_code(@user)
-        = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
-        %h1.name= current_user.facebook_info.user_name
-        %br{:style => "clear:both;"}/
-        #coda-slider-1.coda-slider.preload
-          .panel
-            .panel-wrapper.social
-              .social-container
-                %ul
-                  %li.twitter
-                    %a{:href => "#"} Twitter
-                  %li.linkedin
-                    %a{:href => "#"} Linkedin
-                  %li.lastfm.last-left
-                    %a{:href => "#"} Last.fm
-                %ul
-                  %li.facebook
-                    %a{:href => "#"} Facebook
-                  %li.myspace
-                    %a{:href => "#"} Myspace
-                  %li.flickr.last-right
-                    %a{:href => "#"} Flickr
-                %br{:style => "clear:both"}/
+= image_tag ("fsm_logo1.png"), :id => "logo_edit"
+.vcard-container
+  .coda-slider-wrapper
+    .layer
+      / = link_to "Your card" , card_landing_path(@user.slug), :popup => true
+      / |
+      / = link_to_qr_code(@user)
+      = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
+      %h1.name= current_user.facebook_info.user_name
+      %br{:style => "clear:both;"}/
+      #coda-slider-1.coda-slider.preload
+        .panel
+          .panel-wrapper.social
+            .social-container
+              %ul
+                %li.twitter
+                  %a{:href => "#"} Twitter
+                %li.linkedin
+                  %a{:href => "#"} Linkedin
+                %li.lastfm.last-left
+                  %a{:href => "#"} Last.fm
+              %ul
+                %li.facebook
+                  %a{:href => "#"} Facebook
+                %li.myspace
+                  %a{:href => "#"} Myspace
+                %li.flickr.last-right
+                  %a{:href => "#"} Flickr
+              %br{:style => "clear:both"}/
