@@ -71,7 +71,7 @@ nav.right_splash {
   clear: both;
   margin-bottom: 10px;
   margin-left: 10%;
-  @include border-radius(15px, 15px);
+  @include border-radius(8px, 8px);
   @include columns(10.2);
 }
 
@@ -114,4 +114,13 @@ footer {
   #footer_img {
   vertical-align: text-top;
   }
+}
+
+a, a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

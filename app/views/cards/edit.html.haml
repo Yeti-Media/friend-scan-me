@@ -1,17 +1,17 @@
-= image_tag ("fsm_logo1.png"), :id => "logo_edit"
+%a{:href => "/"} #{image_tag ("fsm_logo1.png"), :id => "logo_edit"}
 .vcard-container
   .coda-slider-wrapper
     .layer
-      / = link_to "Your card" , card_landing_path(@user.slug), :popup => true
-      / |
-      / = link_to_qr_code(@user)
       = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
-      %h1.name= current_user.facebook_info.user_name
+      %h1.name #{current_user.facebook_info.user_name} 
+      %span#yourcard #{link_to "Your card" , card_landing_path(@user.slug), :popup => true}
       %br{:style => "clear:both;"}/
       #coda-slider-1.coda-slider.preload
         .panel
           .panel-wrapper.social
             .social-container
+              %p.qrcode #{image_tag_qr_code(@user)}
+              %br{:style => "clear:both;"}/
               %ul
                 %li.twitter
                   %a{:href => "#"} Twitter
