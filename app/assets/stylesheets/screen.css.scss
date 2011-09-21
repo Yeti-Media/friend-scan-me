@@ -1,0 +1,84 @@
+
+// Imports --------------------------------------------------------------
+
+@import "partials/base";
+@import "susy";
+@import "compass/css3";
+@import "compass/utilities";
+@import "partials/shared";
+@import "partials/cards";
+
+/* Layout -------------------------------------------------------------- */
+
+body {
+  background: #3399cc url(/assets/bg.png) fixed repeat-x;
+  font-size: 13px;
+  font-family: $font-family;
+  color: #333;
+}
+
+#wrap {
+  @include container;
+  @include susy-grid-background;
+}
+
+.logo {
+	@include columns(5);
+	@include suffix(7);
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+#title {
+	@include full;
+  @include prefix(0);
+	font-size: 3em;
+}
+
+.banner {
+	@include columns(2);
+	@include pad(3,2);
+	margin-bottom: 40px;
+}
+
+h1 {
+	@include columns(5);
+	font-size: 30px;
+	font-weight: normal;
+}
+
+nav.right_splash {
+  ul {
+	  padding: 0px;
+    li {
+			@include columns(3);
+			@include prefix(0);
+			@include alpha;
+      list-style-type: none; 
+}}}
+
+section.bg_white {
+	@include full;
+	background-color: white;
+}
+
+h2 {
+	font-size: 23px;
+	font-weight: normal;
+}
+
+.left {
+	clear: both;
+	@include alpha;
+	@include columns(3);
+}
+
+.middle {
+		@include prefix(1);
+		@include columns(3);
+}
+
+.right {
+		@include prefix(1);
+		@include columns(3);
+}

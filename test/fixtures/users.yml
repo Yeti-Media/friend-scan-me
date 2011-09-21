@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  provider: twitter
+  uid: 1234
+  name: nick
+
+two:
+  provider: facebook
+  uid: 1234
+  name: nick

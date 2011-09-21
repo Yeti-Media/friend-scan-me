@@ -1,7 +1,3 @@
-require "rubygems"
-require "bundler"
+require ::File.expand_path('../config/environment',  __FILE__)
+run Friendscan::Application
 
-Bundler.require
-
-require "./app"
-run Sinatra::Application

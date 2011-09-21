@@ -1,0 +1,38 @@
+
+
+// Font Sizes --------------------------------------------------------
+$base-font-size: 16px;
+$base-line-height: 24px;
+$font-size-small: 11px;
+$font-size-large: 14px;
+$font-size-label: 18px;
+$font-size-xl: 20px;
+$font-family: 'Maven Pro', Arial;
+
+// Margins
+$content-margin: 22px;
+$content-box-margin: 60px;
+$section-margin-top: 10px;
+
+// Padding
+$content-padding-left: 22px;
+$content-padding-right: 22px;
+
+// HTML TAGS
+$h2-size: 14px;
+
+// TEXT SHADOWS CSS3
+$text-shadow-color: #333;
+$text-shadow-h-offset: 1px;
+$text-shadow-v-offset: 3px;
+$text-shadow-blur: 3px;
+
+//  Radius
+$radius: 10px;
+
+// Grid --------------------------------------------------------------
+
+$total-cols: 12;
+$col-width: 4em;
+$gutter-width: 1em; // Width of space between columns
+$side-gutter-width: $gutter-width; //Space on either side of the page

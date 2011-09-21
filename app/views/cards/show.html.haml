@@ -1,0 +1,34 @@
+= @user.name
+
+= @user.bio
+
+- if @user.facebook_info
+  = link_to_add_facebook_friend(@user)
+
+- if @user.twitter_info
+  = link_to_twitter_follow(@user)
+
+- if @user.linked_in_info
+  = link_to_linkedin(@user)
+
+- if @user.last_fm_info
+  = link_to_last_fm(@user)
+
+- if @user.github_info
+  = link_to_github(@user)
+
+- if @user.foursquare_info
+  = link_to_foursquare(@user)
+
+- if @user.instagram_info
+  = link_to_instagram(@user)
+
+- if @user.tumblr_info
+  = link_to_tumblr_follow(@user)
+
+- if @user.flickr_info
+  = link_to_flickr(@user)
+
+- if @user.blog_url
+  = link_to "Blog", @user.blog_url
+

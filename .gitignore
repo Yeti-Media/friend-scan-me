@@ -1,2 +1,10 @@
-.env
-log/
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+.rbenv-version
+vendor/bundle
+Procfile
+.DS_Store
+
