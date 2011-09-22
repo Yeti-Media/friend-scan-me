@@ -1,8 +1,8 @@
 defaults: &defaults
   omniauth:
     facebook:
-      app_id: 131951090214210
-      app_secret: f98cd378657bda1c60e9ee561aa29468
+      app_id: 178729732201658
+      app_secret: 58fcef42640ad46d3f2f0b5f63aed749
     twitter:
       consumer_key: 5T4pHIO2jnxqmwwn4kE5w
       consumer_secret: KGMCHC0pi1rKPzj9OETJXX4gigYkZe5iuckKZDA
@@ -41,8 +41,8 @@ production:
   <<: *defaults
   omniauth:
     facebook:
-      app_id: "129816637097234"
-      app_secret: "72493a8a4deb0787c52493834fdcbcdd"
+      app_id: "131951090214210"
+      app_secret: "f98cd378657bda1c60e9ee561aa29468"
   domain: friendscan.me
   site:
     url: http://friendscan.me

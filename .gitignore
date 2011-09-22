@@ -6,5 +6,6 @@ tmp/
 .rbenv-version
 vendor/bundle
 Procfile
+app/assets/images/.DS_Store
+app/assets/.DS_Store
 .DS_Store
-
