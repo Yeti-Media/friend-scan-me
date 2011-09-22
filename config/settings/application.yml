@@ -38,11 +38,36 @@ test:
   <<: *defaults
 
 production:
-  <<: *defaults
   omniauth:
     facebook:
       app_id: "131951090214210"
       app_secret: "f98cd378657bda1c60e9ee561aa29468"
+      app_id: 131951090214210
+      app_secret: f98cd378657bda1c60e9ee561aa29468
+    twitter:
+      consumer_key: 5T4pHIO2jnxqmwwn4kE5w
+      consumer_secret: KGMCHC0pi1rKPzj9OETJXX4gigYkZe5iuckKZDA
+    linkedin:
+      api_key: eh65xvmj536i
+      api_secret: w6ipurJaKfSEQWRj
+    last_fm:
+      api_key: a8e0acba994680d34b46dacae3727f65
+      api_secret: aef3976168f9c2291c158ca454c3c706
+    github:
+      api_key: 8cfa13b9870e279298a0
+      api_secret: ce6f105742bee2d914f0bcf106d98328ac4fdd81
+    foursquare:
+      client_id: M0PXUCDR2ZRLUZCS13PTAG1XMENEPEIHYXH0IBBOLKKA34V4
+      client_secret: 1RGCUZQCFG0TQXSUJZSG3NQNMBX5ZHN0WK35DOCCOU4NAKGT
+    instagram:
+      client_id: e6df9dd1640742a3a202806c06aa02ee
+      client_secret: 4c26db9f73d94080b4b14cc1d340afbf
+    tumblr:
+      consumer_key: Ms1DdraaaeLcum1WPftJNIA7yA8iVYYkehZfFEhlGQYBGzp8Ew
+      consumer_secret: KCHM6OEyDcH3ZTnk82YHTcPmY057Iit0AMzh3Mymw1Oh832NBG
+    flickr:
+      consumer_key: 6fc454ff14d85d4a57c0e1e55bd5d25a
+      consumer_secret: 4314409c3176beab
   domain: friendscan.me
   site:
     url: http://friendscan.me
