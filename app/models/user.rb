@@ -33,7 +33,7 @@ class User
   end
 
   def self.find_by_provider_and_uid(provider ,uid)
-    where("#{provider}_info"=> {uid: uid}).first
+    where("#{provider}_info.uid" => uid).first
   end
 
   def associate_provider(auth)
