@@ -21,10 +21,14 @@ class User
   embeds_one :flickr_info
 
 
+  def self.find_or_create_with_omniauth(auth)
+    User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.new_with_omniauth(auth)
+  end
+
   def self.new_with_omniauth(auth)
     user = User.new
     info = send("add_#{auth["provider"]}", user , auth)
-    user.name = info.uid
+    user.name = info.sluggable_name
     user
   end
 
@@ -39,6 +43,8 @@ class User
     end
   end
 
+
+
   private
 
   def self.add_facebook(user , auth)
@@ -47,7 +53,7 @@ class User
   end
 
   def self.add_twitter(user , auth)
-    info = TwitterInfo.new(uid: auth["user_info"]["nickname"])
+    info = TwitterInfo.new(uid: auth["uid"], user_name: auth["user_info"]["nickname"])
     user.facebook_info = info
   end
 
