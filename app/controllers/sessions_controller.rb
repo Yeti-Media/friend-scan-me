@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       current_user.associate_provider(auth)
       redirect_to edit_card_path(current_user.slug), :notice => "Signed in!"
     else
-      user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.new_with_omniauth(auth)
+      user = User.find_or_create_with_omniauth(auth)
       if user.save!
         session[:user_id] = user.id
         redirect_to edit_card_path(user.slug), :notice => "Signed in!"
