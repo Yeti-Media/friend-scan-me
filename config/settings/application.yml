@@ -33,7 +33,7 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  
+
 test:
   <<: *defaults
 
@@ -43,7 +43,7 @@ production:
     facebook:
       app_id: "129816637097234"
       app_secret: "72493a8a4deb0787c52493834fdcbcdd"
-  domain: rentsbooks.com
+  domain: friendscan.me
   site:
-    url: http://www.rentsbooks.com
+    url: http://friendscan.me
 
