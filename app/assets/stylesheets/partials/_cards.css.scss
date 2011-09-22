@@ -1,23 +1,15 @@
 
 .vcard-container {
-  /*width: 500px;*/
+  @include mobile-portrait(300px);
+  @include mobile-landscape(460px);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  margin-left: gutter(1.53);
-  /*margin: 0 auto;*/
+  //margin-left: gutter(1.53);
+  margin: auto;
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
-  box-shadow: 0 1px 3px #489CC6; 
-  @include columns(9);}
-
-
-.starburst {
-  background: url(/assets/bg-starburst.png) no-repeat top center;
-  height: 600px;
-  padding: 50px;
-  margin: 0 auto; 
-  @include full(10);
+  box-shadow: 0 1px 3px #489CC6;
 }
 
 .layer {
@@ -28,11 +20,13 @@
   -moz-border-radius-topright: 8px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding-top: 15px; 
+  padding-top: 15px;
+  height: 100px;
   }
 
 h1.name {
   margin-top: 0;
+  margin-bottom: 0;
   text-shadow: 0 1px 0px #fff; }
 
 p.role {
@@ -41,7 +35,7 @@ p.role {
 
 .panel {
   p {
-    margin: 0 20px 20px 10px;
+    margin: 0 0px 20px 0px;
     color: #666; }
   h2 {
     color: #333;
@@ -52,153 +46,40 @@ img.avatar {
   margin: 0 15px 15px 15px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px; 
+  border-radius: 8px;
   @include columns(1.2);
 }
 
-a.download-vcard {
-  float: right;
-  display: block;
-  text-indent: -5000px;
-  width: 46px;
-  height: 29px;
-  background: url(/assets/vCard.png) no-repeat;
-  margin: 0 15px 0 0;
-  background-position: 0 0;
-  &:hover {
-    background-position: 0 -29px; } }
-
-.coda-slider-wrapper {
-  padding: 0;}
-
-.coda-slider {
-  background: #fff; 
+#middle {
+  @include full;
+  @include prefix(1);
+  @include columns(5);
+  p {
+    padding-bottom: 5px;
   }
-
-.coda-slider-no-js .coda-slider {
-  height: 200px;
-  overflow: auto !important;
-  padding-right: 20px; }
-
-.coda-slider {
-  width: 500px;
-  -webkit-border-bottom-left-radius: 8px;
-  -webkit-border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  -moz-border-radius-bottomleft: 8px;
-  -moz-border-radius-bottomright: 8px;
-  .panel {
-    width: 500px;
-    -webkit-border-bottom-left-radius: 8px;
-    -webkit-border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    -moz-border-radius-bottomleft: 8px;
-    -moz-border-radius-bottomright: 8px; } }
-
-.coda-slider-wrapper.arrows .coda-slider {
-  width: 500px;
-  .panel {
-    width: 500px; }
-  margin: 0 10px; }
-
-.coda-nav-left a {
-  color: #333;
-  width: 10px;
-  height: 12px;
-  text-indent: -5000px;
-  background: url(/assets/arrows.png) no-repeat;
-  margin: 10px 0 0 10px; }
-
-.coda-nav-right a {
-  color: #333;
-  width: 10px;
-  height: 12px;
-  text-indent: -5000px;
-  background: url(/assets/arrows.png) no-repeat;
-  margin: 10px 0 0 10px;
-  background-position: -10px 0;
-  margin-left: 10px;
-  &:hover {
-    background-position: -10px -12px; } }
-
-.coda-nav-left a:hover {
-  background-position: 0px -12px; }
-
-.coda-nav ul li a.current {
-  background: #fff;
-  color: #333;
-  border-top: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px; }
-
-.coda-slider {
-  .panel-wrapper {
-    padding: 0px; }
-  p.loading {
-    padding: 20px;
-    text-align: center; } }
-
-.coda-nav ul {
-  clear: both;
-  display: block;
-  margin: auto;
-  overflow: hidden;
-  width: 425px;
-  float: left;
-  margin-left: 15px;
-  li {
-    display: inline;
-    a {
-      font-weight: bold;
-      background: none;
-      color: #3399CC;
-      display: block;
-      float: left;
-      margin-right: 1px;
-      padding: 8px 14px;
-      text-decoration: none;
-      border-top: 1px solid #f8f8f8;
-      border-left: 1px solid #f8f8f8;
-      border-right: 1px solid #f8f8f8; } } }
-
-.coda-slider-wrapper {
-  clear: both;
-  overflow: auto; }
-
-.coda-slider {
-  float: left;
-  overflow: hidden;
-  position: relative;
-  .panel {
-    display: block;
-    float: left; }
-  .panel-container {
-    position: relative; } }
-
-.coda-nav-left, .coda-nav-right {
-  float: left; }
-
-.coda-nav-left a, .coda-nav-right a {
-  display: block;
-  text-align: center;
-  text-decoration: none; }
+}
+#right {
+  @include alpha;
+  @include columns(4);
+  text-align: left;
+  p {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+}
 
 .social {
   ul {
+    @include mobile-portrait(298px);
+    @include mobile-landscape(458px);
     float: left;
-    width: 250px;
+    //width: 438px;
     margin: 0;
     list-style: none;
-    margin: 0; }
+    padding: 0; }
   li {
+    @include mobile-portrait(298px);
+    @include mobile-landscape(458px);
     background: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8');
     /* for IE */
@@ -206,19 +87,22 @@ a.download-vcard {
     /* for webkit browsers */
     background: -moz-linear-gradient(top, white, #f8f8f8);
     /* for firefox 3.6+ */
-    width: 250px;
+    width: 438px;
     border: 1px solid #eee;
     border-top: none;
     a {
       font-size: 15px;
       font-weight: bold;
-      width: 249px;
+      /*width: 249px;*/
       height: 65px;
       display: block;
       color: #666;
       text-decoration: none;
       line-height: 65px;
       text-indent: 65px; }
+    &.qrcode {
+      padding: 20px 0px;
+      text-align: center;}
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
       background-position: 20px 16px; }
@@ -243,21 +127,6 @@ a.download-vcard {
 /* icon set used http://www.nouveller.com/general/free-social-media-bookmark-icon-pack-the-ever-growing-icon-set/ */
 /* to add more/different icons, download the icon set and add a new class to list above */
 
-.about, .contact {
-  margin: 20px; }
-
-.about {
-  a {
-    color: #3399CC;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline; } }
-  ul {
-    color: #666;
-    margin: 20px; }
-  li {
-    margin-left: 20px; } }
-
 .social ul li {
   &.last-left {
     -webkit-border-bottom-left-radius: 8px;
@@ -275,9 +144,6 @@ a.download-vcard {
       -webkit-border-bottom-right-radius: 8px;
       -moz-border-radius-bottomright: 8px;
       border-bottom-right-radius: 8px; } } }
-
-.social-container {
-  width: 500px; }
 
 .social {
   margin: 0; }

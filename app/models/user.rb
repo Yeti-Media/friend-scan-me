@@ -96,4 +96,3 @@ class User
 
 
 end
-
