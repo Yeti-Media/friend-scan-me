@@ -13,7 +13,7 @@ gem 'sass-rails', "~> 3.1.0"
 gem 'coffee-rails', "~> 3.1.0"
 gem 'uglifier'
 gem 'haml'
-gem 'compass', :require => false
+gem 'compass', :require => false ,:git => "git://github.com/chriseppstein/compass.git", :tag => '0.12.alpha.0'
 gem 'compass-susy-plugin', '0.9', :require => 'susy'
 gem 'responsive-sass'
 gem 'jquery-rails'
