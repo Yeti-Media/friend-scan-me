@@ -3,6 +3,7 @@
 
 @import "partials/base";
 @import "susy";
+@import "responsive-sass";
 @import "compass/css3";
 @import "compass/utilities";
 @import "partials/shared";
@@ -19,15 +20,15 @@ body {
 
 #wrap {
   @include container;
-  //@include susy-grid-background;
+  @include susy-grid-background;
 }
 
 .starburst {
   background: url(/assets/bg-starburst.png) no-repeat top center;
   height: 600px;
-  padding: 20px 50px 0px 50px;
+  padding: 20px 0px 50px 0px;
   margin: 0 auto;
-  @include full(10);
+  @include full(12);
 }
 
 #flash_notice {
@@ -40,29 +41,43 @@ body {
 	margin-top: 10px;
 }
 
-.left_splash #banner {
-  clear: both;
-	margin: 0% 2% 2% 0%;
-	@include alpha;
-	@include columns(3);
-	@include prefix(1.8);
-	@include suffix(1);
-}
 
-.left_splash #logo {
-	@include columns(5);
-	margin-top: 6%;
+
+.left_splash {
+  @include alpha;
+  @include prefix(1);
+	@include columns(3);
 	margin-bottom: 2%;
+	#phone_pic {
+	  @include columns(3);
+	  @include prefix(1.2);
+	  @include mobile-portrait(110px);
+	  @include mobile-landscape(150px);
+	  @include tablet-portrait(200px);
+	  @include min-width-960(200px);
+	  @include tablet-landscape(200px);
+    clear: both;
+	  margin: 0% 2% 2% 3%;
+	}
 }
 
 nav.right_splash {
-	@include columns(5);
-	@include prefix(0);
+  @include prefix(1.2);
+	@include columns(3);
+	padding-top: 10%;
+	#logo {
+	  @include mobile-portrait(190px);
+    @include mobile-landscape(250px);
+	  @include tablet-portrait(325px);
+	  @include min-width-960(325px);
+	  @include tablet-landscape(325px);
+  }
   ul {
 	  padding: 0px;
 		list-style-type: none;
     li {
 			display: inline;
+			padding-left: 2%;
 }}}
 
 #bg_blog {
@@ -72,7 +87,7 @@ nav.right_splash {
   margin-bottom: 10px;
   margin-left: 10%;
   @include border-radius(8px, 8px);
-  @include columns(10.2);
+  @include columns(10);
 }
 
 h2 {
