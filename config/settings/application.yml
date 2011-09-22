@@ -33,13 +33,15 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  
+
 test:
   <<: *defaults
 
 production:
   omniauth:
     facebook:
+      app_id: "131951090214210"
+      app_secret: "f98cd378657bda1c60e9ee561aa29468"
       app_id: 131951090214210
       app_secret: f98cd378657bda1c60e9ee561aa29468
     twitter:
@@ -68,5 +70,5 @@ production:
       consumer_secret: 4314409c3176beab
   domain: friendscan.me
   site:
-    url: http://www.friendscan.me
+    url: http://friendscan.me
 
