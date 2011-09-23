@@ -31,10 +31,6 @@ body {
   @include full(12);
 }
 
-#flash_notice {
-  @include columns(3);
-}
-
 .user_name {
 	@include columns(4);
   @include prefix(8);
