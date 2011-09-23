@@ -120,7 +120,7 @@ h2 {
 
 footer {
   clear: both;
-  margin: 0px 0px 10px 0px;
+  margin: 5px 0px 10px 0px;
   @include prefix(5);
   @include columns(4);
   span {
