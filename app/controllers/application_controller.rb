@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     unless signed_in?
-       render :status => 404
+       redirect_to "/", :notice => "Please sign in first!"
     end
   end
 end
