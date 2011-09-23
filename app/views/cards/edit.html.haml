@@ -14,7 +14,7 @@
               = image_tag_qr_code(@user)
             #right
               %p Preview your show page by scanning your QR Code!
-              %p Download Friend Scan Me on your phone! #{ image_tag ("icn-androidstore.png")}
+              %p Download Friend Scan Me on your phone! #{ link_to image_tag("/assets/icn-androidstore.png"), "#" }
             %br{:style=> "clear:both"}/
 -#                %li.twitter
 -#                  %a{:href => "#"} Twitter

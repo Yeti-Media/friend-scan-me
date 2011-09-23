@@ -60,11 +60,11 @@ img.avatar {
 }
 #right {
   @include alpha;
-  @include columns(4);
+  @include columns(5);
   text-align: left;
   p {
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    img { float: left; }
   }
 }
 

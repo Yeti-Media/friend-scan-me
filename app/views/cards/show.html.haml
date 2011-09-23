@@ -1,9 +1,6 @@
-= @user.bio
+
 .vcard-container
   .layer
-    / = link_to "Your card" , card_landing_path(@user.slug), :popup => true
-    / | preview show page by scanning qr code
-    / = link_to_qr_code(@user)
     = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
     %h1.name= current_user.facebook_info.user_name
     %br{:style => "clear:both;"}/
@@ -13,33 +10,3 @@
           %li.facebook.last-left.last-right
             = link_to_add_facebook_friend(@user)
         %br{:style => "clear:both"}/
-                
-- if @user.facebook_info
-  //= link_to_add_facebook_friend(@user)
-
-- if @user.twitter_info
-  = link_to_twitter_follow(@user)
-
-- if @user.linked_in_info
-  = link_to_linkedin(@user)
-
-- if @user.last_fm_info
-  = link_to_last_fm(@user)
-
-- if @user.github_info
-  = link_to_github(@user)
-
-- if @user.foursquare_info
-  = link_to_foursquare(@user)
-
-- if @user.instagram_info
-  = link_to_instagram(@user)
-
-- if @user.tumblr_info
-  = link_to_tumblr_follow(@user)
-
-- if @user.flickr_info
-  = link_to_flickr(@user)
-
-- if @user.blog_url
-  = link_to "Blog", @user.blog_url
