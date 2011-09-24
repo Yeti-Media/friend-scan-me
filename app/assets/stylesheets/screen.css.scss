@@ -60,7 +60,7 @@ body {
 nav.right_splash {
   @include prefix(1.2);
 	@include columns(3);
-	padding-top: 10%;
+	padding-top: 8%;
 	#logo {
 	  @include mobile-portrait(190px);
     @include mobile-landscape(250px);
@@ -69,7 +69,7 @@ nav.right_splash {
 	  @include tablet-landscape(325px);
   }
   ul {
-	  padding: 0px;
+	  padding: 20px 0px 0px 0px;
 		list-style-type: none;
     li {
 			display: inline;
