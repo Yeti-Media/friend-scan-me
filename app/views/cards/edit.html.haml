@@ -1,10 +1,15 @@
 .vcard-container
   .layer
-    / |
-    / = link_to_qr_code(@user)
+    .signout
+      = link_to "Home", "/"
+      |
+      = link_to "Edit", "#"
+      |
+      = link_to "Sign Out", signout_path , :method => :delete   
     = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
-    %h1.name= current_user.facebook_info.user_name
-    = link_to "Your card" , card_landing_path(@user.slug), :popup => true
+    %h1.name
+      = current_user.facebook_info.user_name
+    = link_to "View Your Card" , card_landing_path(@user.slug), :popup => true 
     %br{:style => "clear:both;"}/
     .panel
       .social
@@ -16,17 +21,3 @@
               %p Preview your show page by scanning your QR Code!
               %p Download Friend Scan Me on your phone! #{ link_to image_tag("/assets/icn-androidstore.png"), "#" }
             %br{:style=> "clear:both"}/
--#                %li.twitter
--#                  %a{:href => "#"} Twitter
--#                %li.linkedin
--#                  %a{:href => "#"} Linkedin
--#                %li.lastfm
--#                  %a{:href => "#"} Last.fm
--#              %ul
--#                %li.facebook
--#                  %a{:href => "#"} Facebook
--#                %li.myspace
--#                  %a{:href => "#"} Myspace
--#                %li.flickr.last-right.last-left
--#                  %a{:href => "#"} Flickr
--#  %br{:style => "clear:both"}/

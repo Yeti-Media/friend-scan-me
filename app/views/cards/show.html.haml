@@ -1,6 +1,12 @@
 
 .vcard-container
   .layer
+    .signout
+      = link_to "Home", "/"
+      |
+      = link_to "Edit", "#"
+      |
+      = link_to "Sign Out", signout_path , :method => :delete   
     = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
     %h1.name= current_user.facebook_info.user_name
     %br{:style => "clear:both;"}/
@@ -9,4 +15,4 @@
         %ul
           %li.facebook.last-left.last-right
             = link_to_add_facebook_friend(@user)
-        %br{:style => "clear:both"}/
+      %br{:style => "clear:both"}/

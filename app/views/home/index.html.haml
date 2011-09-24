@@ -1,8 +1,8 @@
 - if current_user
-  .user_name
+  %p.user_name
     Welcome
     = current_user.facebook_info.user_name
-    = link_to "Sign Out", signout_path , :method => :delete
+  = link_to "Sign Out", signout_path , :method => :delete
 - else
 .left_splash
   = image_tag ("phone_android.png"), :id => "phone_pic"

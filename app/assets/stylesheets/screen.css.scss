@@ -84,7 +84,6 @@ nav.right_splash {
   background-color: #f8f8f8;
   border: 1px solid #000000;
   clear: both;
-  margin-bottom: 10px;
   margin-left: 10%;
   @include border-radius(8px, 8px);
   @include columns(10);
@@ -120,7 +119,7 @@ h2 {
 
 footer {
   clear: both;
-  margin: 0px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
   @include prefix(5);
   @include columns(4);
   span {

@@ -20,9 +20,14 @@
   -moz-border-radius-topright: 8px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding-top: 15px;
+  padding-top: 10px;
   height: 100px;
   }
+
+.signout {
+  float: right;
+  text-align: right; 
+  padding: 5px 15px 0px 10px; }
 
 h1.name {
   margin-top: 0;
