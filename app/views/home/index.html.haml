@@ -1,8 +1,8 @@
 - if current_user
-  .user_name
+  %p.user_name
     Welcome
     = current_user.facebook_info.user_name
-    = link_to "Sign Out", signout_path , :method => :delete
+  = link_to "Sign Out", signout_path , :method => :delete
 - else
 .left_splash
   = image_tag ("phone_android.png"), :id => "phone_pic"
@@ -10,9 +10,7 @@
 %nav.right_splash
   = image_tag ("fsm_logo1.png"), :id => "logo"
   %ul
-    //%li= link_to (image_tag ("icn-appstore.png")), "/auth/facebook"
     %li= link_to image_tag("fbsigninbutton.png"), "/auth/facebook"
-    //%li= link_to (image_tag ("icn-blackberrystore.png")), "/auth/facebook"
 
 %section#bg_blog
   .left
