@@ -2,7 +2,12 @@
   %p.user_name
     Welcome
     = current_user.facebook_info.user_name
-  = link_to "Sign Out", signout_path , :method => :delete
+  %p.user_name
+    = link_to "Show", "/#{current_user.slug}"
+    |
+    = link_to "Edit", "/cards/#{current_user.slug}/edit"
+    |
+    = link_to "Sign Out", signout_path , :method => :delete
 - else
 .left_splash
   = image_tag ("phone_android.png"), :id => "phone_pic"
@@ -28,11 +33,3 @@
     %p Just click the link above to get your personalized QR code. Your friends can add you by simply scanning your QR code.
 
     %p QR code scanners can be found in any application store or marketplace.
-  -#     	%li= link_to (image_tag ("icn-twitter.png"))  + " Twitter", "/auth/twitter"
-  -#     	%li= link_to (image_tag ("icn-linkedin.png"))  + " Linkedin", "/auth/linked_in"
-  -#     	%li= link_to (image_tag ("icn-lastfm.png"))  + " Last.fm", "/auth/last_fm"
-  -#     	%li= link_to "Sign in with Github", "/auth/github"
-  -#    	%li= link_to "Sign in with Foursquare", "/auth/foursquare"
-  -#    	%li= link_to "Sign in with Instagram", "/auth/instagram"
-  -#	    %li= link_to "Sign in with Tumblr", "/auth/tumblr"
-    %li= link_to "Sign in with Flickr", "/auth/flickr"

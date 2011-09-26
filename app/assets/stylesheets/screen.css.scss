@@ -32,9 +32,10 @@ body {
 }
 
 .user_name {
-	@include columns(4);
-  @include prefix(8);
-	margin-top: 10px;
+  @include columns(11);
+  margin: 0px;
+	padding-bottom: 0px;
+	text-align: right;
 }
 
 
@@ -49,16 +50,16 @@ body {
 	  @include prefix(1.2);
 	  @include mobile-portrait(110px);
 	  @include mobile-landscape(150px);
-	  @include tablet-portrait(200px);
-	  @include min-width-960(200px);
-	  @include tablet-landscape(200px);
+	  @include tablet-portrait(256px);
+	  @include min-width-960(256px);
+	  @include tablet-landscape(256px);
     clear: both;
 	  margin: 0% 2% 2% 3%;
 	}
 }
 
 nav.right_splash {
-  @include prefix(1.2);
+  @include prefix(1.6);
 	@include columns(3);
 	padding-top: 8%;
 	#logo {
