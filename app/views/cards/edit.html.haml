@@ -14,5 +14,5 @@
         %ul
           %li.qrcode.last-right.last-left
             = image_tag_qr_code(@user)
-            %p Preview your show page by scanning your QR Code!
+            %p Scan to add #{@user.facebook_info.user_name} as a friend!
           %br{:style=> "clear:both"}/
