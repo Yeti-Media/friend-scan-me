@@ -1,7 +1,7 @@
 
 .vcard-container {
   @include mobile-portrait(300px);
-  @include mobile-landscape(460px);
+  @include mobile-landscape(300px);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -24,8 +24,7 @@
   height: 100px;
   }
 
-.signout {
-  float: right;
+.top_nav {
   text-align: right; 
   padding: 5px 15px 0px 10px; }
 
@@ -52,31 +51,13 @@ img.avatar {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  @include columns(1.2);
-}
-
-#middle {
-  @include full;
-  @include prefix(1);
-  @include columns(5);
-  p {
-    padding-bottom: 5px;
-  }
-}
-#right {
-  @include alpha;
-  @include columns(5);
-  text-align: left;
-  p {
-    margin-bottom: 10px;
-    img { float: left; }
-  }
+  @include columns(2);
 }
 
 .social {
   ul {
     @include mobile-portrait(298px);
-    @include mobile-landscape(458px);
+    @include mobile-landscape(298px);
     float: left;
     //width: 438px;
     margin: 0;
@@ -84,7 +65,7 @@ img.avatar {
     padding: 0; }
   li {
     @include mobile-portrait(298px);
-    @include mobile-landscape(458px);
+    @include mobile-landscape(298px);
     background: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8');
     /* for IE */
@@ -107,7 +88,11 @@ img.avatar {
       text-indent: 65px; }
     &.qrcode {
       padding: 20px 0px;
-      text-align: center;}
+      text-align: center;
+      p {
+        margin: 5px 20px 5px 74px;
+        text-align: left;
+      }}
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
       background-position: 20px 16px; }
