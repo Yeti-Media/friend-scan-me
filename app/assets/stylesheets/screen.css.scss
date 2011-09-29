@@ -45,7 +45,7 @@ body {
 	margin-bottom: 2%;
 	#phone_pic {
 	  @include mobile-portrait(110px);
-	  @include mobile-landscape(150px);
+	  @include mobile-landscape(136px);
 	  @include tablet-portrait(256px);
 	  @include min-width-960(256px);
 	  @include tablet-landscape(256px);
@@ -58,14 +58,14 @@ nav.right_splash {
 	@include columns(5);
 	padding-top: 9%;
 	#logo {
-	  @include mobile-portrait(190px);
-    @include mobile-landscape(250px);
+	  @include mobile-portrait(155px);
+    @include mobile-landscape(190px);
 	  @include tablet-portrait(320px);
 	  @include min-width-960(320px);
 	  @include tablet-landscape(320px);
   }
   ul {
-	  padding: 20px 0px 0px 0px;
+	  padding: 2% 0% 0% 0%;
 		list-style-type: none;
     li {
 			display: inline;
@@ -109,8 +109,7 @@ h2 {
 footer {
   clear: both;
   margin: 10px 0px 10px 0px;
-  @include prefix(5);
-  @include columns(4);
+  text-align: center;
   span {
     font-size: 12px;
   }
