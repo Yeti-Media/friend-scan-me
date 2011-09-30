@@ -5,10 +5,9 @@
   |
   = link_to "Sign Out", signout_path , :method => :delete 
 .vcard-container
-  .layer  
+  .layer
     = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
     %h1.name= @user.facebook_info.user_name
-    %br{:style => "clear:both;"}/
     .panel
       .social
         %ul

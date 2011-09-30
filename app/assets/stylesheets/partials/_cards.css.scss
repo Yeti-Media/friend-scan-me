@@ -5,7 +5,6 @@
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  //margin-left: gutter(1.53);
   margin: auto;
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
@@ -21,7 +20,13 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding-top: 10px;
-  height: 100px;
+  
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   }
 
 .top_nav {
@@ -90,7 +95,7 @@ img.avatar {
       padding: 20px 0px;
       text-align: center;
       p {
-        margin: 5px 20px 5px 74px;
+        margin: 5px 60px 5px 74px;
         text-align: left;
       }}
     &.twitter a {
