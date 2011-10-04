@@ -1,8 +1,8 @@
-
 // Imports --------------------------------------------------------------
 
 @import "partials/base";
 @import "susy";
+@import "responsive-sass";
 @import "compass/css3";
 @import "compass/utilities";
 @import "partials/shared";
@@ -11,7 +11,7 @@
 /* Layout -------------------------------------------------------------- */
 
 body {
-  background: #3399cc url(/assets/bg.png) fixed repeat-x;
+  background: #3399cc url(/assets/bg.png) repeat-x;
   font-size: 13px;
   font-family: $font-family;
   color: #333;
@@ -19,66 +19,110 @@ body {
 
 #wrap {
   @include container;
-  @include susy-grid-background;
+  //@include susy-grid-background;
 }
 
-.logo {
-	@include columns(5);
-	@include suffix(7);
-	margin-top: 20px;
-	margin-bottom: 40px;
+.starburst {
+  background: url(/assets/bg-starburst.png) no-repeat top center;
+  height: 600px;
+  padding: 20px 0px 50px 0px;
+  margin: 0 auto;
+  @include full(12);
 }
 
-#title {
-	@include full;
-  @include prefix(0);
-	font-size: 3em;
+.user_name {
+  @include columns(11);
+  margin: 0px;
+	padding-bottom: 0px;
+	text-align: right;
 }
 
-.banner {
-	@include columns(2);
-	@include pad(3,2);
-	margin-bottom: 40px;
-}
-
-h1 {
-	@include columns(5);
-	font-size: 30px;
-	font-weight: normal;
+.left_splash {
+  @include alpha;
+  @include prefix(1.2);
+	@include columns(3);
+	@include suffix(1.3);
+	margin-bottom: 2%;
+	#phone_pic {
+	  @include mobile-portrait(110px);
+	  @include mobile-landscape(136px);
+	  @include tablet-portrait(256px);
+	  @include min-width-960(256px);
+	  @include tablet-landscape(256px);
+    clear: both;
+	  margin: 0%;
+	}
 }
 
 nav.right_splash {
+	@include columns(5);
+	padding-top: 9%;
+	#logo {
+	  @include mobile-portrait(155px);
+    @include mobile-landscape(190px);
+	  @include tablet-portrait(320px);
+	  @include min-width-960(320px);
+	  @include tablet-landscape(320px);
+  }
   ul {
-	  padding: 0px;
+	  padding: 2% 0% 0% 0%;
+		list-style-type: none;
     li {
-			@include columns(3);
-			@include prefix(0);
-			@include alpha;
-      list-style-type: none; 
+			display: inline;
+			padding-left: 2%;
 }}}
 
-section.bg_white {
-	@include full;
-	background-color: white;
+#bg_blog {
+  background-color: #f8f8f8;
+  border: 1px solid #000000;
+  clear: both;
+  margin-left: 10%;
+  @include border-radius(8px, 8px);
+  @include columns(10);
 }
 
 h2 {
-	font-size: 23px;
+  @include text-shadow(#bebebe, 1px, 1px, 0px);
+	font-size: 1.25em;
 	font-weight: normal;
 }
 
 .left {
-	clear: both;
-	@include alpha;
-	@include columns(3);
+  clear: both;
+  padding: 1% 1% 1% 1%;
+  @include alpha;
+  @include columns(3.4,12);
 }
 
 .middle {
-		@include prefix(1);
-		@include columns(3);
+  padding: 1%;
+  @include alpha;
+	@include columns(3.4,12);
 }
 
 .right {
-		@include prefix(1);
-		@include columns(3);
+  padding: 1% 1% 1% 0%;
+  @include alpha;
+	@include columns(3.4,12);
+}
+
+footer {
+  clear: both;
+  margin: 10px 0px 10px 0px;
+  text-align: center;
+  span {
+    font-size: 12px;
+  }
+  #footer_img {
+    vertical-align: text-bottom;
+  }
+}
+
+a, a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

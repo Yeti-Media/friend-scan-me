@@ -8,5 +8,9 @@ class FacebookInfo
 
   validates :uid , presence: true
 
+  def sluggable_name
+    user_name
+  end
+
 end
 

@@ -7,6 +7,10 @@ module CardsHelper
      "http://www.facebook.com/dialog/friends/?id=#{user.facebook_info.uid}&app_id=#{Settings.omniauth.facebook.app_id}&redirect_uri=#{request.url}"
   end
 
+  def url_add_facebook_friend(user)
+     "http://www.facebook.com/dialog/friends/?id=#{user.facebook_info.uid}&app_id=#{Settings.omniauth.facebook.app_id}&redirect_uri=#{request.url}"
+  end
+
   def link_to_tumblr_follow(user)
     link_to "Follow on Tumblr", "http://www.tumblr.com/follow/#{user.tumblr_info.uid}", popup: true
   end
@@ -18,6 +22,10 @@ module CardsHelper
   # Edit HELPERS
   def link_to_qr_code(user, w=200 ,h = 200)
     link_to "Your QRcode", "http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(user.slug)}&size=#{w}x#{h}"
+  end
+  
+  def image_tag_qr_code(user, w=150 ,h = 150)
+    image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(user.slug)}&size=#{w}x#{h}")
   end
 
   def link_to_facebook(user)

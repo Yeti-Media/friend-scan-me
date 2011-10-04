@@ -100,3 +100,57 @@ a.remove_child {
   height: 200px;
   width: 766px;
 }
+
+
+/* Some flash notice stuff */
+
+#flash_notice, #flash_error, #flash_alert, #flash_success, #flash_failure {
+  padding: 8px 10px;
+  text-align:center;
+  @include border-radius($radius);
+  @include box-shadow(#fff 0px 1px 0px);
+  @include columns(12);
+}
+
+#flash_notice, #flash_success {
+  border: solid 1px #3399CC; 
+  background: #ccffcc;
+  color: #3399CC;}
+
+#flash_error, #flash_failure {
+  background: #ffcccc;
+  border: solid 1px #cc6666;
+  color: #ff0000; }
+
+#flash_alert {
+  background: none repeat scroll 0 0 #FFF6BF;
+  border: 1px solid #FFD324;
+  color: #514721;
+}
+
+.fieldWithErrors {
+  display: inline; }
+
+#errorExplanation {
+  border: 2px solid #cf0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: 0;
+    background-color: #cc0000;
+    color: white; }
+  p {
+    color: #333333;
+    margin-bottom: 0;
+    padding: 8px; }
+  ul {
+    margin: 2px 24px;
+    li {
+      font-size: 12px;
+      list-style: disc; } } }

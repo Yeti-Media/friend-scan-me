@@ -1,29 +1,17 @@
-.starburst
-  .vcard-container
-    .coda-slider-wrapper
-      .layer
-        / = link_to "Your card" , card_landing_path(@user.slug), :popup => true
-        / |
-        / = link_to_qr_code(@user)
-        = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
-        %h1.name= current_user.facebook_info.user_name
-        %br{:style => "clear:both;"}/
-        #coda-slider-1.coda-slider.preload
-          .panel
-            .panel-wrapper.social
-              .social-container
-                %ul
-                  %li.twitter
-                    %a{:href => "#"} Twitter
-                  %li.linkedin
-                    %a{:href => "#"} Linkedin
-                  %li.lastfm.last-left
-                    %a{:href => "#"} Last.fm
-                %ul
-                  %li.facebook
-                    %a{:href => "#"} Facebook
-                  %li.myspace
-                    %a{:href => "#"} Myspace
-                  %li.flickr.last-right
-                    %a{:href => "#"} Flickr
-                %br{:style => "clear:both"}/
+.top_nav
+  = link_to "Home", "/"
+  |
+  = link_to "Sign Out", signout_path , :method => :delete 
+.vcard-container 
+  .layer 
+    = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
+    %h1.name
+      = current_user.facebook_info.user_name
+    = link_to "View Your Card" , card_landing_path(@user.slug), :popup => true 
+    .panel
+      .social
+        %ul
+          %li.qrcode.last-right.last-left
+            = image_tag_qr_code(@user)
+            %p Scan to add #{@user.facebook_info.user_name} as a friend!
+        %br{:style=> "clear:both"}/
