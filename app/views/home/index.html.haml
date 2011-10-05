@@ -15,7 +15,9 @@
 %nav.right_splash
   = image_tag ("fsm_logo1.png"), :id => "logo"
   %ul
-    %li= link_to image_tag("fbsigninbutton.png"), "/auth/facebook"
+    %li
+      %a{:href => "/auth/facebook", :id => "signin_"}
+        = image_tag ("fbsigninbutton.png")
 
 %section#bg_blog
   .left
