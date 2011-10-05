@@ -8,11 +8,10 @@
     %h1.name
       = current_user.facebook_info.user_name
     = link_to "View Your Card" , card_landing_path(@user.slug), :popup => true 
-    %br{:style => "clear:both;"}/
     .panel
       .social
         %ul
           %li.qrcode.last-right.last-left
             = image_tag_qr_code(@user)
-            %p Preview your show page by scanning your QR Code!
-          %br{:style=> "clear:both"}/
+            %p Scan to add #{@user.facebook_info.user_name} as a friend!
+        %br{:style=> "clear:both"}/
