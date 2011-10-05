@@ -3,6 +3,10 @@ require 'spec_helper'
 describe CardsController do
   render_views
   
+  before(:each) do
+    login_with_oath
+  end
+  
   describe "GET 'new'" do
     it "should be successful" do
       get 'new'
