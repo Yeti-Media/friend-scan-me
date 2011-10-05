@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :signed_in?, :current_user
-
-
-
+  has_mobile_fu
+  helper_method :signed_in?, :current_user 
 
   private
 
