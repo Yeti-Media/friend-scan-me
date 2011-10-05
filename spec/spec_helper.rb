@@ -24,5 +24,14 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   #config.use_transactional_fixtures = false
-
+  config.include IntegrationSpecHelper, :type => :request
 end
+
+Capybara.default_host = "http://example.org"
+
+OmniAuth.config.test_mode = true
+
+OmniAuth.config.add_mock(:facebook, {
+  :uid => '12345',
+  :nickname => 'zapnap'
+})
