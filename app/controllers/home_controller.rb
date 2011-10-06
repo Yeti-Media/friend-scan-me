@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   layout "application"
   
   def index
-    respond_to_mobile "index"
+    respond_to_mobile :index
   end
   
   private
