@@ -3,8 +3,8 @@
     = link_to "Home", "/"
     |
     = link_to "Sign Out", signout_path , :method => :delete
-.vcard-container 
-  .layer 
+.vcard-container
+  .layer
     = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
     %h1.name= current_user.facebook_info.user_name
     = link_to "View your card" , card_landing_path(@user.slug)
