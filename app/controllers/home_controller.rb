@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   
   def respond_to_mobile(content)
     respond_to do |format|
-      format.mobile {render content}
+      format.mobile {render content, :layout => "application"}
     end
   end
   
