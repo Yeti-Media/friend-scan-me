@@ -1,11 +1,10 @@
 .top_bar
-  friendscan.me
-.top_nav
-  = link_to "Home", "/"
-  |
-  = link_to "Edit", "/cards/#{@user.slug}/edit"
-  |
-  = link_to "Sign Out", signout_path , :method => :delete 
+  %a{ :href => "/" }friendscan.me
+- if current_user
+  .top_nav
+    = link_to "Edit", "/cards/#{@user.slug}/edit"
+    |
+    = link_to "Sign Out", signout_path , :method => :delete 
 .vcard-container
   .layer
     = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
