@@ -22,6 +22,7 @@ gem 'mongoid_slug'
 gem 'settingslogic'
 gem 'zazzle'
 gem 'mobile-fu'
+gem "airbrake"
 
 # Use unicorn as the web server
 gem 'unicorn'
