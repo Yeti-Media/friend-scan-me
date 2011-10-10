@@ -1,0 +1,30 @@
+.top_bar
+  %a{ :href => "/" }friendscan.me
+- if current_user
+  .top_nav
+    = link_to "Home", "/"
+    |
+    = link_to "Sign Out", signout_path , :method => :delete
+.vcard-container
+  .layer
+    = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
+    %h1.name= current_user.facebook_info.user_name
+    = link_to "View your card" , card_landing_path(@user.slug)
+    .panel
+      .social
+        %ul
+          %li.qrcode.last-right.last-left          
+            - if is_mobile_device?
+              #center
+                .image
+                  = image_tag_qr_code(@user)
+                .copy-odd
+                  Scan this QR code and add 
+                  = current_user.facebook_info.user_name
+                  as a friend instantly!
+            - else
+              #center
+                .image= bookmark_qr_code(@user)
+                .copy-odd
+                  Scan the QR code & bookmark this page to start adding friends.
+            %br{:style=> "clear:both"}/

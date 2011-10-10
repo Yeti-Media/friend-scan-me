@@ -2,6 +2,8 @@
   %a{ :href => "/" }friendscan.me
 - if current_user
   .top_nav
+    = link_to "Home", "/"
+    |
     = link_to "Edit", "/cards/#{@user.slug}/edit"
     |
     = link_to "Sign Out", signout_path , :method => :delete 

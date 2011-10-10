@@ -5,6 +5,9 @@
   %link{ :href => "/assets/icn-fsm.ico", :rel => "icon" }
   %link{ :href =>"/assets/apple-touch-icon.png", :rel => "apple-touch-icon" }
   = render :partial => "javascripts"
+  %script{ :type => "text/javascript" }
+    :plain
+      run_at_start();
   %meta{:name => "apple-mobile-web-app-capable", :content => "yes" }/
-  %meta{:content => "width=device-width; initial-scale=1.0, maximum-scale=1.0", :name => "viewport" }/
+  %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport" }/
   %title #{title}

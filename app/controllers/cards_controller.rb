@@ -7,6 +7,7 @@ class CardsController < ApplicationController
   def show
     @user = User.find_by_slug(params[:slug_id])
     @title = @user.facebook_info.user_name + " @"
+    respond_to_mobile :show
   end
 
   def create
@@ -17,6 +18,7 @@ class CardsController < ApplicationController
   def edit
     @user = current_user
     @title = @user.facebook_info.user_name + " @"
+    respond_to_mobile :edit
   end
 
 
@@ -27,6 +29,14 @@ class CardsController < ApplicationController
       flash[:notice] = "Oooops!"
     end
     redirect_to :back
+  end
+  
+  private
+  
+  def respond_to_mobile(content)
+    respond_to do |format|
+      format.mobile {render content}
+    end
   end
 
 end

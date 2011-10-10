@@ -1,17 +1,17 @@
-
 .vcard-container {
   @include mobile-portrait(300px);
   @include mobile-landscape(300px);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  margin: auto;
+  margin: 0 auto;
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
   box-shadow: 0 1px 3px #489CC6;
 }
 
 .layer {
+  @include clearfix;
   background: #f8f8f8;
   -webkit-border-top-left-radius: 8px;
   -webkit-border-top-right-radius: 8px;
@@ -27,7 +27,7 @@
   -moz-border-radius-bottomright: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  }
+}
 
 .top_bar {
   background: #000;
@@ -58,12 +58,9 @@ p.role {
 
 .panel {
   p {
-    margin: 0 0px 20px 0px;
+    margin: 0 0px 0px 0px;
     color: #666; }
-  h2 {
-    color: #333;
-    margin: 0 20px 20px 10px;
-    font-size: 17px; } }
+}
 
 img.avatar {
   margin: 0 15px 15px 15px;
@@ -74,6 +71,13 @@ img.avatar {
 }
 
 .social {
+  
+  .copy-odd {
+    background-color: #F8F8F8;
+    padding: 10px 0px;
+    margin: 5px 0px 5px 0px;
+  }
+  
   ul {
     @include mobile-portrait(298px);
     @include mobile-landscape(298px);
@@ -108,10 +112,15 @@ img.avatar {
     &.qrcode {
       padding: 20px 0px;
       text-align: center;
-      p {
-        margin: 5px 60px 5px 74px;
-        text-align: left;
-      }}
+      .image {
+        border: 10px solid #ddd;
+        height: 150px;
+        margin: 0 auto;
+        padding: 5px;
+        width: 150px;
+        @include border-radius(5px)
+      }
+    }
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
       background-position: 20px 16px; }
@@ -153,9 +162,6 @@ img.avatar {
       -webkit-border-bottom-right-radius: 8px;
       -moz-border-radius-bottomright: 8px;
       border-bottom-right-radius: 8px; } } }
-
-.social {
-  margin: 0; }
 
 label {
   display: block;
