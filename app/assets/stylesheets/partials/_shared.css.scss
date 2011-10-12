@@ -109,7 +109,7 @@ a.remove_child {
   text-align:center;
   @include border-radius($radius);
   @include box-shadow(#fff 0px 1px 0px);
-  @include columns(12);
+  @include full(12);
 }
 
 #flash_notice, #flash_success {

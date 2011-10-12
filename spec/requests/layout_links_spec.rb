@@ -9,7 +9,7 @@ describe "LayoutLinks" do
   it "should go to card edit page" do
     login_with_oauth
     visit root_path
-    click_link("Fbsigninbutton")
+    click_link("signin_")
     page.should have_content("@ FriendScan.Me")
   end
   
@@ -17,7 +17,7 @@ describe "LayoutLinks" do
     before(:each) do
       login_with_oauth
       visit root_path
-      click_link("Fbsigninbutton")
+      click_link("signin_")
     end
 
     it "should take you to home page and have welcome message" do
@@ -26,7 +26,7 @@ describe "LayoutLinks" do
     end
     
     it "should have View Your Card link and work" do
-      click_link("View Your Card")
+      click_link("View your card")
       page.should have_content("Add as a Friend on Facebook")
     end
     
