@@ -1,19 +1,26 @@
 .top_bar
   %a{ :href => "/" }friendscan.me
-- if current_user
-  .top_nav
-    = link_to "Home", "/"
-    |
-    = link_to "Edit", "/cards/#{@user.slug}/edit"
-    |
-    = link_to "Sign Out", signout_path , :method => :delete 
-.vcard-container
-  .layer
-    = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
-    %h1.name= @user.facebook_info.user_name
-    .panel
-      .social
-        %ul
-          %li.facebook.last-left.last-right
-            = link_to_add_facebook_friend(@user)
-        %br{:style => "clear:both"}/
+#wrap
+  .starburst
+    = render :partial => 'flash', :locals => {:flash => flash}
+    - if current_user
+      .top_nav
+        = link_to "Home", "/"
+        |
+        = link_to "Edit", "/cards/#{@user.slug}/edit"
+        |
+        = link_to "Sign Out", signout_path , :method => :delete 
+    .vcard-container
+      .layer
+        = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
+        %h1.name= @user.facebook_info.user_name
+        .panel
+          .social
+            %ul
+              %li.facebook.last-left.last-right
+                = link_to_add_facebook_friend(@user)
+            %br{:style => "clear:both"}/
+    %footer
+      %span
+        %b Hire 
+        = link_to (image_tag ("yeti_logo.png"), :id => "footer_img"), "http://yeti-media.com/"
