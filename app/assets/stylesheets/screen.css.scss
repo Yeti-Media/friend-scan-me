@@ -11,6 +11,7 @@
 /* Layout -------------------------------------------------------------- */
 
 body {
+  background-color: #3399cc;
   font-size: 13px;
   font-family: $font-family;
   color: #333;
@@ -44,7 +45,11 @@ body {
 
 .top_nav {
   text-align: right; 
-  padding: 5px 10px; }
+  padding: 5px 10px; 
+  a {color: #0F628C;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-shadow: 0 1px 0 #78C4E3;}}
 
 .user_name {
   @include columns(11);
