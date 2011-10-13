@@ -3,11 +3,4 @@
 %html{:lang => "en"}
   = render :partial => 'head'
   %body{:class => "#{controller.controller_name}"}
-    %header.admin
-      /= render :partial => 'layouts/header'
-    #wrap
-      .starburst
-        = render :partial => 'flash', :locals => {:flash => flash}
-        = yield
-        %footer
-          =render :partial => 'layouts/footer'
+    = yield

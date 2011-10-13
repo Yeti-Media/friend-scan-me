@@ -1,17 +1,17 @@
-
 .vcard-container {
   @include mobile-portrait(300px);
   @include mobile-landscape(300px);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  margin: auto;
+  margin: 0 auto;
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
   box-shadow: 0 1px 3px #489CC6;
 }
 
 .layer {
+  @include clearfix;
   background: #f8f8f8;
   -webkit-border-top-left-radius: 8px;
   -webkit-border-top-right-radius: 8px;
@@ -27,11 +27,7 @@
   -moz-border-radius-bottomright: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  }
-
-.top_nav {
-  text-align: right; 
-  padding: 5px 15px 0px 10px; }
+}
 
 h1.name {
   margin-top: 0;
@@ -44,12 +40,9 @@ p.role {
 
 .panel {
   p {
-    margin: 0 0px 20px 0px;
+    margin: 0 0px 0px 0px;
     color: #666; }
-  h2 {
-    color: #333;
-    margin: 0 20px 20px 10px;
-    font-size: 17px; } }
+}
 
 img.avatar {
   margin: 0 15px 15px 15px;
@@ -151,9 +144,6 @@ img.avatar {
       -webkit-border-bottom-right-radius: 8px;
       -moz-border-radius-bottomright: 8px;
       border-bottom-right-radius: 8px; } } }
-
-.social {
-  margin: 0; }
 
 label {
   display: block;

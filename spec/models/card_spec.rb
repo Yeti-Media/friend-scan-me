@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Card do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    login_with_oauth
+    visit root_path
+    click_link("signin_")
+  end
 end
