@@ -8,3 +8,6 @@
 //= require jquery_ujs
 //= require_tree .
 
+$(function() {
+  run_at_start();
+});
