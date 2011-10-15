@@ -1,0 +1,19 @@
+/* TEAM */
+	Chef: Nick Treadway
+	Contact: rnt [at] yeti-media.com
+	Twitter: @nicktea
+	From: California
+
+	UI developer: Patrick Yeo
+	From: California
+
+	Senoir Develpoer: Nico Santa
+	From: Argentina
+
+
+/* SITE */
+	Last update:2011/10/15
+	Language:English
+	Doctype:HTML5
+	IDE:Textmate, Photoshop
+	Framework: RoR 3.1
