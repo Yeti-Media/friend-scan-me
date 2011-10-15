@@ -4,7 +4,6 @@ function run_at_start(){
 
 	if (isUAMobile) {
 	  // When ready...
-	console.log("called")
 	  window.addEventListener("load",function() {
 	  	// Set a timeout...
 	  	setTimeout(function(){

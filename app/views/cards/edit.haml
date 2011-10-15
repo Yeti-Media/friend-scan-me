@@ -5,15 +5,19 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
-        = link_to "Home", "/"
-        |
-        = link_to "Sign Out", signout_path , :method => :delete
+        - if !is_mobile_device?
+          = link_to "Home", "/"
+          |
+          = link_to "Card", card_landing_path(@user.slug)
+          |
+          = link_to "Sign Out", signout_path , :method => :delete
       .vcard-container
         .layer
           = image_tag("http://graph.facebook.com/#{current_user.facebook_info.uid}/picture", :class => "avatar")
           %h1.name= current_user.facebook_info.user_name
-          = link_to "View your QR Code", "javascript:void(0)", :class => 'qr-code-link'
-          = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
+          - if !is_mobile_device?
+            = link_to "View your QR Code", "javascript:void(0)", :class => 'qr-code-link'
+            = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
           .panel
             .social
               %ul
@@ -45,7 +49,4 @@
                           = current_user.facebook_info.user_name
                         as a friend instantly!
                   %br{:style=> "clear:both"}/
-    %footer
-      %span
-        %b Hire 
-        = link_to (image_tag ("yeti_logo.png"), :id => "footer_img"), "http://yeti-media.com/"
+    = render :partial => 'footer'
