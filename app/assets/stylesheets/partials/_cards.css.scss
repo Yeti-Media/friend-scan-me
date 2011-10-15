@@ -13,20 +13,10 @@
 .layer {
   @include clearfix;
   background: #f8f8f8;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
   padding-top: 10px;
+  @include border-radius(8px);
+  .bookmark-link {display:none;}
   
-  -webkit-border-bottom-left-radius: 8px;
-  -webkit-border-bottom-right-radius: 8px;
-  -moz-border-radius-bottomleft: 8px;
-  -moz-border-radius-bottomright: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 
 h1.name {
@@ -54,6 +44,7 @@ img.avatar {
 
 .social {
   
+  .your-qr-code {display:none;}
   .copy-odd {
     background-color: #F8F8F8;
     padding: 10px 0px;
