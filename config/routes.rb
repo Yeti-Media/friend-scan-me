@@ -7,8 +7,6 @@ Friendscan::Application.routes.draw do
   match 'auth/failure' => 'sessions#failure'
   match "/sessions/signout" => "sessions#destroy", :as => :signout
 
-  #resources :cards
-
   root :to => "home#index"
 
   match '/:slug_id' => 'cards#show', :as => :card_landing
