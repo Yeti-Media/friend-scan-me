@@ -1,3 +1,4 @@
+= render :partial => "facebook_js_sdk"
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
@@ -39,5 +40,6 @@
         %p Just sign in with facebook to get your personalized QR code. Your friends can add you by simply scanning your QR code.
 
         %p QR code scanners can be found in any application store or marketplace.
+      = render :partial => "social_marketing"
   = render :partial => 'footer'
   
