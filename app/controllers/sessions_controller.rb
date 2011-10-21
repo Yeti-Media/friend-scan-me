@@ -12,12 +12,13 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to edit_card_path(user.slug), :notice => "Signed in!"
       else
-        redirect_to root_path, :notice => "Try Again!"
+        redirect_to root_path, :notice => "Try to Sign in again!"
       end
     end
   end
 
   def failure
+    redirect_to root_path, :notice => "Try to Sign in again!"
   end
 
   def destroy
