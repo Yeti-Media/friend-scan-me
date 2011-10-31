@@ -93,6 +93,14 @@ nav.right_splash {
 			padding-left: 2%;
 }}}
 
+#signin_ {
+	  @include mobile-portrait(150px);
+    @include mobile-landscape(200px);
+	  @include tablet-portrait(280px);
+	  @include min-width-960(280px);
+	  @include tablet-landscape(280px);
+}
+
 #bg_blog {
   background-color: #f8f8f8;
   border: 1px solid #000000;
