@@ -6,10 +6,6 @@
     - if current_user
       .top_nav
         - if !is_mobile_device?
-          = link_to "Home", "/"
-          |
-          = link_to "Card", card_landing_path(@user.slug)
-          |
           = link_to "Sign Out", signout_path , :method => :delete
       .vcard-container
         .layer
@@ -20,6 +16,11 @@
             = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
           .panel
             .social
+              %nav.silvergradient
+                %ul
+                  %li #{link_to "Home", "/"}
+                  %li #{link_to "Add as Friend", "#"}
+                  %li #{link_to "Card", card_landing_path(@user.slug)}
               %ul
                 %li.qrcode.last-right.last-left          
                   - if is_mobile_device?

@@ -42,14 +42,14 @@ body {
   padding: 0px 0px 50px 0px;
   margin: 0 auto;
 }
-
+//ff7f2a
 .top_nav {
   text-align: right; 
   padding: 5px 10px; 
   a {color: #0F628C;
     font-weight: bold;
     letter-spacing: -1px;
-    text-shadow: 0 1px 0 #78C4E3;}}
+    text-shadow: 0 1px 0 #333;}}
 
 .user_name {
   @include columns(11);
