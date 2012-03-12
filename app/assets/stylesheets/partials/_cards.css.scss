@@ -43,7 +43,6 @@ img.avatar {
 }
 
 .social {
-  
   .your-qr-code {display:none;}
   .copy-odd {
     background-color: #F8F8F8;
@@ -52,7 +51,6 @@ img.avatar {
   }
   .silvergradient ul {
 background: #f8f8f8;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIxJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkyJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWYxZjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 background: -moz-linear-gradient(top, #f8f8f8 0%, #f6f6f6 21%, #dbdbdb 92%, #f1f1f1 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(21%,#f6f6f6), color-stop(92%,#dbdbdb), color-stop(100%,#f1f1f1));
 background: -webkit-linear-gradient(top, #f8f8f8 0%,#f6f6f6 21%,#dbdbdb 92%,#f1f1f1 100%);
@@ -84,11 +82,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     @include mobile-landscape(298px);
     background: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8');
-    /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f8f8f8));
-    /* for webkit browsers */
     background: -moz-linear-gradient(top, white, #f8f8f8);
-    /* for firefox 3.6+ */
     width: 438px;
     border: 1px solid #eee;
     border-top: none;
@@ -106,7 +101,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     }
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
-      background-position: 20px 16px; }
+      background-position: 20px 16px; 
+		}
     &.facebook a {
       background: url(/assets/icn-facebook.png) no-repeat;
       background-position: 20px 16px; }

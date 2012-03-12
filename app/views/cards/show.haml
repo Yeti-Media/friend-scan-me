@@ -22,10 +22,10 @@
           .social
             %ul
               - if @user.has_social?(:facebook)
-                %li.facebook.last-left.last-right
+                %li.facebook
                   = link_to_add_facebook_friend(@user)
               - if @user.has_social?(:twitter)    
-                %li.facebook.last-left.last-right
+                %li.twitter
                   = link_to_twitter_follow(@user)
 
               %li.get-app
