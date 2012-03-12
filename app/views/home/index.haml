@@ -6,7 +6,7 @@
       .top_nav
         %p.user_name
           Welcome
-          = current_user.facebook_info.user_name
+          = current_user.name
         %p.user_name
           = link_to "Show", "/#{current_user.slug}"
           |
@@ -23,6 +23,9 @@
         %li
           %a{:href => "/auth/facebook", :id => "signin_"}
             = image_tag ("fb-connect-large.png"), :id => "signin_"
+        %li 
+          %a{:href => 'auth/twitter' , :id => 'signin_'}
+            = image_tag ("tw-connect-large.png"), :id => "signin_"
 
     %section#bg_blog
       .left

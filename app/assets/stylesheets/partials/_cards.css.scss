@@ -42,7 +42,6 @@ img.avatar {
 }
 
 .social {
-  
   .your-qr-code {display:none;}
   .copy-odd {
     background-color: #F8F8F8;
@@ -100,7 +99,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     }
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
-      background-position: 20px 16px; }
+      background-position: 20px 16px; 
+		}
     &.facebook a {
       background: url(/assets/icn-facebook.png) no-repeat;
       background-position: 20px 16px; }

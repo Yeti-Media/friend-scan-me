@@ -43,6 +43,9 @@ class User
     end
   end
 
+  def has_social?(provider)
+    send("#{provider}_info").present?
+  end
 
 
   private
@@ -54,7 +57,7 @@ class User
 
   def self.add_twitter(user , auth)
     info = TwitterInfo.new(uid: auth["uid"], user_name: auth["user_info"]["nickname"])
-    user.facebook_info = info
+    user.twitter_info = info
   end
 
   def self.add_linked_in(user , auth)
