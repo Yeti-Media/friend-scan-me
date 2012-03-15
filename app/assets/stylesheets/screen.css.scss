@@ -11,16 +11,14 @@
 
 body {
   background-color: #3399cc;
-  font-size: 13px;
   font-family: $font-family;
   color: #333;
 }
-
+.pad2em { padding-top: 2em; }
 .top_bar {
   background: #000;
   color: #f8f8f8;
   font-family: 'Lobster', cursive;
-  font-size: 20px;
   text-align: center; 
   padding: 2px 10px;
   a:link, a:hover, a:visited {
@@ -52,28 +50,27 @@ body {
 	padding-bottom: 0px;
 	text-align: right;
 }
-
+.wrapper {
+}
 .left_splash {
-	margin: 0;
 	#phone_pic {
 	  @include mobile-portrait(110px);
 	  @include mobile-landscape(136px);
 	  @include tablet-portrait(256px);
 	  @include min-width-960(256px);
-	  @include tablet-landscape(256px);
     clear: both;
 	  margin: 0%;
 	}
 }
 
 nav.right_splash {
-	padding-top: 9%;
+	padding-top: .5em;
 	#logo {
-	  @include mobile-portrait(155px);
-    @include mobile-landscape(190px);
-	  @include tablet-portrait(320px);
+		@extend .mobile-portrait;
+    @include mobile-landscape(170px);
+	  @include tablet-portrait(190px);
 	  @include min-width-960(320px);
-	  @include tablet-landscape(320px);
+		@include tablet-landscape(400px);
   }
   ul {
 	  padding: 2% 0% 0% 0%;
@@ -82,20 +79,30 @@ nav.right_splash {
 			padding-left: 2%;
 }}}
 
-#signin_ {
-	  @include mobile-portrait(150px);
-    @include mobile-landscape(200px);
-	  @include tablet-portrait(280px);
-	  @include min-width-960(280px);
-	  @include tablet-landscape(280px);
+.mobile-portrait {
+	@include mobile-portrait(150px);
 }
 
+
+#signin_ {
+}
+
+.orangeStripe {
+	background-color: #eb8500;
+	margin-top: .5em;
+	width: 100%;
+	height: 15px;
+}
+.bg_mainContent {
+	background-color: #244468;
+	padding-top: .5em;
+	width: 100%;
+}
 #bg_blog {
+  @include border-radius(8px, 8px);
   background-color: #f8f8f8;
   border: 1px solid #000000;
-  clear: both;
-  margin: 0 0 0 9%;
-  @include border-radius(8px, 8px);
+  margin: 0;
 }
 
 h2 {
@@ -104,17 +111,16 @@ h2 {
 	font-weight: normal;
 }
 
-.left {
-  clear: both;
+#left {
   padding: 1% 1% 1% 1%;
 }
 
-.middle {
+#middle {
   padding: 1%;
 }
 
-.right {
-  padding: 1% 1% 1% 0%;
+#right {
+  padding: 1%;
 }
 
 footer {
@@ -123,7 +129,6 @@ footer {
   padding: 8px 0px;
   text-align: center;
   span {
-    font-size: 12px;
   }
   #footer_img {
     vertical-align: text-bottom;
@@ -142,4 +147,59 @@ a, a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 0) {
+	.starburst {
+	  background: url(/assets/bg-starburst.png) no-repeat top center;
+	  height: 600px;
+	  padding: 0px 0px 50px 0px;
+	  margin: 0 auto;
+	}
+	.wrapper {
+		@include width(4.4);
+		margin: 0 auto;
+	}
+	.left_splash {
+		display: none;
+	}
+	nav.right_splash {
+		ul {
+			padding-top: .5em;
+		}
+	}
+	#bg_blog {
+		@include width(4.2);
+		margin: 0 auto;
+	}
+}
+/* 480 pixels */
+@media screen and (min-width: 30em) {
+
+}
+/* 640 */
+@media screen and (min-width: 40em) {
+
+}
+/* 960 */
+@media screen and (min-width: 60em) {
+	.wrapper {
+		@include width(11);
+		overflow: hidden;
+	}
+	.left_splash {
+		display: block;
+		float: left;
+		margin: 0 2em 0 0;
+	}
+	nav.right_splash {
+		float: left;
+	}
+	#bg_blog {
+		@include width(11);
+		margin: 0 auto;
+	}
+}
+/* 1024 */
+@media screen and (min-width: 64em) {
+
 }

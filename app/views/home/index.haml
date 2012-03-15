@@ -14,35 +14,37 @@
           |
           = link_to "Sign Out", signout_path , :method => :delete
     - else
-    .left_splash
-      = image_tag ("phone_android.png"), :id => "phone_pic"
+    %section.wrapper
+      .left_splash
+        = image_tag ("phone_android.png"), :id => "phone_pic"
 
-    %nav.right_splash
-      = image_tag ("fsm_logo1.png"), :id => "logo"
-      %ul
-        %li
-          %a{:href => "/auth/facebook", :id => "signin_"}
-            = image_tag ("fb-connect-large.png"), :id => "signin_"
-        %li 
-          %a{:href => 'auth/twitter' , :id => 'signin_'}
-            = image_tag ("tw-connect-large.png"), :id => "signin_"
+      %nav.right_splash
+        = image_tag ("fsm_logo1.png"), :id => "logo"
+        %ul
+          %li
+            %a{:href => "/auth/facebook", :id => "signin_"}
+              = image_tag ("fb-connect-large.png"), :id => "signin_"
+          %li 
+            %a{:href => 'auth/twitter' , :id => 'signin_'}
+              = image_tag ("tw-connect-large.png"), :id => "signin_"
+    .orangeStripe
+    .bg_mainContent
+      %section#bg_blog
+        #left
+          %h2 What is friend scan me?
+          %p Friend Scan Me is a new way to add friends on Facebook in the real world. Simplify your real world life contacts by translating your social networks into a QR code.
 
-    %section#bg_blog
-      .left
-        %h2 What is friend scan me?
-        %p Friend Scan Me is a new way to add friends on Facebook in the real world. Simplify your real world life contacts by translating your social networks into a QR code.
+          %p Others can scan your QR code and add you as a friend instantly! No more fumbling with email addresses or spelling names, just scan, confirm, and you're done!
 
-        %p Others can scan your QR code and add you as a friend instantly! No more fumbling with email addresses or spelling names, just scan, confirm, and you're done!
+        #middle
+          %h2 What is a QR Code?
+          %p QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern.
 
-      .middle
-        %h2 What is a QR Code?
-        %p QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern.
+        #right
+          %h2 How do I start?
+          %p Just sign in with facebook to get your personalized QR code. Your friends can add you by simply scanning your QR code.
 
-      .right
-        %h2 How do I start?
-        %p Just sign in with facebook to get your personalized QR code. Your friends can add you by simply scanning your QR code.
-
-        %p QR code scanners can be found in any application store or marketplace.
+          %p QR code scanners can be found in any application store or marketplace.
       = render :partial => "social_marketing"
-  = render :partial => 'footer'
+      = render :partial => 'footer'
   
