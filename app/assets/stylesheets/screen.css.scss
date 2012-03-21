@@ -56,8 +56,9 @@ body {
 	#phone_pic {
 	  @include mobile-portrait(110px);
 	  @include mobile-landscape(136px);
-	  @include tablet-portrait(256px);
-	  @include min-width-960(256px);
+	  @include tablet-portrait(230px);
+	  @include min-width-960(230px);
+		@include tablet-landscape(256px);
     clear: both;
 	  margin: 0%;
 	}
@@ -70,7 +71,7 @@ nav.right_splash {
     @include mobile-landscape(170px);
 	  @include tablet-portrait(190px);
 	  @include min-width-960(320px);
-		@include tablet-landscape(400px);
+		@include tablet-landscape(401px);
   }
   ul {
 	  padding: 2% 0% 0% 0%;
@@ -80,7 +81,7 @@ nav.right_splash {
 }}}
 
 .mobile-portrait {
-	@include mobile-portrait(150px);
+	@include mobile-portrait(155px);
 }
 
 
@@ -185,14 +186,16 @@ a:hover {
 	.wrapper {
 		@include width(11);
 		overflow: hidden;
+		padding-top: 30px;
 	}
 	.left_splash {
 		display: block;
 		float: left;
-		margin: 0 2em 0 0;
+		margin: 0 2em 0 4em;
 	}
 	nav.right_splash {
 		float: left;
+		padding-top: 2.5em;
 	}
 	#bg_blog {
 		@include width(11);
@@ -201,5 +204,10 @@ a:hover {
 }
 /* 1024 */
 @media screen and (min-width: 64em) {
-
+	.left_splash {
+		margin: 0 2em 0 2em;
+	}
+	nav.right_splash {
+		padding-top: 2em;
+	}
 }
