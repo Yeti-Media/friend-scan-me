@@ -1,6 +1,9 @@
 .vcard-container {
   @include mobile-portrait(300px);
-  @include mobile-landscape(300px);
+	@include mobile-landscape(300px);
+	@include tablet-portrait(300px);
+	@include min-width-960(300px);
+  @include tablet-landscape(300px);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
