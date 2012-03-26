@@ -59,8 +59,9 @@ background: -webkit-linear-gradient(top, #f8f8f8 0%,#f6f6f6 21%,#dbdbdb 92%,#f1f
 background: -o-linear-gradient(top, #f8f8f8 0%,#f6f6f6 21%,#dbdbdb 92%,#f1f1f1 100%);
 background: -ms-linear-gradient(top, #f8f8f8 0%,#f6f6f6 21%,#dbdbdb 92%,#f1f1f1 100%);
 background: linear-gradient(top, #f8f8f8 0%,#f6f6f6 21%,#dbdbdb 92%,#f1f1f1 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f1f1f1',GradientType=0 );      
-      padding: 5px 0;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f1f1f1',GradientType=0 );
+		padding: 5px 0;
+		width: 100%;
     li {
       background: transparent;
       border: 0px;
@@ -74,6 +75,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
   ul {
     @include mobile-portrait(298px);
     @include mobile-landscape(298px);
+		@include tablet-portrait(298px);
+		@include min-width-960(298px);
+	  @include tablet-landscape(298px);
     float: left;
     margin: 0;
     list-style: none;
@@ -81,6 +85,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
   li {
     @include mobile-portrait(298px);
     @include mobile-landscape(298px);
+		@include tablet-portrait(298px);
+		@include min-width-960(298px);
+	  @include tablet-landscape(298px);
     background: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8');
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f8f8f8));
@@ -102,26 +109,61 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     }
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
-      background-position: 20px 16px; 
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
 		}
     &.facebook a {
-      background: url(/assets/icn-facebook.png) no-repeat;
-      background-position: 20px 16px; }
+      background: url(/assets/icn-facebook.png) no-repeat; 
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+			height: 65px;
+		}
     &.linkedin a {
       background: url(/assets/icn-linkedin.png) no-repeat;
-      background-position: 20px 16px; }
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
     &.myspace a {
       background: url(/assets/icn-myspace.png) no-repeat;
-      background-position: 20px 16px; }
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
     &.lastfm a {
       background: url(/assets/icn-lastfm.png) no-repeat;
-      background-position: 20px 16px; }
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
     &.flickr a {
       background: url(/assets/icn-flickr.png) no-repeat;
-      background-position: 20px 16px; }
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
+		&.get-app a {
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+			height: 65px;
+		}
+		a:link, a:visited {
+			color: #666666;
+			font-size: 15px;
+		  font-weight: bold;
+			text-decoration: none;
+		}
     a:hover {
       color: #3399CC; } } }
-
 /* icon set used http://www.nouveller.com/general/free-social-media-bookmark-icon-pack-the-ever-growing-icon-set/ */
 /* to add more/different icons, download the icon set and add a new class to list above */
 
@@ -141,7 +183,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     a {
       -webkit-border-bottom-right-radius: 8px;
       -moz-border-radius-bottomright: 8px;
-      border-bottom-right-radius: 8px; } } }
+      border-bottom-right-radius: 8px; } } 
+}
 
 label {
   display: block;

@@ -50,7 +50,7 @@ body {
   a {color: #0F628C;
     font-weight: bold;
     letter-spacing: -1px;
-    text-shadow: 0 1px 0 #333;}}
+    text-shadow: 0 1px 0 #ffffff;}}
 
 .user_name {
   margin: 0px;
@@ -75,19 +75,18 @@ nav.right_splash {
 	padding-top: 1em;
 	#logo {
 		@extend .mobile-portrait;
-    @include mobile-landscape(170px);
-	  @include tablet-portrait(190px);
+    @include mobile-landscape(290px);
+	  @include tablet-portrait(290px);
 	  @include min-width-960(390px);
 		@include tablet-landscape(424px);
   }
   ul {
-	  padding-bottom: 3em;
 		list-style-type: none;
     li {
 			padding-left: 2%;
 }}}
 .mobile-portrait {
-	@include mobile-portrait(155px);
+	@include mobile-portrait(290px);
 }
 
 
@@ -109,41 +108,8 @@ nav.right_splash {
 	padding-top: .5em;
 	width: 100%;
 }
-.bgb {
-  margin: 0 auto;
-	@include width(11);
-	p {
-		color: #ffffff;
-		font-size: 12px;
-		text-shadow: 1px 1px 1px #000000;
-	}
-}
-.hr-dashed {
-	background: url(/assets/hr-dashed.png);
-	margin: 0 auto;
-	@include width(10);
-	height: 3px;
-}
-.gutter1col {
-	@include width(1);
-	float: left;
-	height: 1em;
-}
-.r1 {
-	@include width(11);
-	overflow: hidden;
-	padding-top: 2em;
-}
-.d1 {
-	@include width(4);
-	float: left;
-	padding: 0 0 2em 0;
-}
-.d2 {
-	@include width(6);
-	float: left;
-	padding: 0 0 2em 0;
-}
+
+
 h2 {
   @include text-shadow(#bebebe, 1px, 1px, 0px);
 	font-size: 1.25em;
@@ -163,7 +129,6 @@ h2 {
 }
 
 footer {
-	background: url(/assets/bgBluePlaid.png);
   div {display: inline;}
   clear: both;
   padding: 8px 0px;
@@ -171,12 +136,12 @@ footer {
   span {
   }
   #footer_img {
-    vertical-align: text-bottom;
+    vertical-align: middle;
   }
   
   .request {
     margin-right: 154px;
-    text-align: left;
+    text-align: center;
 		a, a:visited, a:link { 
 			color: #ffffff; 
 			font-size: .75em;
@@ -216,14 +181,78 @@ a:hover {
 		@include width(4.2);
 		margin: 0 auto;
 	}
+	.bgb {
+	  margin: 0 auto;
+		@include width(4.7);
+		p {
+			color: #ffffff;
+			font-size: 12px;
+			text-shadow: 1px 1px 1px #000000;
+		}
+	}
+	.hr-dashed {
+		background: url(/assets/hr-dashed.png);
+		margin: 1em 0;
+		@include width(4.7);
+		height: 3px;
+	}
+	.r1 {
+		@include width(4.7);
+	}
+	.d1 {
+		padding: 0 0 1em 0;
+		text-align: center;
+	}
 }
-/* 480 pixels */
+/* 480 */
 @media screen and (min-width: 30em) {
-
 }
 /* 640 */
 @media screen and (min-width: 40em) {
 
+}
+/* 768 */
+@media screen and (min-width: 48em) {
+	nav.right_splash {
+		ul {
+			padding-bottom: 1em;
+		}
+	}
+	.bgb {
+	  margin: 0 auto;
+		@include width(11);
+		p {
+			color: #ffffff;
+			font-size: 12px;
+			text-shadow: 1px 1px 1px #000000;
+		}
+	}
+	.hr-dashed {
+		background: url(/assets/hr-dashed.png);
+		margin: 0 auto;
+		@include width(10);
+		height: 3px;
+	}
+	.gutter1col {
+		@include width(1);
+		float: left;
+		height: 1em;
+	}
+	.r1 {
+		@include width(11);
+		overflow: hidden;
+		padding-top: 2em;
+	}
+	.d1 {
+		@include width(4);
+		float: left;
+		padding: 0 0 2em 0;
+	}
+	.d2 {
+		@include width(6);
+		float: left;
+		padding: 0 0 2em 0;
+	}
 }
 /* 960 */
 @media screen and (min-width: 60em) {

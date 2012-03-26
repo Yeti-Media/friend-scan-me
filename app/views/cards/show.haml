@@ -22,13 +22,13 @@
           .social
             %ul
               - if @user.has_social?(:facebook)
-                %li.facebook
+                %li.facebook.card-button
                   = link_to_add_facebook_friend(@user)
               - if @user.has_social?(:twitter)    
                 %li.twitter
                   = link_to_twitter_follow(@user)
 
-              %li.get-app
+              %li.get-app.card-button
                 = link_to "Who is scanning you?", "/auth/facebook"
           
     %br{:style => "clear:both"}/
