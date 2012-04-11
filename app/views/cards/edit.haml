@@ -54,8 +54,10 @@
                         as a friend instantly!
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
-                    = link_to "Add facebook Too" , "/auth/facebook"
+                    %li.facebook
+                      = link_to "Add Your Facebook Account" , "/auth/facebook"
                   - elsif !current_user.has_social?(:twitter)  
-                    = link_to "Add Twitter Too" , "/auth/twitter"
+                    %li.twitter
+                      = link_to "Add Your Twitter Account" , "/auth/twitter"
     = render :partial => 'footer'
     = render :partial => 'google_conversions'
