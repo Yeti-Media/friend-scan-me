@@ -5,6 +5,12 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
+        = link_to "Home", "/"
+        |
+        Edit
+        |
+        = link_to "Show" , card_landing_path(@user.slug)
+        |
         - if !is_mobile_device?
           = link_to "Sign Out", signout_path , :method => :delete
       .vcard-container
@@ -19,7 +25,7 @@
             = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
           .panel
             .social
-              %nav.silvergradient
+              -#%nav.silvergradient
                 %ul
                   %li #{link_to "Home", "/"}
                   %li #{link_to "Add as Friend", "#"}
