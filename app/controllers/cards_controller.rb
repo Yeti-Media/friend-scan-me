@@ -6,7 +6,7 @@ class CardsController < ApplicationController
 
   def show
     @user = User.find_by_slug(params[:slug_id])
-    @title = @user.facebook_info.user_name + " @"
+    @title = @user.name + " @"
     respond_to_mobile :show
   end
 
@@ -17,7 +17,7 @@ class CardsController < ApplicationController
 
   def edit
     @user = current_user
-    @title = @user.facebook_info.user_name + " @"
+    @title = @user.name + " @"
     respond_to_mobile :edit
   end
 

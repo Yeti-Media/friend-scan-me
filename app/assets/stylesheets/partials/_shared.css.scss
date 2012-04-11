@@ -38,21 +38,17 @@ a.big {
 }
 
 .single-column {
- @include columns(6);
  }
  
 .three-column {
-  @include columns(2);
   clear: none;
 }
 
 .two-column {
-  @include columns(1.5);
   clear: none;
 }
  
 .four-column {
-  @include columns(1);
   clear: none;
 }
 
@@ -109,7 +105,6 @@ a.remove_child {
   text-align:center;
   @include border-radius($radius);
   @include box-shadow(#fff 0px 1px 0px);
-  @include full(12);
 }
 
 #flash_notice, #flash_success {

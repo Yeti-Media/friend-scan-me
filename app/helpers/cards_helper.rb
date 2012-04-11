@@ -16,7 +16,7 @@ module CardsHelper
   end
 
   def link_to_twitter_follow(user)
-    link_to "Follow @#{user.twitter_info.uid}", "https://twitter.com/#{user.twitter_info.uid}", class: "twitter-follow-button"
+    link_to "Follow @#{user.twitter_info.user_name}", "https://twitter.com/intent/user?screen_name=#{user.twitter_info.user_name}", class: "twitter-follow-button" , target:'_new'
   end
 
   # Edit HELPERS
