@@ -27,12 +27,11 @@ $text-shadow-h-offset: 1px;
 $text-shadow-v-offset: 3px;
 $text-shadow-blur: 3px;
 
+// BOX SHADOW CSS3
+$box-shadow-x-offset: 0;
+$box-shadow-y-offset: 5px;
+$box-shadow-blur-radius: 0;
+$box-shadow-spread-radius: 5px;
+$box-shadow-color: #888;
 //  Radius
 $radius: 10px;
-
-// Grid --------------------------------------------------------------
-
-$total-cols: 12;
-$col-width: 4em;
-$gutter-width: 1em; // Width of space between columns
-$side-gutter-width: $gutter-width; //Space on either side of the page
