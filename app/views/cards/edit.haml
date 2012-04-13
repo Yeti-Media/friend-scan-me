@@ -15,14 +15,15 @@
           = link_to "Sign Out", signout_path , :method => :delete
       .vcard-container
         .layer
-          - if @user.has_social?(:facebook)
-            = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
-          - elsif @user.has_social?(:twitter)
-            = image_tag("https://api.twitter.com/1/users/profile_image?screen_name=#{@user.twitter_info.user_name}", :class => "avatar")
-          %h1.name= current_user.name
-          - if !is_mobile_device?
-            = link_to "View your QR Code", "javascript:void(0)", :class => 'qr-code-link'
-            = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
+          .card-header
+            - if @user.has_social?(:facebook)
+              = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
+            - elsif @user.has_social?(:twitter)
+              = image_tag("https://api.twitter.com/1/users/profile_image?screen_name=#{@user.twitter_info.user_name}", :class => "avatar")
+            %h1.name= current_user.name
+            - if !is_mobile_device?
+              = link_to "View your QR Code", "javascript:void(0)", :class => 'qr-code-link'
+              = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
           .panel
             .social
               -#%nav.silvergradient
