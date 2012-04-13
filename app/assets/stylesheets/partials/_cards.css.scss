@@ -12,11 +12,10 @@
   -moz-box-shadow: 0 1px 3px #489CC6;
   box-shadow: 0 1px 3px #489CC6;
 }
-
+.card-header { padding: 15px 0 0 15px; }
 .layer {
   @include clearfix;
   background: #f8f8f8;
-  padding-top: 10px;
   @include border-radius(8px);
   .bookmark-link {display:none;}
   
@@ -38,7 +37,7 @@ p.role {
 }
 
 img.avatar {
-  margin: 0 15px 15px 15px;
+  margin: 0 15px 15px 0;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
