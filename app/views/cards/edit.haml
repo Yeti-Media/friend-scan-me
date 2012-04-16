@@ -66,5 +66,8 @@
                   - elsif !current_user.has_social?(:twitter)  
                     %li.twitter
                       = link_to "Add Your Twitter Account" , "/auth/twitter"
+                  - elsif !current_user.has_social?(:linkedin)  
+                    %li.linkedin
+                      = link_to "Add Your Linkedin Account" , "/auth/linkedin"    
     = render :partial => 'footer'
     = render :partial => 'google_conversions'
