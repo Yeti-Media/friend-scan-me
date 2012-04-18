@@ -70,16 +70,17 @@ body {
 	  margin: 0;
 	}
 }
-
+h4 {
+	color: #ffffff;
+	font-family: 'Georgia', serif;
+	font-size: 3em;
+	font-weight: lighter;
+	@include text-shadow(#000000, 2px, 2px, 4px);
+	span { padding-left: 1em; }
+}
 nav.right_splash {
 	padding-top: 1em;
-	#logo {
-		@extend .mobile-portrait;
-    @include mobile-landscape(290px);
-	  @include tablet-portrait(290px);
-	  @include min-width-960(390px);
-		@include tablet-landscape(424px);
-  }
+	width: 100%;
   ul {
 		list-style-type: none;
     li {
@@ -267,7 +268,7 @@ a:hover {
 		float: left;
 	}
 	nav.right_splash {
-		@include width(5);
+		@include width(6);
 		float: left;
 		padding-top: 6em;
 		ul {
