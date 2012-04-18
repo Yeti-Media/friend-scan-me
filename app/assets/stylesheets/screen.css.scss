@@ -84,8 +84,27 @@ nav.right_splash {
   ul {
 		list-style-type: none;
     li {
-			padding-left: 2%;
-}}}
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			margin-bottom: 5px;
+			padding: 0;
+			width: 280px;
+			height: 47px;
+			a {
+				color: #ffffff;
+				display: block;
+				font-size: 1em;
+				font-weight: lighter;
+				padding: 13px 0 14px 70px;
+				text-decoration: none;
+				@include text-shadow(#000000, 1px, 1px, 0px);
+			}
+		}
+		.fb { background: url(fb-connect-large.png) no-repeat; }
+		.tw { background: url(tw-connect-large.png) no-repeat; }
+	}
+}
 .mobile-portrait {
 	@include mobile-portrait(290px);
 }
