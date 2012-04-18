@@ -1,5 +1,22 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  home:
+    wis1: "Friend Scan Me is a new way to add friends on Facebook and Twitter in the real world. Simplify your real world life contacts by translating your social networks into a QR code."
+    wis2: "Others can scan your QR code and add you as a friend instantly! No more fumbling with email addresses or spelling names, just scan, confirm, and you're done!"
+    qrc: "QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern."
+    hts1: "Just sign in with Facebook or Twitter to get your personalized QR code. Your friends can add you by simply scanning your QR code."
+    hts2: "QR code scanners can be found in any application store or marketplace."
+  nav:
+   home: Home
+   edit: Edit
+   sign_out: Sign Out
+   show: Show
+  cards:
+    show:
+      who_is_scanning_you: "Who is scanning you?"
+    edit:
+    helpers:
+      link_to_add_facebook_friend: "Add as a Friend on Facebook"
+      link_to_twitter_follow: "Follow @"
+

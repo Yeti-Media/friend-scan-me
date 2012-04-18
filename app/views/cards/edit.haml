@@ -5,14 +5,14 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
-        = link_to "Home", "/"
+        = link_to t('nav.home'), "/"
         |
-        Edit
+        = t 'nav.edit'
         |
-        = link_to "Show" , card_landing_path(@user.slug)
+        = link_to t('nav.show') , card_landing_path(@user.slug)
         |
         - if !is_mobile_device?
-          = link_to "Sign Out", signout_path , :method => :delete
+          = link_to t("nav.sign_out"), signout_path , :method => :delete
       .vcard-container
         .layer
           .card-header
