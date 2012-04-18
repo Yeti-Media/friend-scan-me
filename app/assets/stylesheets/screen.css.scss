@@ -73,7 +73,6 @@ body {
 h4 {
 	color: #ffffff;
 	font-family: 'Georgia', serif;
-	font-size: 3em;
 	font-weight: lighter;
 	@include text-shadow(#000000, 2px, 2px, 4px);
 	span { padding-left: 1em; }
@@ -196,6 +195,7 @@ a:hover {
 	.left_splash {
 		display: none;
 	}
+	h4 { font-size: 2.25em; }
 	nav.right_splash {
 		ul {
 			padding-top: .5em;
@@ -294,6 +294,7 @@ a:hover {
 		display: block;
 		float: left;
 	}
+	h4 { 	font-size: 3em; }
 	nav.right_splash {
 		@include width(6);
 		float: left;
