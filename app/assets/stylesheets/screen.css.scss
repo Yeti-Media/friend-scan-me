@@ -12,7 +12,7 @@
 body {
   background-color: #3399cc;
   font-family: $font-family;
-  color: #333;
+  color: #fff;
 }
 .pad2em { padding-top: 2em; }
 .top_bar {
@@ -181,6 +181,7 @@ a:hover {
 }
 
 .fb_ltr { position: relative !important; top: -3px; width: 130px !important; } /* fb widget ghetto align fix */
+
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
@@ -212,6 +213,7 @@ a:hover {
 			color: #ffffff;
 			font-size: 12px;
 			text-shadow: 1px 1px 1px #000000;
+			padding: 0 5px;
 		}
 	}
 	.hr-dashed {
