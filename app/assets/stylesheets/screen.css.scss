@@ -12,7 +12,7 @@
 body {
   background-color: #3399cc;
   font-family: $font-family;
-  color: #fff;
+  color: #333;
 }
 .pad2em { padding-top: 2em; }
 .top_bar {
@@ -167,6 +167,7 @@ footer {
   }
 }
 .hire-copyright { 
+	color: #fff;
 	font-size: .75em;
 }
 
