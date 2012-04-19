@@ -12,7 +12,7 @@
 body {
   background-color: #3399cc;
   font-family: $font-family;
-  color: #333;
+  color: #fff;
 }
 .pad2em { padding-top: 2em; }
 .top_bar {
@@ -151,22 +151,23 @@ footer {
   div {display: inline;}
   clear: both;
   padding: 8px 0px;
-  text-align: center;
+	text-align: center;
   span {
   }
   #footer_img {
-    vertical-align: middle;
+    vertical-align: text-bottom;
   }
   
   .request {
-    margin-right: 154px;
-    text-align: center;
 		a, a:visited, a:link { 
 			color: #ffffff; 
 			font-size: .75em;
 		}
 		a:hover { color: #999999; }
   }
+}
+.hire-copyright { 
+	font-size: .75em;
 }
 
 a, a:visited {
@@ -177,6 +178,9 @@ a, a:visited {
 a:hover {
   text-decoration: underline;
 }
+
+.fb_ltr { position: relative !important; top: -3px; width: 130px !important; } /* fb widget ghetto align fix */
+
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
@@ -208,6 +212,7 @@ a:hover {
 			color: #ffffff;
 			font-size: 12px;
 			text-shadow: 1px 1px 1px #000000;
+			padding: 0 5px;
 		}
 	}
 	.hr-dashed {
@@ -223,12 +228,20 @@ a:hover {
 		padding: 0 0 1em 0;
 		text-align: center;
 	}
+  .request {
+		display: block;
+		margin-right: 0;
+	}
 }
 /* 480 */
 @media screen and (min-width: 30em) {
 }
 /* 640 */
 @media screen and (min-width: 40em) {
+  .request {
+		display: inline;
+		margin-right: 170px;
+	}
 }
 /* 768 */
 @media screen and (min-width: 48em) {
