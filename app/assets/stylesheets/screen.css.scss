@@ -70,21 +70,40 @@ body {
 	  margin: 0;
 	}
 }
-
+h4 {
+	color: #ffffff;
+	font-family: 'Georgia', serif;
+	font-weight: lighter;
+	@include text-shadow(#000000, 2px, 2px, 4px);
+	span { padding-left: 1em; }
+}
 nav.right_splash {
 	padding-top: 1em;
-	#logo {
-		@extend .mobile-portrait;
-    @include mobile-landscape(290px);
-	  @include tablet-portrait(290px);
-	  @include min-width-960(390px);
-		@include tablet-landscape(424px);
-  }
+	width: 100%;
   ul {
 		list-style-type: none;
     li {
-			padding-left: 2%;
-}}}
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			margin-bottom: 5px;
+			padding: 0;
+			width: 280px;
+			height: 47px;
+			a {
+				color: #ffffff;
+				display: block;
+				font-size: 1em;
+				font-weight: lighter;
+				padding: 13px 0 14px 70px;
+				text-decoration: none;
+				@include text-shadow(#000000, 1px, 1px, 0px);
+			}
+		}
+		.fb { background: url(fb-connect-large.png) no-repeat; }
+		.tw { background: url(tw-connect-large.png) no-repeat; }
+	}
+}
 .mobile-portrait {
 	@include mobile-portrait(290px);
 }
@@ -162,6 +181,7 @@ a:hover {
 }
 
 .fb_ltr { position: relative !important; top: -3px; width: 130px !important; } /* fb widget ghetto align fix */
+
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
@@ -176,6 +196,7 @@ a:hover {
 	.left_splash {
 		display: none;
 	}
+	h4 { font-size: 2.25em; }
 	nav.right_splash {
 		ul {
 			padding-top: .5em;
@@ -192,6 +213,7 @@ a:hover {
 			color: #ffffff;
 			font-size: 12px;
 			text-shadow: 1px 1px 1px #000000;
+			padding: 0 5px;
 		}
 	}
 	.hr-dashed {
@@ -274,8 +296,9 @@ a:hover {
 		display: block;
 		float: left;
 	}
+	h4 { 	font-size: 3em; }
 	nav.right_splash {
-		@include width(5);
+		@include width(6);
 		float: left;
 		padding-top: 6em;
 		ul {
