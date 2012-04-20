@@ -23,13 +23,16 @@
       .gutter1col
       %nav.right_splash
         %ul
-          %li
+          %li.fb
             %a{:href => "/auth/facebook", :id => "signin_"}
-              = image_tag ("fb-connect-large.png"), :id => "signin_"
-          %li.last
+              Connect with Facebook
+          %li.tw.last
             %a{:href => 'auth/twitter' , :id => 'signin_'}
-              = image_tag ("tw-connect-large.png"), :id => "signin_"
-        = image_tag ("slogan.png"), :id => "logo"
+              Sign in with Twitter
+        %h4 The easy way
+        %h4
+          %span &nbsp;
+          to add friends.
     .orangeStripe
     .bg_mainContent
       .bgb
