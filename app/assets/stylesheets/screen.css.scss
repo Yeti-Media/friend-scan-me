@@ -32,6 +32,7 @@ body {
     color: #f8f8f8;
     text-decoration: none;
   } 
+	img { width: 171px; }
 }
   
 #wrap {
@@ -93,15 +94,27 @@ nav.right_splash {
 			a {
 				color: #ffffff;
 				display: block;
-				font-size: 1em;
+				font-size: 1.2em;
 				font-weight: lighter;
-				padding: 13px 0 14px 70px;
+				padding: 10px 0 14px 60px;
 				text-decoration: none;
 				@include text-shadow(#000000, 1px, 1px, 0px);
 			}
 		}
-		.fb { background: url(fb-connect-large.png) no-repeat; }
-		.tw { background: url(tw-connect-large.png) no-repeat; }
+		.fb { 
+			background: url(fb-connect-large.png) no-repeat; 
+			-moz-background-size: 280px auto;
+			-webkit-background-size: 280px auto;
+			-o-background-size: 280px auto;
+			background-size: 280px auto;
+		}
+		.tw { 
+			background: url(tw-connect-large.png) no-repeat; 
+			-moz-background-size: 280px auto;
+			-webkit-background-size: 280px auto;
+			-o-background-size: 280px auto;
+			background-size: 280px auto;
+		}
 	}
 }
 .mobile-portrait {
@@ -199,7 +212,7 @@ a:hover {
 	h4 { font-size: 2.25em; }
 	nav.right_splash {
 		ul {
-			padding-top: .5em;
+			padding: .5em 0 0 .3em;
 		}
 	}
 	#bg_blog {
