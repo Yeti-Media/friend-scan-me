@@ -1,20 +1,21 @@
 = render :partial => "facebook_js_sdk"
 .top_bar
-  =image_tag ("fsm_logo_topbar.png")
+  = image_tag ("fsm_logo_topbar.png")
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    - if current_user
-      .top_nav
+    .top_nav
+      %p= select_tag :locale , options_for_select(['en', 'es'] , params[:locale]) 
+      - if current_user
         %p.user_name
-          Welcome
+          = t('home.welcome')
           = current_user.name
         %p.user_name
-          = link_to "Show", "/#{current_user.slug}"
+          = link_to t('nav.show'), card_landing_path(current_user.slug)
           |
-          = link_to "Edit", "/cards/#{current_user.slug}/edit"
+          = link_to t('nav.edit'), edit_card_path(current_user.slug)
           |
-          = link_to "Sign Out", signout_path , :method => :delete
+          = link_to t("nav.sign_out"), signout_path , :method => :delete
     - else
     %section.wrapper
       .gutter1col
@@ -24,15 +25,13 @@
       %nav.right_splash
         %ul
           %li.fb
-            %a{:href => "/auth/facebook", :id => "signin_"}
-              Connect with Facebook
+            = link_to t('home.facebook.connect') , "/auth/facebook",:id => "signin_"
           %li.tw.last
-            %a{:href => 'auth/twitter' , :id => 'signin_'}
-              Sign in with Twitter
-        %h4 The easy way
+            = link_to t('home.twitter.connect') , "/auth/twitter",:id => "signin_"
+        %h4= t('home.title1')
         %h4
           %span &nbsp;
-          to add friends.
+          = t('home.title2')
     .orangeStripe
     .bg_mainContent
       .bgb

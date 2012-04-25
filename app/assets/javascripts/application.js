@@ -11,3 +11,15 @@
 $(function() {
   run_at_start();
 });
+
+
+$(document).ready(function(){
+  $('#locale').change(function(){
+    if(!window.location.pathname.match(/\/(en|es)/)){
+      window.location.href = "/" + $("#locale").val() + window.location.pathname;
+    }
+    else {  
+      window.location.href = window.location.pathname.replace(/^\/(en|es)/,  "/" + $(this).val())
+    }
+  })
+})

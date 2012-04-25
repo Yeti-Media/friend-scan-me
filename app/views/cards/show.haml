@@ -5,9 +5,11 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
-        = link_to t('nav.home'), "/"
+        = select_tag :locale , options_for_select(['en', 'es'] , params[:locale]) 
         |
-        = link_to t('nav.edit'), "/cards/#{@user.slug}/edit"
+        = link_to t('nav.home'), locale_home_path
+        |
+        = link_to t('nav.edit'), edit_card_path(@user.slug)
         |
         = link_to t('nav.sign_out'), signout_path , :method => :delete 
     .vcard-container
