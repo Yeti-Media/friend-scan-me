@@ -1,0 +1,20 @@
+.top_bar
+  =link_to image_tag("fsm_logo_topbar.png"), "/"
+#wrap
+  .starburst
+    = render :partial => 'flash', :locals => {:flash => flash}
+    - if current_user
+      .top_nav
+        = link_to "Home", "/"
+        |
+        = link_to "Edit", "/cards/#{@user.slug}/edit"
+        |
+        = link_to "Sign Out", signout_path , :method => :delete 
+    .vcard-container
+      .layer
+        .card-header
+          %h1
+            Like
+            = @facebook_page.name
+            Facebook Page
+          = raw "<iframe src=\"//www.facebook.com/plugins/likebox.php?href=#{@facebook_page.url}&amp;width=292&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false&amp;appId=201619999894249\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:292px; height:395px;\" allowTransparency=\"true\"></iframe>"

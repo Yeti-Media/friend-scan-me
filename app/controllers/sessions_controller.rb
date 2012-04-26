@@ -2,13 +2,12 @@ class SessionsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"]
-#    raise auth.inspect
     if signed_in?
       current_user.associate_provider(auth)
       redirect_to edit_card_path(current_user.slug), :notice => "Signed in!"
     else
       user = User.find_or_create_with_omniauth(auth)
-      if user.save!
+     if user.save
         session[:user_id] = user.id
         redirect_to edit_card_path(user.slug), :notice => "Signed in!"
       else

@@ -2,6 +2,7 @@ Friendscan::Application.routes.draw do
 
 
   resources :cards
+  resources :facebook_pages
 
   match 'auth/:provider/callback' => 'sessions#create'
   match 'auth/failure' => 'sessions#failure'

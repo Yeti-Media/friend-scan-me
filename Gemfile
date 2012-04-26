@@ -23,6 +23,8 @@ gem 'settingslogic'
 gem 'zazzle'
 gem 'mobile-fu'
 gem "airbrake"
+gem "fbgraph"
+
 
 # Use unicorn as the web server
 gem 'unicorn'

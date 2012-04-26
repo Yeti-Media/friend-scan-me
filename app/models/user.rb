@@ -19,10 +19,16 @@ class User
   embeds_one :instagram_info
   embeds_one :tumblr_info
   embeds_one :flickr_info
+  has_many :facebook_pages
 
 
   def self.find_or_create_with_omniauth(auth)
-    User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.new_with_omniauth(auth)
+    if user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) 
+      user.send("update_#{auth['provider']}", auth)
+    else  
+      user = User.new_with_omniauth(auth)
+    end
+    user
   end
 
   def self.new_with_omniauth(auth)
@@ -37,7 +43,9 @@ class User
   end
 
   def associate_provider(auth)
-    unless send("#{auth["provider"]}_info").present?
+    if send("#{auth["provider"]}_info").present?
+      self.send("update_#{auth["provider"]}" , auth)
+    else
       self.class.send("add_#{auth["provider"]}", self , auth)
       self.save
     end
@@ -51,19 +59,36 @@ class User
   private
 
   def self.add_facebook(user , auth)
-    info = FacebookInfo.new(uid: auth["uid"], user_name: auth["user_info"]["name"])
+    info = FacebookInfo.new(uid: auth["uid"], user_name: auth["user_info"]["name"], email: auth["user_info"]["email"])
+    FacebookPage.add_pages(user, auth)
     user.facebook_info = info
   end
+
+  def update_facebook(auth)
+    self.facebook_info.update_attributes(uid: auth["uid"], user_name: auth["user_info"]["name"], email: auth["user_info"]["email"])
+    FacebookPage.add_pages(self, auth)
+  end
+
 
   def self.add_twitter(user , auth)
     info = TwitterInfo.new(uid: auth["uid"], user_name: auth["user_info"]["nickname"])
     user.twitter_info = info
   end
 
+  def update_twitter(auth)
+    self.twitter_info.update_attributes(uid: auth["uid"], user_name: auth["user_info"]["nickname"])
+  end
+  
+
   def self.add_linked_in(user , auth)
     info = LinkedInInfo.new(uid: auth["user_info"]["name"],
                             profile_url: auth["user_info"]["public_profile_url"])
     user.linked_in_info = info
+  end
+
+  def update_linked_in(user , auth)
+    self.linked_in_info.update_attributes(uid: auth["user_info"]["name"],
+                                          profile_url: auth["user_info"]["public_profile_url"])
   end
 
   def self.add_last_fm(user , auth)

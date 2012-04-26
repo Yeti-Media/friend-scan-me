@@ -3,6 +3,7 @@ class FacebookInfo
 
   field :uid , type: String
   field :user_name, type: String
+  field :email , type: String
 
   embedded_in :user
 

@@ -1,0 +1,21 @@
+.top_bar
+  =link_to image_tag("fsm_logo_topbar.png"), "/"
+#wrap
+  .starburst
+    = render :partial => 'flash', :locals => {:flash => flash}
+    - if current_user
+      .top_nav
+        = link_to "Home", "/"
+        |
+        = link_to "Edit", "/cards/#{current_user.slug}/edit"
+        |
+        = link_to "Sign Out", signout_path , :method => :delete 
+    .vcard-container
+      .layer
+        .card-header
+          - @facebook_pages.each do |page|
+            %h5= page.name
+            = facebook_page_qr_code(page)
+            %br/
+            = link_to "view" , facebook_page_path(page.slug)
+            %br/

@@ -32,6 +32,10 @@ module CardsHelper
     image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(user.slug)}&size=#{w}x#{h}")
   end
 
+  def facebook_page_qr_code(facebook_page, w=150 ,h = 150)
+    image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=#{facebook_page_url(facebook_page.slug)}&size=#{w}x#{h}")
+  end
+
   def link_to_facebook(user)
     link_to "Facebook" , "http://facebook.com/profile.php?id=#{user.facebook_info.uid}" , popup: true
   end
