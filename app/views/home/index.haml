@@ -5,7 +5,8 @@
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
     .top_nav
-      %p= select_tag :locale , options_for_select(['en', 'es'] , params[:locale]) 
+      .w100      
+        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
       - if current_user
         %p.user_name
           = t('home.welcome')
@@ -16,7 +17,7 @@
           = link_to t('nav.edit'), edit_card_path(current_user.slug)
           |
           = link_to t("nav.sign_out"), signout_path , :method => :delete
-    - else
+      - else
     %section.wrapper
       .gutter1col
       .left_splash

@@ -194,7 +194,7 @@ a:hover {
 }
 
 .fb_ltr { position: relative !important; top: -3px; width: 130px !important; } /* fb widget ghetto align fix */
-
+.w100 { float: right; margin-left: 20px; width: 100px; }
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
