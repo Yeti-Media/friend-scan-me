@@ -48,8 +48,8 @@ production:
       consumer_key: 5T4pHIO2jnxqmwwn4kE5w
       consumer_secret: KGMCHC0pi1rKPzj9OETJXX4gigYkZe5iuckKZDA
     linkedin:
-      api_key: eh65xvmj536i
-      api_secret: w6ipurJaKfSEQWRj
+      api_key: vlpvjri8ee3m
+      api_secret: DV7bcBWHLFhRDO5Y
     last_fm:
       api_key: a8e0acba994680d34b46dacae3727f65
       api_secret: aef3976168f9c2291c158ca454c3c706

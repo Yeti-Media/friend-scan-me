@@ -41,7 +41,7 @@ module CardsHelper
   end
 
   def link_to_linkedin(user)
-    link_to "Linkedin", user.linked_in_info.profile_url , popup: true
+    link_to "Linkedin Profile", user.linkedin_info.profile_url , popup: true
   end
 
   def link_to_last_fm(user)
