@@ -1,4 +1,4 @@
-class LinkedInInfo
+class LinkedinInfo
   include Mongoid::Document
 
   field :uid , type: String
