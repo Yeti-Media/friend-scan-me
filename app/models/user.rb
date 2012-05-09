@@ -61,7 +61,7 @@ class User
   end
 
   def self.add_linkedin(user , auth)
-    info = LinkedinInfo.new(uid: auth["info"]["name"],
+    info = LinkedinInfo.new(uid: auth["info"]["name"], user_name:  auth["info"]["name"],
                             profile_url: auth["info"]['urls']["public_profile"])
     user.linkedin_info = info
   end
