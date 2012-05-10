@@ -5,11 +5,13 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
-        = link_to "Home", "/"
+        .w100      
+          = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+        = link_to t('nav.home'), locale_home_path
         |
-        = link_to "Edit", "/cards/#{@user.slug}/edit"
+        = link_to t('nav.edit'), edit_card_path(@user.slug)
         |
-        = link_to "Sign Out", signout_path , :method => :delete 
+        = link_to t('nav.sign_out'), signout_path , :method => :delete 
     .vcard-container
       .layer
         .card-header
@@ -33,7 +35,7 @@
                   = link_to_linkedin(@user)    
 
               %li.get-app.card-button
-                = link_to "Who is scanning you?", "/auth/facebook"
+                = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook"
           
     %br{:style => "clear:both"}/
     = render :partial => 'footer'

@@ -1,0 +1,7 @@
+<% if Rails.env.development? %>
+@onLoadFailed = (event, data) ->
+  text = data.xhr.responseText
+  newHtml = text.split(/<\/?html[^>]*>/g)[1]
+  $("html").html newHtml
+$(document).on "pageloadfailed", onLoadFailed
+<% end %>

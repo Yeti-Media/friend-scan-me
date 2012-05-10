@@ -1,15 +1,20 @@
 Friendscan::Application.routes.draw do
 
 
-  resources :cards
 
-  match 'auth/:provider/callback' => 'sessions#create'
-  match 'auth/failure' => 'sessions#failure'
-  match "/sessions/signout" => "sessions#destroy", :as => :signout
+  scope "/(:locale)", :locale => /en|es/ do
+    resources :cards
 
+    match '/auth/:provider/callback' => 'sessions#create', :as => :auth_provider_callback
+    match '/auth/failure' => 'sessions#failure'
+    match "/sessions/signout" => "sessions#destroy", :as => :signout
+  end
+
+  
+  match "/:locale" => "home#index" , :constraints => {:locale => /en|es/} , :as => :locale_home
+  match '/(:locale)/:slug_id' => 'cards#show', :as => :card_landing,  :constraints => {:locale => /en|es/}
   root :to => "home#index"
 
-  match '/:slug_id' => 'cards#show', :as => :card_landing
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
