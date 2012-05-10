@@ -29,7 +29,7 @@ module CardsHelper
   end
   
   def bookmark_qr_code(user, w=150 ,h = 150)
-    image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(user.slug)}&size=#{w}x#{h}")
+    image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=http://friendscan.me&size=#{w}x#{h}")
   end
 
   def link_to_facebook(user)
@@ -41,7 +41,7 @@ module CardsHelper
   end
 
   def link_to_linkedin(user)
-    link_to "Linkedin", user.linked_in_info.profile_url , popup: true
+    link_to "Linkedin Profile", user.linkedin_info.profile_url , popup: true
   end
 
   def link_to_last_fm(user)

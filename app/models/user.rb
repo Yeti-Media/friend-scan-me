@@ -12,7 +12,7 @@ class User
   embeds_one :card
   embeds_one :facebook_info
   embeds_one :twitter_info
-  embeds_one :linked_in_info
+  embeds_one :linkedin_info
   embeds_one :last_fm_info
   embeds_one :github_info
   embeds_one :foursquare_info
@@ -51,19 +51,19 @@ class User
   private
 
   def self.add_facebook(user , auth)
-    info = FacebookInfo.new(uid: auth["uid"], user_name: auth["user_info"]["name"])
+    info = FacebookInfo.new(uid: auth["uid"], user_name: auth["info"]["name"])
     user.facebook_info = info
   end
 
   def self.add_twitter(user , auth)
-    info = TwitterInfo.new(uid: auth["uid"], user_name: auth["user_info"]["nickname"])
+    info = TwitterInfo.new(uid: auth["uid"], user_name: auth["info"]["nickname"])
     user.twitter_info = info
   end
 
-  def self.add_linked_in(user , auth)
-    info = LinkedInInfo.new(uid: auth["user_info"]["name"],
-                            profile_url: auth["user_info"]["public_profile_url"])
-    user.linked_in_info = info
+  def self.add_linkedin(user , auth)
+    info = LinkedinInfo.new(uid: auth["info"]["name"], user_name:  auth["info"]["name"],
+                            profile_url: auth["info"]['urls']["public_profile"])
+    user.linkedin_info = info
   end
 
   def self.add_last_fm(user , auth)
