@@ -5,8 +5,8 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
-        = select_tag :locale , options_for_select(['en', 'es'] , params[:locale]) 
-        |
+        .w100      
+          = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
         = link_to t('nav.home'), locale_home_path
         |
         = link_to t('nav.edit'), edit_card_path(@user.slug)

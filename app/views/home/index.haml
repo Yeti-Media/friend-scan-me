@@ -26,9 +26,9 @@
       %nav.right_splash
         %ul
           %li.fb
-            = link_to t('home.facebook.connect') , "/auth/facebook",:id => "signin_"
+            = link_to t('home.facebook.connect') , "/auth/facebook",:id => "signin_", :"data-ajax" => "false"
           %li.tw.last
-            = link_to t('home.twitter.connect') , "/auth/twitter",:id => "signin_"
+            = link_to t('home.twitter.connect') , "/auth/twitter",:id => "signin_", :"data-ajax" => "false"
         %h4= t('home.title1')
         %h4
           %span &nbsp;
