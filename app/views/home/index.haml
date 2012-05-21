@@ -39,8 +39,8 @@
         .r1
           .gutter1col
           .d1
-            .heading
-              What is it?
+            .heading.wis
+              %h1 What is it?
           .d2
             %p= t 'home.wis1'
             %p= t 'home.wis2'
@@ -48,14 +48,16 @@
         .r1
           .gutter1col
           .d1
-            = image_tag ("title-qrc.png")
+            .heading.qrc
+              %h1 QR Code
           .d2
             %p= t 'home.qrc'
         .hr-dashed
         .r1
           .gutter1col
           .d1
-            = image_tag ("title-hts.png")
+            .heading.hts
+              %h1 How to start
           .d2
             %p= t 'home.hts1'
             %p= t 'home.hts2'

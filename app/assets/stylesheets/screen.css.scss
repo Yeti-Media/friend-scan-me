@@ -238,7 +238,7 @@ a:hover {
 		@include width(4.7);
 		p {
 			color: #ffffff;
-			font-size: 12px;
+			font-size: .75em;
 			font-weight: lighter;
 			line-height: 16px;
 			text-shadow: 1px 1px 1px #000000;
@@ -259,18 +259,42 @@ a:hover {
 	}
 	.d1 {
 		padding: 0 0 1em 0;
+		text-align: center;
+		h1 {
+			color: #ffffff;
+			font-family: 'Lobster', serif;
+			font-size: 2.5em;
+			font-weight: lighter;
+			margin: 0 auto;
+			padding-top: 7px;
+			text-shadow: 0px 1px 1px #000000;
+			width: 215px;
+		}
 		.heading {
+			height: 68px;
+			margin: 0 auto;
+			width: 245px;
+		}
+		.wis {
 			background: url(/assets/title-wis.png) no-repeat;
 			-moz-background-size: 245px auto;
 			-webkit-background-size: 245px auto;
 			-o-background-size: 245px auto;
 			background-size: 245px auto;
-			color: #ffffff;
-			font-family: 'Lobster', serif;
-			font-size: 3em;
-			height: 68px;
-			padding: 2px 0 0 20px;
-			text-shadow: 0px 1px 1px #000000;
+		}
+		.qrc {
+			background: url(/assets/title-qrc.png) no-repeat;
+			-moz-background-size: 245px auto;
+			-webkit-background-size: 245px auto;
+			-o-background-size: 245px auto;
+			background-size: 245px auto;
+		}
+		.hts {
+			background: url(/assets/title-hts.png) no-repeat;
+			-moz-background-size: 245px auto;
+			-webkit-background-size: 245px auto;
+			-o-background-size: 245px auto;
+			background-size: 245px auto;
 		}
 	}
 	.request { margin: 0; }
