@@ -92,11 +92,11 @@ nav.right_splash {
 			width: 280px;
 			height: 47px;
 			a {
-				color: #ffffff;
+				color: #ffffff !important;
 				display: block;
 				font-size: 1.2em;
-				font-weight: lighter;
-				padding: 10px 0 14px 60px;
+				font-weight: lighter !important;
+				padding: 12px 0 14px 55px;
 				text-decoration: none;
 				@include text-shadow(#000000, 1px, 1px, 0px);
 			}
@@ -180,15 +180,18 @@ footer {
   
   .request {
 		a, a:visited, a:link { 
-			color: #ffffff; 
+			color: #ffffff !important; 
 			font-size: .75em;
+			font-weight: lighter !important;
+			text-shadow: none !important;
 		}
-		a:hover { color: #999999; }
+		a:hover { color: #ffffff !important; }
   }
 }
 .hire-copyright { 
 	color: #fff;
 	font-size: .75em;
+	text-shadow: none;
 }
 
 a, a:visited {
@@ -201,7 +204,11 @@ a:hover {
 }
 
 .fb_ltr { position: relative !important; top: -3px; width: 130px !important; } /* fb widget ghetto align fix */
+.fb-like > span {
+	width: 160px !important;
+}
 
+.w100 { float: right; margin-left: 20px; width: 100px; }
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
@@ -211,7 +218,7 @@ a:hover {
 	}
 	.wrapper {
 		@include width(4.4);
-		margin: 0 auto;
+		margin: 20px auto 0;
 	}
 	.left_splash {
 		display: none;
@@ -232,8 +239,10 @@ a:hover {
 		p {
 			color: #ffffff;
 			font-size: 12px;
+			font-weight: lighter;
+			line-height: 16px;
 			text-shadow: 1px 1px 1px #000000;
-			padding: 0 5px;
+			padding: 0 5px 10px;
 		}
 		img {
 			width: 245px;
@@ -272,6 +281,9 @@ a:hover {
 }
 /* 640 */
 @media screen and (min-width: 40em) {
+	.wrapper {
+		margin: 0 auto;
+	}
 	.request { margin-right: 170px; }
 	.hire-copyright { display: inline; }
 

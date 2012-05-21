@@ -5,14 +5,16 @@
     = render :partial => 'flash', :locals => {:flash => flash}
     - if current_user
       .top_nav
-        = link_to "Home", "/"
+        .w100      
+          = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+        = link_to t('nav.home'), locale_home_path
         |
-        Edit
+        = t('nav.edit')
         |
-        = link_to "Show" , card_landing_path(@user.slug)
+        = link_to t('nav.show') , card_landing_path(@user.slug)
         |
         - if !is_mobile_device?
-          = link_to "Sign Out", signout_path , :method => :delete
+          = link_to t("nav.sign_out"), signout_path , :method => :delete
       .vcard-container
         .layer
           .card-header
@@ -22,8 +24,8 @@
               = image_tag("https://api.twitter.com/1/users/profile_image?screen_name=#{@user.twitter_info.user_name}", :class => "avatar")
             %h1.name= current_user.name
             - if !is_mobile_device?
-              = link_to "View your QR Code", "javascript:void(0)", :class => 'qr-code-link'
-              = link_to "Bookmark your card", "javascript:void(0)", :class => 'bookmark-link'
+              = link_to t("cards.edit.view_your_qr_code"), "javascript:void(0)", :class => 'qr-code-link'
+              = link_to t("cards.edit.bookmark_your_card"), "javascript:void(0)", :class => 'bookmark-link'
           .panel
             .social
               -#%nav.silvergradient
@@ -39,26 +41,25 @@
                         = image_tag_qr_code(@user)
                       .copy-odd
                         Scan this QR code and add
+                        = t('cards.edit.scan_legend_1')
                         %b= current_user.name
-                        as a friend instantly!
+                        = t('cards.edit.scan_legend_2') 
                   - else
                     #center.bookmark
                       .image= bookmark_qr_code(@user)
                       .copy-odd
-                        Scan the QR code &
-                        %b 
-                          add
-                          bookmark this page
-                        to start adding friends.
+                        = t('cards.edit.scan_legend_1')
+                        %b= t('cards.edit.bookmark_legend_1')
+                        = t('cards.edit.bookmark_legend_2')
                     #center.your-qr-code
                       .image
                         = image_tag_qr_code(@user)
                       .copy-odd
-                        Scan this QR code and 
+                        = t('cards.edit.scan_legend_1')
                         %b
-                          add
+                          = t('cards.edit.qr_code_legend_1')
                           = current_user.name
-                        as a friend instantly!
+                        = t('cards.edit.qr_code_legend_2')
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
                     %li.facebook

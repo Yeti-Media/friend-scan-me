@@ -1,0 +1,37 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+es:
+  home:
+    facebook:
+      connect: "Connectar con Facebook"
+    twitter:
+      connect: "Conectar con Twitter"
+    wis1: "Friend Scan Me es una nueva forma de  agregar amigos en Facebook y Twitter. Simplifica la forma de contactarse en el mundo real transformando tus redes sociales en un código QR." 
+    wis2: "Otros amigos pueden escanear tu código QR y agregarte como amigos instantaneamente. No más complicaciones con direcciones de email, sólo escanea, confirma y listo!"
+    qrc: "Código QR significa \"código de respuesta rápida\" (quick response code, por sus siglas en inglés). Es un tipo de matriz de código de barras diseñado para ser leido por smart phones. El código consiste en módulos negros ordenados en un patrón cuadrado."
+    hts1: "Solo registrate con Facebook o Twitter para conseguir el Código QR personalizado. Tus amigos pueden agregarte simplemente escaneando tu código QR."
+    hts2: "Escaneadores de códigos QR pueden ser encontrados en la tienda de applicaciones"
+    title1: "La mejor forma"
+    title2: "de añadir amigos."
+    welcome: "Bienvenido"
+  nav:
+   home: Home
+   edit: Editar
+   sign_out: "Salir"
+   show: "Código QR"
+  cards:
+    show:
+      who_is_scanning_you: "Quien te esta escaneando?"
+    edit:
+      view_your_qr_code: "Ve tu código QR"
+      bookmark_your_card: "Agrega Tu Tarjeta a Tus Favoritos"
+      scan_legend_1: "Escanea tu código QR"
+      scan_legend_2: "como amigo instantaneamente!"
+      bookmark_legend_1: "Agrega esta página a tus favoritos"
+      bookmark_legend_2: "para empezar a agregar amigos."
+      qr_code_legend_1: "y agrega a "
+      qr_code_legend_2: "como amigo instantaneamente!"
+    helpers:
+      link_to_add_facebook_friend: "Agregalo en Facebook"
+      link_to_twitter_follow: "Sigue a @"
+
