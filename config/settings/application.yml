@@ -30,7 +30,8 @@ defaults: &defaults
   domain: my.local
   site:
     url: http://my.local:3000
-
+  mobile:
+    token: '90bbf880f9dd2ec3459cb47d1feb67bc'
 development:
   <<: *defaults
 
