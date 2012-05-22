@@ -9,8 +9,6 @@
           = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
         = link_to t('nav.home'), locale_home_path
         |
-        = t('nav.edit')
-        |
         = link_to t('nav.show') , card_landing_path(@user.slug)
         |
         - if !is_mobile_device?
@@ -63,12 +61,12 @@
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
-                      = link_to "Add Your Facebook Account" , "/auth/facebook"
+                      = link_to t('cards.edit.add_facebook_button') , "/auth/facebook"
                   - if !current_user.has_social?(:twitter)  
                     %li.twitter
-                      = link_to "Add Your Twitter Account" , "/auth/twitter"
+                      = link_to t('cards.edit.add_twitter_button'), "/auth/twitter"
                   - if !current_user.has_social?(:linkedin)  
                     %li.linkedin
-                      = link_to "Add Your Linkedin Account" , "/auth/linkedin"    
-    = render :partial => 'footer'
-    = render :partial => 'google_conversions'
+                      = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin"    
+  = render :partial => 'footer'
+  = render :partial => 'google_conversions'
