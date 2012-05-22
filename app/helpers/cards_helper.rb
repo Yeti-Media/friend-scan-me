@@ -21,15 +21,15 @@ module CardsHelper
 
   # Edit HELPERS
   def link_to_qr_code(user, w=200 ,h = 200)
-    link_to "Your QRcode", "http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(user.slug)}&size=#{w}x#{h}"
+    link_to "Your QRcode", "http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&background_color=ffffff&color=244468&second_color=39c&prettify=true&url=#{card_landing_url(user.slug)}"
   end
   
   def image_tag_qr_code(user, w=150 ,h = 150)
-    image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(user.slug)}&size=#{w}x#{h}")
+    image_tag ("http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{card_landing_url(user.slug)}")
   end
   
   def bookmark_qr_code(user, w=150 ,h = 150)
-    image_tag ("http://api.qrserver.com/v1/create-qr-code/?data=http://friendscan.me&size=#{w}x#{h}")
+    image_tag ("http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=http://friendscan.me")
   end
 
   def link_to_facebook(user)
