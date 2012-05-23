@@ -11,6 +11,8 @@
         |
         = link_to t('nav.edit'), edit_card_path(@user.slug), :"data-ajax" => "false"
         |
+        = t('nav.show')
+        |
         = link_to t('nav.sign_out'), signout_path , :method => :delete, :"data-ajax" => "false"
     .vcard-container
       .layer

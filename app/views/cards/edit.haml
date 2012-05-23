@@ -11,6 +11,8 @@
         |
         = t('nav.edit')
         |
+        = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
+        |
         - if !is_mobile_device?
           = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
       .vcard-container
