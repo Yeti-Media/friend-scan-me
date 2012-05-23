@@ -61,12 +61,12 @@
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
-                      = link_to t('cards.edit.add_facebook_button') , "/auth/facebook"
+                      = link_to t('cards.edit.add_facebook_button') , "/auth/facebook", :"data-ajax" => "false"
                   - if !current_user.has_social?(:twitter)  
                     %li.twitter
-                      = link_to t('cards.edit.add_twitter_button'), "/auth/twitter"
+                      = link_to t('cards.edit.add_twitter_button'), "/auth/twitter", :"data-ajax" => "false"
                   - if !current_user.has_social?(:linkedin)  
                     %li.linkedin
-                      = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin"    
+                      = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin", :"data-ajax" => "false"
   = render :partial => 'footer'
   = render :partial => 'google_conversions'
