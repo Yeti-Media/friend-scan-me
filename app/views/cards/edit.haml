@@ -1,5 +1,5 @@
 .top_bar
-  =link_to image_tag("fsm_logo_topbar.png"), "/"
+  =link_to image_tag("fsm_logo_topbar.png"), "/", :"data-ajax" => "false"
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
@@ -7,14 +7,14 @@
       .top_nav
         .w100      
           = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
-        = link_to t('nav.home'), locale_home_path
+        = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
         |
         = t('nav.edit')
         |
-        = link_to t('nav.show') , card_landing_path(@user.slug)
+        = link_to t('nav.show') , card_landing_path(@user.slug), :"data-ajax" => "false"
         |
         - if !is_mobile_device?
-          = link_to t("nav.sign_out"), signout_path , :method => :delete
+          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
       .vcard-container
         .layer
           .card-header
@@ -63,12 +63,12 @@
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
-                      = link_to "Add Your Facebook Account" , "/auth/facebook"
+                      = link_to "Add Your Facebook Account" , "/auth/facebook", :"data-ajax" => "false"
                   - if !current_user.has_social?(:twitter)  
                     %li.twitter
-                      = link_to "Add Your Twitter Account" , "/auth/twitter"
+                      = link_to "Add Your Twitter Account" , "/auth/twitter", :"data-ajax" => "false"
                   - if !current_user.has_social?(:linkedin)  
                     %li.linkedin
-                      = link_to "Add Your Linkedin Account" , "/auth/linkedin"    
+                      = link_to "Add Your Linkedin Account" , "/auth/linkedin" , :"data-ajax" => "false"   
     = render :partial => 'footer'
     = render :partial => 'google_conversions'

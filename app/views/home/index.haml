@@ -12,11 +12,11 @@
           = t('home.welcome')
           = current_user.name
         %p.user_name
-          = link_to t('nav.show'), card_landing_path(current_user.slug)
+          = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
           |
-          = link_to t('nav.edit'), edit_card_path(current_user.slug)
+          = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
           |
-          = link_to t("nav.sign_out"), signout_path , :method => :delete
+          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
       - else
     %section.wrapper
       .gutter1col
