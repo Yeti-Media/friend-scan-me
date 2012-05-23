@@ -59,6 +59,10 @@
                           add
                           = current_user.name
                         as a friend instantly!
+                  #center
+                    %h2 
+                      Url:
+                      = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
