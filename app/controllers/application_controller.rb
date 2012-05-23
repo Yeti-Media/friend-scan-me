@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   has_mobile_fu
   helper_method :signed_in?, :current_user 
+  before_filter :set_locale
 
   private
 
@@ -17,6 +18,16 @@ class ApplicationController < ActionController::Base
     unless signed_in?
        redirect_to "/", :notice => "Please sign in first!"
     end
+  end
+
+
+  def set_locale
+     session[:locale] = params[:locale] if params[:locale].present?
+     I18n.locale = session[:locale] || I18n.default_locale
+  end
+
+  def default_url_options(options={})
+    { :locale => I18n.locale }
   end
 end
 
