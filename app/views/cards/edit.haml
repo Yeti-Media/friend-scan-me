@@ -38,6 +38,9 @@
                       .image
                         = image_tag_qr_code(@user)
                       .copy-odd
+                        %p.qr-link-label
+                          Links to:
+                          = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
                         Scan this QR code and add
                         %b= current_user.name
                         as a friend instantly!
@@ -45,6 +48,9 @@
                     #center.bookmark
                       .image= bookmark_qr_code(@user)
                       .copy-odd
+                        %p.qr-link-label
+                          %span Links to:
+                          = link_to "http://friendscan.me" , "http://friendscan.me"
                         Scan the QR code &
                         %b 
                           add
@@ -54,15 +60,14 @@
                       .image
                         = image_tag_qr_code(@user)
                       .copy-odd
+                        %p.qr-link-label
+                          %span Links to:
+                          = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
                         Scan this QR code and 
                         %b
                           add
                           = current_user.name
                         as a friend instantly!
-                  #center
-                    %h2 
-                      Url:
-                      = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
                   %br{:style=> "clear:both"}/
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
