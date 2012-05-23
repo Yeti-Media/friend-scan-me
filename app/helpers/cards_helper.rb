@@ -3,7 +3,7 @@ module CardsHelper
   # Show Helpers
 
   def link_to_add_facebook_friend(user)
-     link_to "Add as a Friend on Facebook",
+     link_to t('cards.helpers.link_to_add_facebook_friend'),
      "http://www.facebook.com/dialog/friends/?id=#{user.facebook_info.uid}&app_id=#{Settings.omniauth.facebook.app_id}&redirect_uri=#{request.url}"
   end
 
@@ -16,7 +16,7 @@ module CardsHelper
   end
 
   def link_to_twitter_follow(user)
-    link_to "Follow @#{user.twitter_info.user_name}", "https://twitter.com/intent/user?screen_name=#{user.twitter_info.user_name}", class: "twitter-follow-button" , target:'_new'
+    link_to t('cards.helpers.link_to_twitter_follow')+ user.twitter_info.user_name, "https://twitter.com/intent/user?screen_name=#{user.twitter_info.user_name}", class: "twitter-follow-button" , target:'_new'
   end
 
   # Edit HELPERS
@@ -41,7 +41,7 @@ module CardsHelper
   end
 
   def link_to_linkedin(user)
-    link_to "Linkedin Profile", user.linkedin_info.profile_url , popup: true
+    link_to(t("cards.helpers.link_to_linkedin"), user.linkedin_info.profile_url , popup: true)
   end
 
   def link_to_last_fm(user)

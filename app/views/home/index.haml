@@ -1,21 +1,23 @@
 = render :partial => "facebook_js_sdk"
 .top_bar
-  =image_tag ("fsm_logo_topbar.png")
+  = image_tag ("fsm_logo_topbar.png")
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    - if current_user
-      .top_nav
+    .top_nav
+      .w100      
+        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+      - if current_user
         %p.user_name
-          Welcome
+          = t('home.welcome')
           = current_user.name
         %p.user_name
-          = link_to "Show", "/#{current_user.slug}"
+          = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
           |
-          = link_to "Edit", "/cards/#{current_user.slug}/edit"
+          = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
           |
-          = link_to "Sign Out", signout_path , :method => :delete
-    - else
+          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
+      - else
     %section.wrapper
       .gutter1col
       .left_splash
@@ -24,41 +26,41 @@
       %nav.right_splash
         %ul
           %li.fb
-            %a{:href => "/auth/facebook", :id => "signin_"}
-              Connect with Facebook
-          %li.tw
-            %a{:href => '/auth/twitter' , :id => 'signin_'}
-              Sign in with Twitter
-        %h4 The easy way
+            = link_to t('home.facebook.connect') , "/auth/facebook",:id => "signin_", :"data-ajax" => "false"
+          %li.tw.last
+            = link_to t('home.twitter.connect') , "/auth/twitter",:id => "signin_", :"data-ajax" => "false"
+        %h4= t('home.title1')
         %h4
           %span &nbsp;
-          to add friends.
+          = t('home.title2')
     .orangeStripe
     .bg_mainContent
       .bgb
         .r1
           .gutter1col
           .d1
-            = image_tag ("title-wis.png")
+            .heading.wis
+              %h1= t 'home.what_is_it'
           .d2
-            %p Friend Scan Me is a new way to add friends on Facebook and Twitter in the real world. Simplify your real world life contacts by translating your social networks into a QR code.
-            %p Others can scan your QR code and add you as a friend instantly! No more fumbling with email addresses or spelling names, just scan, confirm, and you're done!
+            %p= t 'home.wis1'
+            %p= t 'home.wis2'
         .hr-dashed
         .r1
           .gutter1col
           .d1
-            = image_tag ("title-qrc.png")
+            .heading.qrc
+              %h1= t 'home.qr_code'
           .d2
-            %p QR Code stands for quick response code. It is a type of matrix bar code designed to be read by smart-phones. The code consists of black modules arranged in a square pattern.
+            %p= t 'home.qrc'
         .hr-dashed
         .r1
           .gutter1col
           .d1
-            = image_tag ("title-hts.png")
+            .heading.hts
+              %h1= t 'home.how_to_start'
           .d2
-            %p Just sign in with Facebook or Twitter to get your personalized QR code. Your friends can add you by simply scanning your QR code.
-
-            %p QR code scanners can be found in any application store or marketplace.
+            %p= t 'home.hts1'
+            %p= t 'home.hts2'
         .hr-dashed
       = render :partial => 'footer'
       = render :partial => 'social_marketing'
