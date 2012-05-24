@@ -1,6 +1,9 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 en:
+  og:
+    title: "Friend Scan Me translating you into a QR code."
+    description: "Friend Scan Me is a new way to add friends on Facebook and Twitter in the real world. Simplify your real world life contacts by translating your social networks into a QR code."
   home:
     facebook:
       connect: "Connect with Facebook"

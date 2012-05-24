@@ -1,6 +1,9 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 es:
+  og:
+    title: "Friend Scan Me Transforma a ti en un código QR."
+    description: "Friend Scan Me es una nueva forma de  agregar amigos en Facebook y Twitter. Simplifica la forma de contactarse en el mundo real transformando tus redes sociales en un código QR." 
   home:
     facebook:
       connect: "Connectar con Facebook"
@@ -10,7 +13,7 @@ es:
     wis1: "Friend Scan Me es una nueva forma de  agregar amigos en Facebook y Twitter. Simplifica la forma de contactarse en el mundo real transformando tus redes sociales en un código QR." 
     wis2: "Otros amigos pueden escanear tu código QR y agregarte como amigos instantaneamente. No más complicaciones con direcciones de email, sólo escanea, confirma y listo!"
     qr_code: "Código QR"
-    qrc: "Código QR significa \"código de respuesta rápida\" (quick response code, por sus siglas en inglés). Es un tipo de matriz de código de barras diseñado para ser leido por smart phones. El código consiste en módulos negros ordenados en un patrón cuadrado."
+    qrc: "Código QR significa \"código de respuesta rápida\" (Quick Response code, por sus siglas en inglés). Es un tipo de matriz de código de barras diseñado para ser leido por smart phones. El código consiste en módulos negros ordenados en un patrón cuadrado."
     how_to_start: "Cómo empezar"
     hts1: "Solo registrate con Facebook o Twitter para conseguir el Código QR personalizado. Tus amigos pueden agregarte simplemente escaneando tu código QR."
     hts2: "Escaneadores de códigos QR pueden ser encontrados en la tienda de applicaciones"
