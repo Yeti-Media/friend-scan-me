@@ -40,6 +40,9 @@
                       .image
                         = image_tag_qr_code(@user)
                       .copy-odd
+                        %p.qr-link-label
+                          Links to:
+                          = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
                         Scan this QR code and add
                         = t('cards.edit.scan_legend_1')
                         %b= current_user.name
@@ -48,6 +51,9 @@
                     #center.bookmark
                       .image= bookmark_qr_code(@user)
                       .copy-odd
+                        %p.qr-link-label
+                          %span Links to:
+                          = link_to "http://friendscan.me" , "http://friendscan.me"
                         = t('cards.edit.scan_legend_1')
                         %b= t('cards.edit.bookmark_legend_1')
                         = t('cards.edit.bookmark_legend_2')
@@ -55,6 +61,9 @@
                       .image
                         = image_tag_qr_code(@user)
                       .copy-odd
+                        %p.qr-link-label
+                          %span Links to:
+                          = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
                         = t('cards.edit.scan_legend_1')
                         %b
                           = t('cards.edit.qr_code_legend_1')
