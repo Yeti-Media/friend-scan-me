@@ -7,7 +7,7 @@
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  margin: 30px auto 0 !important;
+  margin: 40px auto 0 !important;
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
   box-shadow: 0 1px 3px #489CC6;
@@ -22,7 +22,8 @@
 }
 
 h1.name {
-  margin-top: 0;
+	font-size: 30px;
+  margin-top: 2px;
   margin-bottom: 0;
   text-shadow: 0 1px 0px #fff; }
 
@@ -41,6 +42,7 @@ img.avatar {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+	float: left;
 }
 
 .social {
@@ -98,6 +100,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
       padding: 20px 0px;
       text-align: center;
       .image {
+				img { height: auto; width: 150px; }
         border: 10px solid #ddd;
         height: 150px;
         margin: 0 auto;
