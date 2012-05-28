@@ -43,6 +43,20 @@ img.avatar {
   border-radius: 8px;
 }
 
+p.qr-link-label {
+	margin-bottom: 20px;
+	a {
+		color: #adadad !important;
+		font-weight: lighter !important;
+	}
+	a:hover {
+		text-decoration: underline !important;
+	}
+	span {
+		color: #adadad;
+		display: block;
+	}
+}
 .social {
   .your-qr-code {display:none;}
   .copy-odd {
