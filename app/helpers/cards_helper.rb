@@ -21,11 +21,11 @@ module CardsHelper
 
   # Edit HELPERS
   def link_to_qr_code(user, w=200 ,h = 200)
-    link_to "Your QRcode", "http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&background_color=ffffff&color=244468&second_color=39c&prettify=true&url=#{card_landing_url(user.slug)}"
+    link_to "Your QRcode", "http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&background_color=ffffff&color=244468&second_color=39c&prettify=true&url=#{card_landing_url(user.slug , :format => :qrcode)}"
   end
   
   def image_tag_qr_code(user, w=150 ,h = 150)
-    image_tag ("http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{card_landing_url(user.slug)}")
+    image_tag ("http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{card_landing_url(user.slug, :format => :qrcode)}")
   end
   
   def bookmark_qr_code(user, w=150 ,h = 150)

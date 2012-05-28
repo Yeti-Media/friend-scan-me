@@ -34,6 +34,11 @@
                   %li #{link_to "Add as Friend", "#"}
                   %li #{link_to "Card", card_landing_path(@user.slug)}
               %ul
+                %li.stats
+                  %h5 
+                    = t('cards.edit.total_scans')
+                    = @user.scan_stats
+                    
                 %li.qrcode          
                   - if is_mobile_device?
                     #center

@@ -6,6 +6,7 @@ class User
   field :name , type: String
   field :bio , type: String
   field :blog_url , type: String
+  field :scan_stats , type: Integer , default: 0
 
   slug :name
 
@@ -47,6 +48,11 @@ class User
     send("#{provider}_info").present?
   end
 
+
+  def update_stats
+    self.scan_stats += 1
+    self.save
+  end
 
   private
 

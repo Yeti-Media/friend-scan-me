@@ -29,6 +29,7 @@ es:
     show:
       who_is_scanning_you: "Quien te esta escaneando?"
     edit:
+      total_scans: "Escaneos Totales"
       add_facebook_button: "Agrega tu Facebook"
       add_twitter_button: "Agrega tu Twitter"
       add_linkedin_button: "Agrega tu Linkedin"
