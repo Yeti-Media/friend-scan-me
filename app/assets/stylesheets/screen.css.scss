@@ -353,6 +353,18 @@ a:hover {
 		@include width(6);
 		float: left;
 		padding: 0 0 2em 0;
+		.iphone {
+			width: 33%;
+			img { width: 59px; }
+		}
+		.android {
+			width: 33%;
+			img { width: 59px; }
+		}
+		.blackberry {
+			width: 33%;
+			img { width: 59px; }
+		}
 	}
 }
 /* 960 */
