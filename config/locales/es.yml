@@ -34,11 +34,11 @@ es:
       add_linkedin_button: "Agrega tu Linkedin"
       view_your_qr_code: "Ve tu código QR"
       bookmark_your_card: "Agrega Tu Tarjeta a Tus Favoritos"
-      scan_legend_1: "Escanea tu código QR"
+      scan_legend_1: "Escanea este código QR"
       scan_legend_2: "como amigo instantaneamente!"
       bookmark_legend_1: "Agrega esta página a tus favoritos"
       bookmark_legend_2: "para empezar a agregar amigos."
-      qr_code_legend_1: "y agrega a "
+      qr_code_legend_1: "para agregar a "
       qr_code_legend_2: "como amigo instantaneamente!"
     helpers:
       link_to_add_facebook_friend: "Agregalo en Facebook"
