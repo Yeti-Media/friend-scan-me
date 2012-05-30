@@ -43,10 +43,11 @@
                         %p.qr-link-label
                           Links to:
                           = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
-                        Scan this QR code and add
                         = t('cards.edit.scan_legend_1')
-                        %b= current_user.name
-                        = t('cards.edit.scan_legend_2') 
+                        %b
+                          = t('cards.edit.qr_code_legend_1')
+                          = current_user.name
+                        = t('cards.edit.qr_code_legend_2')
                   - else
                     #center.bookmark
                       .image= bookmark_qr_code(@user)
