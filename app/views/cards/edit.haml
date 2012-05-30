@@ -80,5 +80,11 @@
                   - if !current_user.has_social?(:linkedin)  
                     %li.linkedin
                       = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin", :"data-ajax" => "false"
+                  - if !current_user.has_social?(:instagram)  
+                    %li.instagram
+                      = link_to t('cards.edit.add_instagram_button') , "/auth/instagram", :"data-ajax" => "false"
+                  - if !current_user.has_social?(:github)  
+                    %li.github
+                      = link_to t('cards.edit.add_github_button') , "/auth/github", :"data-ajax" => "false"
   = render :partial => 'footer'
   = render :partial => 'google_conversions'
