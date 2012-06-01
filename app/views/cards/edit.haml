@@ -26,13 +26,11 @@
             - if !is_mobile_device?
               = link_to t("cards.edit.view_your_qr_code"), "javascript:void(0)", :class => 'qr-code-link'
               = link_to t("cards.edit.bookmark_your_card"), "javascript:void(0)", :class => 'bookmark-link'
+            %h5
+              = t('cards.edit.total_scans')
+              = @user.scan_stats
           .panel
             .social
-              %ul
-                %li.stats
-                  %h5 
-                    = t('cards.edit.total_scans')
-                    = @user.scan_stats
               %ul
                 %li.qrcode
                   - if is_mobile_device?
