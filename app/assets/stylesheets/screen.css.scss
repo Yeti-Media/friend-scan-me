@@ -14,6 +14,7 @@ body {
   font-family: $font-family;
   color: #333;
 }
+.padhalfem { padding-top: .5em; }
 .pad2em { padding-top: 2em; }
 .top_bar {
 	background: url(/assets/bg-topbar.gif);
@@ -350,20 +351,47 @@ a:hover {
 	.d2 {
 		@include width(6);
 		float: left;
-		padding: 0 0 2em 0;
+		padding: 0 0 2em 10px;
+		li { 
+			color: #ffffff;
+			font-size: 12px;
+			font-weight: lighter;
+			padding: 2px 0;
+			text-shadow: 0 1px 1px #000000; 
+		}
 		.iphone {
+			float: left;
 			width: 33%;
-			img { width: 59px; }
+			img { 
+				padding: 0 0 0 8px;
+				width: 65px; 
+			}
+			ul {
+				padding: 0 0 0 25px;
+			}
 		}
 		.android {
+			float: left;
 			width: 33%;
-			img { width: 59px; }
+			img { 
+				padding-top: 3px;
+				width: 100px; 
+			}
+			ul {
+				padding: 0 0 0 18px;
+			}
 		}
 		.blackberry {
+			float: left;
 			width: 33%;
-			img { width: 59px; }
+			img { 
+				width: 106px; 
+			}
+			ul {
+				padding: 0 0 0 18px;
+			}
 		}
-	}
+	}/* d2 */
 }
 /* 960 */
 @media screen and (min-width: 60em) {

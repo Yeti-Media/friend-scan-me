@@ -61,10 +61,34 @@
           .d2
             %p= t 'home.hts1'
             %p= t 'home.hts2'
+            .padhalfem
             .iphone
               = image_tag("logo-iphone.png")
+              %ul
+                %li 
+                  %a{ :href => "#1" }QR-Reader
+                %li 
+                  %a{ :href => "#1" }QRafter
+                %li 
+                  %a{ :href => "#1" }Shopsavvy
             .android
+              = image_tag("logo-android.png")
+              %ul
+                %li 
+                  %a{ :href => "#1" }QRDroid
+                %li 
+                  %a{ :href => "#1" }Quickmark
+                %li 
+                  %a{ :href => "#1" }Scanlife
             .blackberry
+              = image_tag("logo-blackberry.png")
+              %ul
+                %li 
+                  %a{ :href => "#1" }QR-Reader
+                %li 
+                  %a{ :href => "#1" }Code Muncher
+                %li 
+                  %a{ :href => "#1" }QR Code Scanner Pro
         .hr-dashed
       = render :partial => 'footer'
       = render :partial => 'social_marketing'
