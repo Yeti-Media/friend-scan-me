@@ -32,6 +32,8 @@ es:
       add_facebook_button: "Agrega tu Facebook"
       add_twitter_button: "Agrega tu Twitter"
       add_linkedin_button: "Agrega tu Linkedin"
+      add_instagram_button: "Agrega tu Instagram"
+      add_github_button: "Agrega tu Github"
       view_your_qr_code: "Ve tu código QR"
       bookmark_your_card: "Agrega Tu Tarjeta a Tus Favoritos"
       scan_legend_1: "Escanea este código QR"
@@ -44,4 +46,6 @@ es:
       link_to_add_facebook_friend: "Agregalo en Facebook"
       link_to_twitter_follow: "Sigue a @"
       link_to_linkedin: "Perfil en Linkedin"
+      link_to_instagram: "Síguelo en Instagram"
+      link_to_github: "Perfil en Github"
 

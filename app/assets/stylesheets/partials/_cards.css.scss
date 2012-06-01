@@ -145,6 +145,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
 			line-height: 65px;
 			text-indent: 65px;
     }
+    &.instagram a {
+      background: url(/assets/icn-instagram.png) no-repeat;
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
+    &.github a {
+      background: url(/assets/icn-github.png) no-repeat;
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
     &.myspace a {
       background: url(/assets/icn-myspace.png) no-repeat;
 			background-position: 20px 16px;
