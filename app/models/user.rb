@@ -65,6 +65,17 @@ class User
                             profile_url: auth["info"]['urls']["public_profile"])
     user.linkedin_info = info
   end
+  
+  def self.add_instagram(user , auth)
+    info = InstagramInfo.new(uid: auth["info"]["nickname"])
+    user.instagram_info = info
+  end
+
+  def self.add_github(user , auth)
+    info = GithubInfo.new(uid: auth["info"]["nickname"])
+    user.github_info = info
+  end
+
 
   def self.add_last_fm(user , auth)
     info = LastFmInfo.new(uid: auth["uid"],
@@ -72,20 +83,12 @@ class User
     user.last_fm_info = info
   end
 
-  def self.add_github(user , auth)
-    info = GithubInfo.new(uid: auth["user_info"]["nickname"])
-    user.github_info = info
-  end
 
   def self.add_foursquare(user , auth)
     info = FoursquareInfo.new(uid: auth["user_info"]["nickname"])
     user.foursquare_info = info
   end
 
-  def self.add_instagram(user , auth)
-    info = InstagramInfo.new(uid: auth["user_info"]["nickname"])
-    user.instagram_info = info
-  end
 
   def self.add_tumblr(user , auth)
     info = TumblrInfo.new(uid: auth["uid"])
