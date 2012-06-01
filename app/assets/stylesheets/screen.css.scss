@@ -7,6 +7,8 @@
 @import "partials/shared";
 @import "partials/cards";
 
+/* Override JQuery Mobile Styles --------------------------------------- */
+
 /* Layout -------------------------------------------------------------- */
 
 body {
@@ -57,6 +59,10 @@ body {
   margin: 0px;
 	padding-bottom: 0px;
 	text-align: right;
+	.ui-link {
+		color: #555555 !important;
+		font-weight: bold !important;
+	}
 }
 .wrapper {
 }
@@ -358,6 +364,10 @@ a:hover {
 			font-weight: lighter;
 			padding: 2px 0;
 			text-shadow: 0 1px 1px #000000; 
+		}
+		.ui-link {
+			color: #ffffff !important;
+			font-weight: lighter !important;
 		}
 		.iphone {
 			float: left;
