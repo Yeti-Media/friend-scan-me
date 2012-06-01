@@ -3,10 +3,10 @@
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    - if current_user
-      .top_nav
-        .w100
-          = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+    .top_nav
+      .w100
+        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+      - if current_user
         = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
         |
         = t('nav.edit')
@@ -15,8 +15,8 @@
         |
         - if !is_mobile_device?
           = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
-    - else
-      = link_to "Login", "/"
+      - else
+        = link_to "Login", "/"
     .vcard-container
       .layer
         .card-header
@@ -65,7 +65,7 @@
                       = t('cards.edit.scan_legend_1')
                       %b
                         = t('cards.edit.qr_code_legend_1')
-                        = current_user.name
+                        = @user.name
                       = t('cards.edit.qr_code_legend_2')
                 %br{:style=> "clear:both"}/
                 - if signed_in?
