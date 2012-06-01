@@ -60,6 +60,9 @@ p.qr-link-label {
 	}
 }
 .social {
+	.ui-link {
+		color: #333333 !important;
+	}
   .your-qr-code {display:none;}
   .copy-odd {
     background-color: #F8F8F8;
