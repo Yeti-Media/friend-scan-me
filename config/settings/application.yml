@@ -60,8 +60,8 @@ production:
       client_id: M0PXUCDR2ZRLUZCS13PTAG1XMENEPEIHYXH0IBBOLKKA34V4
       client_secret: 1RGCUZQCFG0TQXSUJZSG3NQNMBX5ZHN0WK35DOCCOU4NAKGT
     instagram:
-      client_id: e6df9dd1640742a3a202806c06aa02ee
-      client_secret: 4c26db9f73d94080b4b14cc1d340afbf
+      client_id: 23bcc58234c24462b9fa821d0cb048f7
+      client_secret: 202007bb64c44fc68e32ba023ca4f5a3
     tumblr:
       consumer_key: Ms1DdraaaeLcum1WPftJNIA7yA8iVYYkehZfFEhlGQYBGzp8Ew
       consumer_secret: KCHM6OEyDcH3ZTnk82YHTcPmY057Iit0AMzh3Mymw1Oh832NBG

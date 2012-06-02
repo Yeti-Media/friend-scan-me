@@ -35,7 +35,12 @@
               - if @user.has_social?(:linkedin)    
                 %li.linkedin
                   = link_to_linkedin(@user)    
-
+              - if @user.has_social?(:instagram)    
+                %li.instagram
+                  = link_to_instagram(@user)    
+              - if @user.has_social?(:github)    
+                %li.github
+                  = link_to_github(@user)    
               %li.get-app.card-button
                 = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook", :"data-ajax" => "false"
           
