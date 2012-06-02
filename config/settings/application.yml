@@ -54,8 +54,8 @@ production:
       api_key: a8e0acba994680d34b46dacae3727f65
       api_secret: aef3976168f9c2291c158ca454c3c706
     github:
-      api_key: 8cfa13b9870e279298a0
-      api_secret: ce6f105742bee2d914f0bcf106d98328ac4fdd81
+      api_key: a0c5eda36716426e807d
+      api_secret: 98843a42b36bd15ab2128bf17bb712e117ba9faa
     foursquare:
       client_id: M0PXUCDR2ZRLUZCS13PTAG1XMENEPEIHYXH0IBBOLKKA34V4
       client_secret: 1RGCUZQCFG0TQXSUJZSG3NQNMBX5ZHN0WK35DOCCOU4NAKGT
