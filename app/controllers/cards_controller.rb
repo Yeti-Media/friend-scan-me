@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_filter :authenticate_user , :except => [:show]
+  before_filter :authenticate_user , :except => [:show, :edit]
 
   def new
   end
@@ -16,7 +16,7 @@ class CardsController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    @user = current_user || User.find_by_slug(params[:id])
     @title = @user.name + " @"
     respond_to_mobile :edit
   end

@@ -7,7 +7,7 @@
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  margin: 30px auto 0 !important;
+  margin: 40px auto 0 !important;
   -webkit-box-shadow: 0 1px 3px #489CC6;
   -moz-box-shadow: 0 1px 3px #489CC6;
   box-shadow: 0 1px 3px #489CC6;
@@ -22,7 +22,8 @@
 }
 
 h1.name {
-  margin-top: 0;
+	font-size: 30px;
+  margin-top: 2px;
   margin-bottom: 0;
   text-shadow: 0 1px 0px #fff; }
 
@@ -45,9 +46,27 @@ img.avatar {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+	float: left;
 }
 
+p.qr-link-label {
+	margin-bottom: 20px;
+	a {
+		color: #adadad !important;
+		font-weight: lighter !important;
+	}
+	a:hover {
+		text-decoration: underline !important;
+	}
+	span {
+		color: #adadad;
+		display: block;
+	}
+}
 .social {
+	.ui-link {
+		color: #333333 !important;
+	}
   .your-qr-code {display:none;}
   .copy-odd {
     background-color: #F8F8F8;
@@ -102,6 +121,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
       padding: 20px 0px;
       text-align: center;
       .image {
+				img { height: auto; width: 150px; }
         border: 10px solid #ddd;
         height: 150px;
         margin: 0 auto;
@@ -127,6 +147,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
 		}
     &.linkedin a {
       background: url(/assets/icn-linkedin.png) no-repeat;
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
+    &.instagram a {
+      background: url(/assets/icn-instagram.png) no-repeat;
+			background-position: 20px 16px;
+			display: block;
+			line-height: 65px;
+			text-indent: 65px;
+    }
+    &.github a {
+      background: url(/assets/icn-github.png) no-repeat;
 			background-position: 20px 16px;
 			display: block;
 			line-height: 65px;

@@ -3,10 +3,10 @@
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    - if current_user
-      .top_nav
-        .w100      
-          = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false", :"data-ajax" => "false"
+    .top_nav
+      .w100      
+        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false", :"data-ajax" => "false"
+      - if current_user
         = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
         |
         = link_to t('nav.edit'), edit_card_path(@user.slug), :"data-ajax" => "false"
@@ -35,7 +35,12 @@
               - if @user.has_social?(:linkedin)    
                 %li.linkedin
                   = link_to_linkedin(@user)    
-
+              - if @user.has_social?(:instagram)    
+                %li.instagram
+                  = link_to_instagram(@user)    
+              - if @user.has_social?(:github)    
+                %li.github
+                  = link_to_github(@user)    
               %li.get-app.card-button
                 = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook", :"data-ajax" => "false"
           

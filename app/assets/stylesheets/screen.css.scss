@@ -44,8 +44,9 @@ body {
 }
 .starburst {
   background: url(/assets/bg-starburst.png) no-repeat top center;
-  padding: 0px 0px 50px 0px;
+  padding: 0;
   margin: 0 auto;
+	min-height: 600px;
 }
 .top_nav {
   text-align: right; 
@@ -209,7 +210,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.fb_ltr { position: relative !important; top: -3px; width: 130px !important; } /* fb widget ghetto align fix */
+.fb_ltr { position: relative !important; top: -3px; width: 150px !important; } /* fb widget ghetto align fix */
 .fb-like > span {
 	width: 160px !important;
 }
@@ -218,8 +219,9 @@ a:hover {
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
-	  padding: 0px 0px 50px 0px;
+	  padding: 0;
 	  margin: 0 auto;
+		min-height: 600px;
 	}
 	.wrapper {
 		@include width(4.4);

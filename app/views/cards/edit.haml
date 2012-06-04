@@ -3,53 +3,72 @@
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    = render :partial => 'topnav'
-      .vcard-container
-        .layer
-          .card-header
-            - if @user.has_social?(:facebook)
-              = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
-            - elsif @user.has_social?(:twitter)
-              = image_tag("https://api.twitter.com/1/users/profile_image?screen_name=#{@user.twitter_info.user_name}", :class => "avatar")
-            %h1.name= current_user.name
-            - if !is_mobile_device?
-              = link_to t("cards.edit.view_your_qr_code"), "javascript:void(0)", :class => 'qr-code-link'
-              = link_to t("cards.edit.bookmark_your_card"), "javascript:void(0)", :class => 'bookmark-link'
-          .panel
-            .social
-              -#%nav.silvergradient
-                %ul
-                  %li #{link_to "Home", "/"}
-                  %li #{link_to "Add as Friend", "#"}
-                  %li #{link_to "Card", card_landing_path(@user.slug)}
-              %ul
-                %li.qrcode          
-                  - if is_mobile_device?
-                    #center
-                      .image
-                        = image_tag_qr_code(@user)
-                      .copy-odd
-                        Scan this QR code and add
-                        = t('cards.edit.scan_legend_1')
-                        %b= current_user.name
-                        = t('cards.edit.scan_legend_2') 
-                  - else
-                    #center.bookmark
-                      .image= bookmark_qr_code(@user)
-                      .copy-odd
-                        = t('cards.edit.scan_legend_1')
-                        %b= t('cards.edit.bookmark_legend_1')
-                        = t('cards.edit.bookmark_legend_2')
-                    #center.your-qr-code
-                      .image
-                        = image_tag_qr_code(@user)
-                      .copy-odd
-                        = t('cards.edit.scan_legend_1')
-                        %b
-                          = t('cards.edit.qr_code_legend_1')
-                          = current_user.name
-                        = t('cards.edit.qr_code_legend_2')
-                  %br{:style=> "clear:both"}/
+    .top_nav
+      .w100
+        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+      - if current_user
+        = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
+        |
+        = t('nav.edit')
+        |
+        = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
+        |
+        - if !is_mobile_device?
+          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
+      - else
+        = link_to "Login", "/"
+    .vcard-container
+      .layer
+        .card-header
+          - if @user.has_social?(:facebook)
+            = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
+          - elsif @user.has_social?(:twitter)
+            = image_tag("https://api.twitter.com/1/users/profile_image?screen_name=#{@user.twitter_info.user_name}", :class => "avatar")
+          %h1.name= @user.name
+          - if !is_mobile_device?
+            = link_to t("cards.edit.view_your_qr_code"), "javascript:void(0)", :class => 'qr-code-link'
+            = link_to t("cards.edit.bookmark_your_card"), "javascript:void(0)", :class => 'bookmark-link'
+        .panel
+          .social
+            %ul
+              %li.qrcode          
+                - if is_mobile_device?
+                  #center
+                    .image
+                      = image_tag_qr_code(@user)
+                    .copy-odd
+                      %p.qr-link-label
+                        Links to:
+                        = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
+                      = t('cards.edit.scan_legend_1')
+                      %b
+                        = t('cards.edit.qr_code_legend_1')
+                        = @user.name
+                      = t('cards.edit.qr_code_legend_2')
+                - else
+                  #center.bookmark
+                    .image= bookmark_qr_code(@user)
+                    .copy-odd
+                      %p.qr-link-label
+                        %span Links to:
+                        = link_to "http://friendscan.me" , "http://friendscan.me"
+                      = t('cards.edit.scan_legend_1')
+                      %b= t('cards.edit.bookmark_legend_1')
+                      = t('cards.edit.bookmark_legend_2')
+                  #center.your-qr-code
+                    .image
+                      = image_tag_qr_code(@user)
+                    .copy-odd
+                      %p.qr-link-label
+                        %span Links to:
+                        = link_to card_landing_url(@user.slug), card_landing_url(@user.slug)
+                      = t('cards.edit.scan_legend_1')
+                      %b
+                        = t('cards.edit.qr_code_legend_1')
+                        = @user.name
+                      = t('cards.edit.qr_code_legend_2')
+                %br{:style=> "clear:both"}/
+                - if signed_in?
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
                       = link_to t('cards.edit.add_facebook_button') , "/auth/facebook", :"data-ajax" => "false"
@@ -59,5 +78,11 @@
                   - if !current_user.has_social?(:linkedin)  
                     %li.linkedin
                       = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin", :"data-ajax" => "false"
+                  - if !current_user.has_social?(:instagram)  
+                    %li.instagram
+                      = link_to t('cards.edit.add_instagram_button') , "/auth/instagram", :"data-ajax" => "false"
+                  - if !current_user.has_social?(:github)  
+                    %li.github
+                      = link_to t('cards.edit.add_github_button') , "/auth/github", :"data-ajax" => "false"
   = render :partial => 'footer'
   = render :partial => 'google_conversions'

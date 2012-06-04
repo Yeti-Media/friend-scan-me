@@ -11,7 +11,8 @@ gem "omniauth"
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-linkedin'
-
+gem 'omniauth-instagram'
+gem 'omniauth-github'
 
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0"
