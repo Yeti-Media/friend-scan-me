@@ -3,20 +3,7 @@
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    .top_nav
-      .w100
-        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
-      - if current_user
-        = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
-        |
-        = t('nav.edit')
-        |
-        = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
-        |
-        - if !is_mobile_device?
-          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
-      - else
-        = link_to "Login", "/"
+    = render :partial => 'topnav', :locals => { :current_page => 'edit' }
     .vcard-container
       .layer
         .card-header

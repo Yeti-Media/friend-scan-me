@@ -4,20 +4,7 @@
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    .top_nav
-      .w100      
-        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
-      - if current_user
-        %p.user_name
-          = t('home.welcome')
-          = current_user.name
-        %p.user_name
-          = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
-          |
-          = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
-          |
-          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
-      - else
+    = render :partial => 'topnav', :locals => { :current_page => 'home' }
     %section.wrapper
       .gutter1col
       .left_splash
