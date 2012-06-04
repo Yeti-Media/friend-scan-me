@@ -15,6 +15,8 @@
         |
         - if !is_mobile_device?
           = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
+        - else
+          = link_to "Login", "/"
       .vcard-container
         .layer
           .card-header
@@ -22,7 +24,7 @@
               = image_tag("http://graph.facebook.com/#{@user.facebook_info.uid}/picture", :class => "avatar")
             - elsif @user.has_social?(:twitter)
               = image_tag("https://api.twitter.com/1/users/profile_image?screen_name=#{@user.twitter_info.user_name}", :class => "avatar")
-            %h1.name= current_user.name
+            %h1.name= @user.name
             - if !is_mobile_device?
               = link_to t("cards.edit.view_your_qr_code"), "javascript:void(0)", :class => 'qr-code-link'
               = link_to t("cards.edit.bookmark_your_card"), "javascript:void(0)", :class => 'bookmark-link'
@@ -32,7 +34,7 @@
           .panel
             .social
               %ul
-                %li.qrcode
+                %li.qrcode          
                   - if is_mobile_device?
                     #center
                       .image
@@ -44,7 +46,7 @@
                         = t('cards.edit.scan_legend_1')
                         %b
                           = t('cards.edit.qr_code_legend_1')
-                          = current_user.name
+                          = @user.name
                         = t('cards.edit.qr_code_legend_2')
                   - else
                     #center.bookmark
@@ -66,17 +68,24 @@
                         = t('cards.edit.scan_legend_1')
                         %b
                           = t('cards.edit.qr_code_legend_1')
-                          = current_user.name
+                          = @user.name
                         = t('cards.edit.qr_code_legend_2')
                   %br{:style=> "clear:both"}/
-                  - if !current_user.has_social?(:facebook)
-                    %li.facebook
-                      = link_to t('cards.edit.add_facebook_button') , "/auth/facebook", :"data-ajax" => "false"
-                  - if !current_user.has_social?(:twitter)
-                    %li.twitter
-                      = link_to t('cards.edit.add_twitter_button'), "/auth/twitter", :"data-ajax" => "false"
-                  - if !current_user.has_social?(:linkedin)
-                    %li.linkedin
-                      = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin", :"data-ajax" => "false"
+                  - if signed_in?
+                    - if !current_user.has_social?(:facebook)
+                      %li.facebook
+                        = link_to t('cards.edit.add_facebook_button') , "/auth/facebook", :"data-ajax" => "false"
+                    - if !current_user.has_social?(:twitter)
+                      %li.twitter
+                        = link_to t('cards.edit.add_twitter_button'), "/auth/twitter", :"data-ajax" => "false"
+                    - if !current_user.has_social?(:linkedin)
+                      %li.linkedin
+                        = link_to t('cards.edit.add_linkedin_button') , "/auth/linkedin", :"data-ajax" => "false"
+                    - if !current_user.has_social?(:instagram)  
+                      %li.instagram
+                        = link_to t('cards.edit.add_instagram_button') , "/auth/instagram", :"data-ajax" => "false"
+                    - if !current_user.has_social?(:github)  
+                      %li.github
+                        = link_to t('cards.edit.add_github_button') , "/auth/github", :"data-ajax" => "false"
   = render :partial => 'footer'
   = render :partial => 'google_conversions'
