@@ -6,6 +6,7 @@ class CardsController < ApplicationController
 
   def show
     @user = User.find_by_slug(params[:slug_id])
+    @user.update_stats if request.format == :qrcode
     @title = @user.name + " @"
     respond_to_mobile :show
   end
@@ -38,6 +39,7 @@ class CardsController < ApplicationController
       format.mobile {render content}
     end
   end
+
 
 end
 
