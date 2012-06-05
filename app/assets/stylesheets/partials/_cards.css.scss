@@ -32,6 +32,10 @@ p.role {
   color: #999; }
 
 .panel {
+	.ui-link {
+		color: #555555 !important;
+		font-weight: bold !important;
+	}
   p {
     margin: 0 0px 0px 0px;
     color: #666; }

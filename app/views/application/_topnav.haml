@@ -1,0 +1,28 @@
+.top_nav
+  .w100      
+    = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+  - if current_user
+    %p.user_name
+      = t('home.welcome')
+      = current_user.name
+    %p.user_name
+      - if current_page == "home"
+        = t('nav.home')
+      - else
+        = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
+      |
+      - if current_page == "edit"
+        = t('nav.edit')
+      - else
+        = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
+      |
+      - if current_page == "show"
+        = t('nav.show')
+      - else
+        = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
+      |
+      = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
+  - else
+    - if current_page == "edit"
+      = link_to "Login", "/"
+    - else
