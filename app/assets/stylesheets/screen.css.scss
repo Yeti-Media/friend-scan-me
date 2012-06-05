@@ -393,6 +393,11 @@ a:hover {
 		float: left;
 		height: 1em;
 	}
+	.gutter3col {
+		@include width(2.5);
+		float: left;
+		height: 1em;
+	}
 	.r1 {
 		@include width(11);
 		overflow: hidden;
@@ -453,7 +458,7 @@ a:hover {
 /* 960 */
 @media screen and (min-width: 60em) {
 	.wrapper {
-		@include width(11);
+		@include width(14);
 		overflow: hidden;
 		padding-top: 30px;
 	}
@@ -483,5 +488,17 @@ a:hover {
 	.left_splash {
 	}
 	nav.right_splash {
+	}
+}
+/* 1152 */
+@media screen and (min-width: 72em) {
+	.wrapper {
+	}
+	.left_splash {
+	}
+	nav.right_splash {
+	}
+	.gutter3col {
+		@include width(3.25);
 	}
 }
