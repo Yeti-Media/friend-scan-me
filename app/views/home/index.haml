@@ -4,22 +4,9 @@
 #wrap
   .starburst
     = render :partial => 'flash', :locals => {:flash => flash}
-    .top_nav
-      .w100      
-        = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
-      - if current_user
-        %p.user_name
-          = t('home.welcome')
-          = current_user.name
-        %p.user_name
-          = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
-          |
-          = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
-          |
-          = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
-      - else
+    = render :partial => 'topnav', :locals => { :current_page => 'home' }
     %section.wrapper
-      .gutter1col
+      .gutter3col
       .left_splash
         = image_tag ("phone_android.png"), :id => "phone_pic"
       .gutter1col
@@ -61,6 +48,34 @@
           .d2
             %p= t 'home.hts1'
             %p= t 'home.hts2'
+            .padhalfem
+            .iphone
+              = image_tag("logo-iphone.png")
+              %ul
+                %li
+                  %a{ :href => "http://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8&uo=4", :target => "itunes_store"}QR-Reader
+                %li
+                  %a{ :href => "http://itunes.apple.com/us/app/qrafter-qr-code-reader-generator/id416098700?mt=8&uo=4", :target => "itunes_store" }QRafter
+                %li
+                  %a{ :href => "http://itunes.apple.com/us/app/shopsavvy-barcode-scanner/id338828953?mt=8&uo=4", :target => "itunes_store" }Shopsavvy
+            .android
+              = image_tag("logo-android.png")
+              %ul
+                %li 
+                  %a{ :href => "https://play.google.com/store/apps/details?id=la.droid.qr#?t=W251bGwsMSwxLDIxMiwibGEuZHJvaWQucXIiXQ..", :target => "android_store" }QRDroid
+                %li 
+                  %a{ :href => "https://play.google.com/store/apps/details?id=tw.com.quickmarklite#?t=W251bGwsMSwxLDIxMiwidHcuY29tLnF1aWNrbWFya2xpdGUiXQ..", :target => "android_store" }Quickmark Lite
+                %li 
+                  %a{ :href => "https://play.google.com/store/apps/details?id=com.ScanLife#?t=W251bGwsMSwxLDIxMiwiY29tLlNjYW5MaWZlIl0.", :target => "android_store" }Scanlife
+            .blackberry
+              = image_tag("logo-blackberry.png")
+              %ul
+                %li 
+                  %a{ :href => "https://appworld.blackberry.com/webstore/content/86361/?lang=en", :target => "blackberry_store" }QR-Reader
+                %li 
+                  %a{ :href => "https://appworld.blackberry.com/webstore/content/22249/?lang=en", :target => "blackberry_store" }Code Muncher
+                %li 
+                  %a{ :href => "https://appworld.blackberry.com/webstore/content/13962/?lang=en", :target => "blackberry_store" }QR Code Scanner Pro
         .hr-dashed
       = render :partial => 'footer'
       = render :partial => 'social_marketing'
