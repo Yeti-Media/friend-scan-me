@@ -54,12 +54,13 @@ body {
   a {color: #0F628C;
     font-weight: bold;
     letter-spacing: -1px;
-    text-shadow: 0 1px 0 #ffffff;}}
+    text-shadow: 0 1px 0px #d7f1ff;}}
 
 .user_name {
   margin: 0px;
 	padding-bottom: 0px;
 	text-align: right;
+	text-shadow: 0 1px 1px #f8f8f8;
 	.ui-link {
 		font-weight: bold !important;
 	}
@@ -247,7 +248,7 @@ a:hover {
 			font-size: .75em;
 			font-weight: lighter;
 			line-height: 16px;
-			text-shadow: 1px 1px 1px #000000;
+			text-shadow: 0px 1px 1px #0b151f;
 			padding: 0 5px 10px;
 		}
 		img {
