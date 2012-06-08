@@ -2,6 +2,8 @@ require 'api_constraints'
 
 Friendscan::Application.routes.draw do
 
+  match "/faq" => "home#faq"
+  match "/terms" => "home#terms"
   namespace :api, defaults: {format: 'json'} do
     namespace :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       resource :authentication , :controller => 'authentication'
