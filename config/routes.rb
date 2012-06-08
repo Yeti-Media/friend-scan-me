@@ -1,7 +1,21 @@
+require 'api_constraints'
+
 Friendscan::Application.routes.draw do
 
   match "/faq" => "home#faq"
   match "/terms" => "home#terms"
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resource :authentication , :controller => 'authentication'
+      resource :user do
+        member do
+          get :qr_code
+        end
+      end
+    end
+  end
+
+
 
   scope "/(:locale)", :locale => /en|es/ do
     resources :cards
