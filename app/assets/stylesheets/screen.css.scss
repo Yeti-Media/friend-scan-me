@@ -19,7 +19,7 @@ body {
 .padhalfem { padding-top: .5em; }
 .pad2em { padding-top: 2em; }
 .top_bar {
-	background: url(/assets/bg-topbar.gif);
+	background: url(/assets/bg-topbar.png) #d2e7ff;
 	-moz-box-shadow: black 0 5px 5px;
 	-webkit-box-shadow: black 0 5px 5px;
 	box-shadow: black 0 5px 5px;
@@ -27,7 +27,7 @@ body {
   font-family: 'Lobster', cursive;
 	padding-top: 10px;
   text-align: center; 
-	height: 43px;
+	height: 42px;
 	p {
 		font-size: 2em;
 	}
@@ -37,7 +37,9 @@ body {
   } 
 	img { width: 171px; }
 }
-  
+.faq {
+	background: url(/assets/bg-topbar.png) #1b3653;
+	}  
 #wrap {
   @include clearfix;
   background: #3399cc url(/assets/bg.png) repeat-x;
@@ -173,7 +175,37 @@ h2 {
 #right {
   padding: 1%;
 }
-
+/* FAQ Page styles */
+.bg-plaid {
+	background: url(/assets/bgBluePlaid.png) repeat;
+	h1, h2 {
+		color: #f5f5f5;
+		font-family: 'Futura', 'Helvetica', 'Arial', sans-serif;
+		font-weight: lighter;
+		text-shadow: 0 1px 1px #000000;
+	}
+	h1 {
+		padding: 40px 0;
+	}
+	h2 {
+		padding: 0 0 5px 0;
+	}
+	p {
+		color: #f8f8f8;
+		font-family: 'PT Sans Narrow', Arial, sans-serif;
+		font-weight: lighter;
+		padding-bottom: 40px;
+		text-shadow: 0 1px 0 #000000;
+	}
+	.ui-link {
+		color: #ffec6e !important;
+		font-weight: lighter !important;
+	}
+}
+.w8col {
+	margin: 0 auto;
+}
+/* Footer Style */
 footer {
   div {display: inline;}
   clear: both;
@@ -214,7 +246,6 @@ a:hover {
 .fb-like > span {
 	width: 160px !important;
 }
-
 .w100 { float: right; margin-left: 20px; width: 100px; }
 @media screen and (min-width: 0) {
 	.starburst {
@@ -353,9 +384,38 @@ a:hover {
 	}
 	.request { margin: 0; }
 	.hire-copyright { display: block; }
+	/* FAQ Page styles */
+	.bg-plaid {
+		h1 {
+			font-size: 1.25em;
+			padding: 30px 0;
+		}
+		h2 {
+			font-size: 1.1em;
+			padding: 0 0 5px 0;
+			letter-spacing: 0;
+		}
+		p { font-size: .9em; }
+	}
+	.w8col { @include width(4); }
 }
 /* 480 */
 @media screen and (min-width: 30em) {
+/* FAQ Page styles */
+.bg-plaid {
+	background: url(/assets/bgBluePlaid.png) repeat;
+	h1 {
+		font-size: 1.5em;
+		padding: 40px 0;
+	}
+	h2 {
+		font-size: 1.1em;
+		padding: 0 0 5px 0;
+		letter-spacing: 0;
+	}
+	p { font-size: .9em; }
+}
+.w8col { @include width(6); }
 }
 /* 640 */
 @media screen and (min-width: 40em) {
@@ -478,6 +538,40 @@ a:hover {
 	}
 	#bg_blog {
 		@include width(11);
+		margin: 0 auto;
+	}
+	/* FAQ Page styles */
+	.bg-plaid {
+		background: url(/assets/bgBluePlaid.png) repeat;
+		h1, h2 {
+			color: #f5f5f5;
+			font-family: 'Futura', 'Helvetica', 'Arial', sans-serif;
+			font-weight: lighter;
+			letter-spacing: 2px;
+			text-shadow: 0 1px 1px #000000;
+		}
+		h1 {
+			padding: 40px 0;
+		}
+		h2 {
+			font-size: 1.4em;
+			padding: 0 0 5px 0;
+		}
+		p {
+			color: #d7d7d7;
+			font-family: 'PT Sans Narrow', Arial, sans-serif;
+			font-size: 1.25em;
+			font-weight: lighter;
+			padding-bottom: 40px;
+			text-shadow: 0 1px 0 #000000;
+		}
+		.ui-link {
+			color: #ffec6e !important;
+			font-weight: lighter !important;
+		}
+	}
+	.w8col {
+		@include width(8);
 		margin: 0 auto;
 	}
 }
