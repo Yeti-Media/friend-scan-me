@@ -1,6 +1,7 @@
 Friendscan::Application.routes.draw do
 
-
+  match "/faq" => "home#faq"
+  match "/terms" => "home#terms"
 
   scope "/(:locale)", :locale => /en|es/ do
     resources :cards

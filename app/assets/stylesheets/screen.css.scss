@@ -57,8 +57,8 @@ body {
     font-weight: bold;
     letter-spacing: -1px;
     text-shadow: 0 1px 0px #d7f1ff;}}
-
-.user_name {
+.w100 { float: right; margin-left: 20px; width: 100px; }
+p.user_name {
   margin: 0px;
 	padding-bottom: 0px;
 	text-align: right;
@@ -197,6 +197,16 @@ h2 {
 		padding-bottom: 40px;
 		text-shadow: 0 1px 0 #000000;
 	}
+	.top_nav p.user_name { 
+		color: #fefefe;
+		font-size: 1em;
+		font-weight: lighter !important; 
+		padding-bottom: 0px; 
+		.ui-link { 
+			color: #0F628C !important; 
+			font-weight: lighter !important;
+			text-shadow: 0px 1px 0 #111e3c; }
+	}
 	.ui-link {
 		color: #ffec6e !important;
 		font-weight: lighter !important;
@@ -218,6 +228,8 @@ footer {
   }
   
   .request {
+		color: #ffffff;
+		font-weight: lighter;
 		a, a:visited, a:link { 
 			color: #ffffff !important; 
 			font-size: .75em;
@@ -246,7 +258,7 @@ a:hover {
 .fb-like > span {
 	width: 160px !important;
 }
-.w100 { float: right; margin-left: 20px; width: 100px; }
+
 @media screen and (min-width: 0) {
 	.starburst {
 	  background: url(/assets/bg-starburst.png) no-repeat top center;
@@ -383,7 +395,7 @@ a:hover {
 		}
 	}
 	.request { margin: 0; }
-	.hire-copyright { display: block; }
+	.hire-copyright { display: block; padding-top: 10px; }
 	/* FAQ Page styles */
 	.bg-plaid {
 		h1 {
@@ -422,8 +434,8 @@ a:hover {
 	.wrapper {
 		margin: 0 auto;
 	}
-	.request { margin-right: 170px; }
-	.hire-copyright { display: inline; }
+	.request { margin: 0; }
+	.hire-copyright { display: block; padding-top: 10px; }
 
 }
 /* 768 */
