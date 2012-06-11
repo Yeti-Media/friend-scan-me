@@ -19,7 +19,8 @@
       |
       = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
   - else
-    = link_to "Login", "/"
+    %p.user_name
+      = link_to "Login", "/"
   .w8col
     %h1 Frequently Asked Questions
     %h2 What social media platforms do you support?

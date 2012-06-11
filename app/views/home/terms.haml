@@ -19,7 +19,8 @@
       |
       = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
   - else
-    = link_to "Login", "/"
+    %p.user_name
+      = link_to "Login", "/"
   .w8col
     %h1 Terms of Service
 
@@ -37,14 +38,6 @@
 
     %h2 Copyright
     %p No artwork, graphics or written content may be copied or reproduced from this site without our prior permission.
-
-    %h2 Privacy Policy
-    %p
-      Friendscan.me and Yeti-Media do not have any access to personal information. This information is ONLY used for statistical purposes of Yeti-media.
-      When you sign up with your email address by completing a web form, we will only use your email address for the purposes for which it was provided. We will not subscribe your email address to any mailing list.
-    %p
-      We respect your privacy. Your information is confidential and will not be sold or shared with other companies or individuals.
-      External sites that are linked to or from Friendscan.me site are not under our control or responsibility and you are advised to review their privacy statement.
 
     %h2 Disclaimer
     %p 
