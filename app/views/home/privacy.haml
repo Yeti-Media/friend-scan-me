@@ -1,0 +1,33 @@
+= render :partial => "facebook_js_sdk"
+= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Sans+Narrow'
+.top_bar.faq
+  =link_to image_tag("fsm_logo_topbar.png"), "/", :"data-ajax" => "false"
+.bg-plaid
+  -#= render :partial => 'topnav', :locals => { :current_page => 'faq' }
+  .top_nav
+  .w100      
+  - if current_user
+    %p.user_name
+      = t('home.welcome')
+      = current_user.name
+    %p.user_name
+      = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
+      |
+      = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
+      |
+      = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
+      |
+      = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
+  - else
+    %p.user_name
+      = link_to "Login", "/"
+  .w8col
+    %h1 Privacy Policy
+    %p
+      Friendscan.me and Yeti-Media do not have any access to personal information. This information is ONLY used for statistical purposes of Yeti-media.
+      When you sign up with your email address by completing a web form, we will only use your email address for the purposes for which it was provided. We will not subscribe your email address to any mailing list.
+    %p
+      We respect your privacy. Your information is confidential and will not be sold or shared with other companies or individuals.
+      External sites that are linked to or from Friendscan.me site are not under our control or responsibility and you are advised to review their privacy statement.
+  = render :partial => 'footer'
+  = render :partial => 'social_marketing'
