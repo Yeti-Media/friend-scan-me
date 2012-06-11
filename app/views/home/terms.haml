@@ -3,7 +3,23 @@
 .top_bar.faq
   =link_to image_tag("fsm_logo_topbar.png"), "/", :"data-ajax" => "false"
 .bg-plaid
-  = render :partial => 'topnav', :locals => { :current_page => 'faq' }
+  -#= render :partial => 'topnav', :locals => { :current_page => 'faq' }
+  .top_nav
+  .w100      
+  - if current_user
+    %p.user_name
+      = t('home.welcome')
+      = current_user.name
+    %p.user_name
+      = link_to t('nav.home'), locale_home_path, :"data-ajax" => "false"
+      |
+      = link_to t('nav.edit'), edit_card_path(current_user.slug), :"data-ajax" => "false"
+      |
+      = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
+      |
+      = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
+  - else
+    = link_to "Login", "/"
   .w8col
     %h1 Terms of Service
 
