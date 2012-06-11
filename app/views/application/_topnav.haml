@@ -1,6 +1,6 @@
 .top_nav
   .w100      
-    = select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
+    -#= select_tag :locale, options_for_select(['en', 'es'] , params[:locale]), :"data-native-menu" => "false"
   - if current_user
     %p.user_name
       = t('home.welcome')
