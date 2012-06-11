@@ -4,6 +4,7 @@ Friendscan::Application.routes.draw do
 
   match "/faq" => "home#faq"
   match "/terms" => "home#terms"
+  match "/privacy" => "home#privacy"
   namespace :api, defaults: {format: 'json'} do
     namespace :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       resource :authentication , :controller => 'authentication'
