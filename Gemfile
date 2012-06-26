@@ -29,6 +29,7 @@ gem 'settingslogic'
 gem 'zazzle'
 gem 'mobile-fu'
 gem "airbrake"
+gem "rack-offline", "~> 0.6.2"
 
 # Use unicorn as the web server
 gem 'unicorn'
