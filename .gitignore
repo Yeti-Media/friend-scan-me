@@ -6,3 +6,4 @@ tmp/
 .rbenv-version
 vendor/bundle
 .DS_Store
+public/assets
