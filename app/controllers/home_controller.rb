@@ -4,7 +4,17 @@ class HomeController < ApplicationController
   def index
     respond_to_mobile :index
   end
-  
+ 
+
+  def manifest
+    manifest = Manifest.new
+    #add_files
+    manifest.files << card_landing_url(current_user.slug)
+    #add_dirs
+    manifest.dirs[Rails.public_path] = ['assets/*']
+    render text: manifest.manifest!
+  end
+
   private
   
   def respond_to_mobile(content)
