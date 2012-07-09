@@ -55,6 +55,8 @@
                         = @user.name
                       = t('cards.edit.qr_code_legend_2')
                 %br{:style=> "clear:both"}/
+                %li 
+                  = tweet(t('cards.edit.tweet'), edit_card_url(@user.slug))
                 - if signed_in?
                   - if !current_user.has_social?(:facebook)
                     %li.facebook

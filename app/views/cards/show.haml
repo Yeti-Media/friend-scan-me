@@ -33,6 +33,8 @@
                   = link_to_github(@user)    
               %li.get-app.card-button
                 = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook", :"data-ajax" => "false"
+              %li.get-app.card-button
+                = tweet(t("cards.show.tweet"), card_landing_url(@user.slug))
           
     %br{:style => "clear:both"}/
     = render :partial => 'footer'
