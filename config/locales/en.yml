@@ -29,6 +29,10 @@ en:
     show:
       who_is_scanning_you: "Who is scanning you?"
       tweet: "Follow me on FriendScanMe"
+      facebook:
+        name: "FriendScanMe Profile Page"
+        caption: "caption goes here"
+        description: "description goes here"
     edit:
       total_scans: "Total Scans"
       add_facebook_button: "Add Your Facebook Account"
@@ -45,6 +49,10 @@ en:
       qr_code_legend_1: "to add"
       qr_code_legend_2: "as a friend instantly!"
       tweet: "Scan me QRCode on FriendScanMe"
+      facebook:
+        name: "FriendScanMe QR code Page"
+        caption: "caption goes here"
+        description: "description goes here"
     helpers:
       link_to_add_facebook_friend: "Add as a Friend on Facebook"
       link_to_twitter_follow: "Follow @"

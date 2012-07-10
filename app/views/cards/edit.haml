@@ -57,6 +57,11 @@
                 %br{:style=> "clear:both"}/
                 %li 
                   = tweet(t('cards.edit.tweet'), edit_card_url(@user.slug))
+                  = facebook_post(t("cards.edit.facebook.name"),
+                                  t("cards.edit.facebook.caption"),
+                                  t("cards.edit.facebook.description"), 
+                                  card_landing_url(@user.slug, :format => :qrcode), 
+                                  qrcode_url(card_landing_url(@user.slug, :format => :qrcode), 200, 200))
                 - if signed_in?
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
