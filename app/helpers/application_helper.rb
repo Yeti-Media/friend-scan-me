@@ -26,7 +26,7 @@ module ApplicationHelper
                                  caption=#{caption}&
                                  description=#{description}&
                                  redirect_uri=#{url}",
-             "data-ajax" => "false", target: '_new'
+             "data-ajax" => "false", class: 'fb-post-link', target: '_new'
   end
 
 

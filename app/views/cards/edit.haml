@@ -55,7 +55,7 @@
                         = @user.name
                       = t('cards.edit.qr_code_legend_2')
                 %br{:style=> "clear:both"}/
-                %li 
+                %li.editshow-share
                   = tweet(t('cards.edit.tweet'), edit_card_url(@user.slug))
                   = facebook_post(t("cards.edit.facebook.name"),
                                   t("cards.edit.facebook.caption"),

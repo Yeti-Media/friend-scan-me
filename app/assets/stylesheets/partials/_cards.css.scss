@@ -130,6 +130,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         @include border-radius(5px)
       }
     }
+    &.editshow-share {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 20px 0px 20px 20px;
+      iframe { vertical-align: text-bottom; }
+    }
     &.twitter a {
       background: url(/assets/icn-twitter.png) no-repeat;
 			background-position: 20px 16px;
