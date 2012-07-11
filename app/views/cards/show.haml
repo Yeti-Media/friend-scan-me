@@ -31,14 +31,14 @@
               - if @user.has_social?(:github)    
                 %li.github
                   = link_to_github(@user)    
-              %li.get-app.card-button
-                = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook", :"data-ajax" => "false"
-              %li.get-app.card-button
+              %li.editshow-share
                 = tweet(t("cards.show.tweet"), card_landing_url(@user.slug))
                 = facebook_post(t("cards.edit.facebook.name"),
                                 t("cards.edit.facebook.caption"),
                                 t("cards.edit.facebook.description"), 
                                 card_landing_url(@user.slug), 
                                 image_url("fsm_logo_topbar.png"))
+              %li.get-app.card-button
+                = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook", :"data-ajax" => "false"
     %br{:style => "clear:both"}/
     = render :partial => 'footer'
