@@ -55,6 +55,13 @@
                         = @user.name
                       = t('cards.edit.qr_code_legend_2')
                 %br{:style=> "clear:both"}/
+                %li.editshow-share
+                  = tweet(t('cards.edit.tweet'), edit_card_url(@user.slug))
+                  = facebook_post(t("cards.edit.facebook.name"),
+                                  t("cards.edit.facebook.caption"),
+                                  t("cards.edit.facebook.description"), 
+                                  card_landing_url(@user.slug, :format => :qrcode), 
+                                  image_url("fsm_logo_topbar.png"))
                 - if signed_in?
                   - if !current_user.has_social?(:facebook)
                     %li.facebook

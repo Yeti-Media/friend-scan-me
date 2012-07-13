@@ -28,6 +28,11 @@ en:
   cards:
     show:
       who_is_scanning_you: "Who is scanning you?"
+      tweet: "Connect with me on FriendScanMe"
+      facebook:
+        name: "FriendScanMe"
+        caption: "Social Media QR Code"
+        description: "I'm using Friendscan.me to connect with new friends"
     edit:
       total_scans: "Total Scans"
       add_facebook_button: "Add Your Facebook Account"
@@ -43,6 +48,11 @@ en:
       bookmark_legend_2: "to start adding friends."
       qr_code_legend_1: "to add"
       qr_code_legend_2: "as a friend instantly!"
+      tweet: "Connect with me on FriendScanMe"
+      facebook:
+        name: "FriendScanMe"
+        caption: "Social Media QR Code"
+        description: "I'm using Friendscan.me to connect with new friends"
     helpers:
       link_to_add_facebook_friend: "Add as a Friend on Facebook"
       link_to_twitter_follow: "Follow @"
