@@ -25,18 +25,20 @@ module CardsHelper
 
   # Edit HELPERS
   def link_to_qr_code(user, w=200 ,h = 200)
-    link_to "Your QRcode", "http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&background_color=ffffff&color=244468&second_color=39c&prettify=true&url=#{card_landing_url(user.slug , :format => :qrcode)}"
+    link_to "Your QRcode", qrcode_url(card_landing_url(user.slug, :format => :qrcode), w, h)
   end
   
   def image_tag_qr_code(user, w=150 ,h = 150)
-    image_tag ("http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{card_landing_url(user.slug, :format => :qrcode)}")
+    image_tag(qrcode_url(card_landing_url(user.slug, :format => :qrcode), w, h))
   end
   
   def bookmark_qr_code(user, w=150 ,h = 150)
-    image_tag ("http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=http://friendscan.me")
+    image_tag(qrcode_url("http://friendscan.me", w, h))
   end
 
-
+  def qrcode_url(url, w, h)
+    "http://qurecode.herokuapp.com/api/qrcode.image?size=#{w}&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{url}"
+  end
 
   def link_to_tumblr_follow(user)
     link_to "Follow on Tumblr", "http://www.tumblr.com/follow/#{user.tumblr_info.uid}", popup: true
