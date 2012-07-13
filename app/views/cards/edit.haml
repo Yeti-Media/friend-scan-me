@@ -61,7 +61,7 @@
                                   t("cards.edit.facebook.caption"),
                                   t("cards.edit.facebook.description"), 
                                   card_landing_url(@user.slug, :format => :qrcode), 
-                                  image_url("fsm_logo_topbar.png"))
+                                  image_url("apple-touch-icon.png"))
                 - if signed_in?
                   - if !current_user.has_social?(:facebook)
                     %li.facebook
