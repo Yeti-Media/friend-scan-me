@@ -1,0 +1,25 @@
+.top_bar
+  =link_to image_tag("fsm_logo_topbar.png"), "/", :"data-ajax" => "false"
+#wrap
+  .starburst
+    = render :partial => 'flash', :locals => {:flash => flash}
+    = render :partial => 'topnav', :locals => { :current_page => 'show' }
+    .vcard-container
+      .layer
+        %h1= @product.name
+        = image_tag @product.asset.url
+        = raw facebook_like(product_url(@product))
+        = tweet("I like \"#{@product.name}\" on FriendScanMe ", product_url(@product))
+        %p= link_to "Product URL", @product.url
+    %br{:style => "clear:both"}/
+    = render :partial => 'footer'
+
+= content_for :facebook_javascript do
+  :plain
+    FB.Event.subscribe('edge.create',function(response) {
+      $.get("/products/#{@product.slug}/like");
+    });
+
+
+= content_for :javascripts do
+  = render :partial => "facebook_js_sdk"

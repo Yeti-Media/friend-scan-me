@@ -1,0 +1,19 @@
+.field
+  = f.label :name
+  = f.text_field :name
+.field
+  = f.label :asset
+  = f.file_field :asset
+  - if f.object.asset.present?
+    %br/
+    = f.check_box :remove_asset
+    = f.label :remove_asset
+.field
+  = f.label :description
+  = f.text_area :description
+.field
+  = f.label :url, t('products.form.url')
+  = f.text_field :url
+.field
+  = f.check_box :visible
+  = f.label :visible , "Visible?"

@@ -1,0 +1,12 @@
+.top_bar
+  =link_to image_tag("fsm_logo_topbar.png"), "/", :"data-ajax" => "false"
+#wrap
+  .starburst
+    = render :partial => 'flash', :locals => {:flash => flash}
+    = render :partial => 'topnav', :locals => { :current_page => 'show' }
+    .vcard-container
+      .layer
+        %h1 New Product
+        = form_for @product, html: {'data-ajax' => 'false' } do |f|
+          = render partial: 'form', locals: {f: f}
+          = f.submit "Save", 'data-ajax' => 'false'

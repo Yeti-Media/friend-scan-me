@@ -21,6 +21,7 @@ class User
   embeds_one :tumblr_info
   embeds_one :flickr_info
 
+  has_many :products
 
   def self.find_or_create_with_omniauth(auth)
     User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.new_with_omniauth(auth)

@@ -20,6 +20,11 @@ Friendscan::Application.routes.draw do
 
   scope "/(:locale)", :locale => /en|es/ do
     resources :cards
+    resources :products do
+      member do
+        get :like
+      end
+    end
 
     match '/auth/:provider/callback' => 'sessions#create', :as => :auth_provider_callback
     match '/auth/failure' => 'sessions#failure'

@@ -25,6 +25,7 @@ en:
    edit: Edit
    sign_out: "Sign Out"
    show: Show
+   products: "Products"
   cards:
     show:
       who_is_scanning_you: "Who is scanning you?"
@@ -59,4 +60,6 @@ en:
       link_to_linkedin: "Linkedin Profile"
       link_to_instagram: "Follow on Instagram"
       link_to_github: "Github Profile"
+  products:
+    form: "Product URL (optional):"
 

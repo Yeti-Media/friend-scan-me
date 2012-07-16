@@ -21,6 +21,8 @@
       - else
         = link_to t('nav.show'), card_landing_path(current_user.slug), :"data-ajax" => "false"
       |
+      = link_to t('nav.products'), products_path, :"data-ajax" => "false"
+      |
       = link_to t("nav.sign_out"), signout_path , :method => :delete, :"data-ajax" => "false"
   - else
     - if current_page == "edit"
