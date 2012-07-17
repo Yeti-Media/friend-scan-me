@@ -34,4 +34,8 @@ module ApplicationHelper
     "http://#{request.host_with_port}#{image_path(source)}"
   end
 
+  def pinit_button(url, image, description)
+    button = image_tag "//assets.pinterest.com/images/PinExt.png", border: 0, title: "Pin It"
+    link_to button , "http://pinterest.com/pin/create/button/?url=#{url}&media=#{image}&description=#{description}", class: "pin-it-button", 'count-layout' => "horizontal"
+  end
 end
