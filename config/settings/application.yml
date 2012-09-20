@@ -73,5 +73,5 @@ production:
   site:
     url: http://friendscan.me
   mobile:
-  token: '90bbf880f9dd2ec3459cb47d1feb67bc'
+    token: '90bbf880f9dd2ec3459cb47d1feb67bc'
 
