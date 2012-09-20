@@ -6,7 +6,7 @@ class Api::V1::AuthenticationController < Api::V1::BaseController
     if user.save
       @current_user = User.find(user.id)
       render json: {user_id: user.id.to_s, status: 'ok',
-                    qr_code: "http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(@current_user.slug)}&size=366x366&background_color=ffffff&color=244468&second_color=39c&prettify=true&" }
+                    qr_code: "http://qurecode.herokuapp.com/api/qrcode.image?size=366&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{card_landing_url(@current_user.slug)}" }
     else
       render json: {status: 'error', error: 'The user could not be saved. Try Again'}
     end

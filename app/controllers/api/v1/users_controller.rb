@@ -7,6 +7,6 @@ class Api::V1::UsersController < Api::V1::BaseController
 
 
   def qr_code
-    render json: {qr_code: "http://api.qrserver.com/v1/create-qr-code/?data=#{card_landing_url(current_user.slug)}&size=#{w}x#{h}"}
+    render json: {qr_code: "http://qurecode.herokuapp.com/api/qrcode.image?size=366&color=244468&background_color=ffffff&second_color=39c&prettify=true&url=#{card_landing_url(current_user.slug)}" }
   end
 end
