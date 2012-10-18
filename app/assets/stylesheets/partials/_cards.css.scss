@@ -12,6 +12,12 @@
   -moz-box-shadow: 0 1px 3px #489CC6;
   box-shadow: 0 1px 3px #489CC6;
 }
+.store-container {
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  width: 300px;
+}
 .card-header { padding: 15px 0 0 15px; }
 .layer {
   @include clearfix;
@@ -211,9 +217,8 @@ p.qr-link-label {
     }
 		&.get-app a {
 			display: block;
-			line-height: 65px;
+      padding: 20px 0 8px 0;
 			text-indent: 65px;
-			height: 65px;
 		}
 		a:link, a:visited {
 			color: #666666;

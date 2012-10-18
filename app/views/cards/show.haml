@@ -40,5 +40,9 @@
                                 image_url("apple-touch-icon.png"))
               %li.get-app.card-button
                 = link_to t("cards.show.who_is_scanning_you"), "/auth/facebook", :"data-ajax" => "false"
+                %br
+    .store-container
+      %a{:href => "https://itunes.apple.com/app/id564838321?mt=8"}
+        %img{:src => "/assets/app-store.svg", :xlink => "show", :width => "135", :height => "40", :type => "image/svg+xml", :pluginspage => "http://www.adobe.com/svg/viewer/install/"}
     %br{:style => "clear:both"}/
     = render :partial => 'footer'
