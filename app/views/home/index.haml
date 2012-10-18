@@ -20,6 +20,11 @@
         %h4
           %span &nbsp;
           = t('home.title2')
+        .app-store
+          %a{:href => "http://www.apple.com"}
+            %img{:src => "/assets/app-store.svg", :xlink => "show", :width => "135", :height => "40", :type => "image/svg+xml", :pluginspage => "http://www.adobe.com/svg/viewer/install/"}
+          -#:plain
+            <embed src="/assets/app-store.svg" width="300" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         %div.social_marketing
           :plain
             <div class="fb-like" data-href="http://friendscan.me" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="tahoma"></div>
