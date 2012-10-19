@@ -27,9 +27,10 @@
           :plain
             <div class="fb-like" data-href="http://friendscan.me" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="tahoma"></div>
 
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://friendscan.me" data-text="Get Your Personal #QRCode Now!" data-count="horizontal" data-via="friendscanme">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script> 
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://friendscan.me" data-text="Get Your Personal #QRCode Now!" data-count="horizontal" data-via="friendscanme">Tweet</a>
             <!-- Place this tag where you want the +1 button to render -->
             <g:plusone annotation="inline" width="100"></g:plusone>
+          = pinit_button( "http://friendscan.me", 'http://friendscan.me/assets/phone_android.png', t('og.description'))
         .clear
     .orangeStripe
     .bg_mainContent
@@ -89,13 +90,3 @@
                   %a{ :href => "https://appworld.blackberry.com/webstore/content/13962/?lang=en", :target => "blackberry_store" }QR Code Scanner Pro
       = render :partial => 'footer'
       = render :partial => 'social_marketing'
-:plain
-  <!-- Place this render call where appropriate -->
-  <script type="text/javascript">
-    (function() {
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-  </script>
-  
