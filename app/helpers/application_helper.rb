@@ -34,4 +34,15 @@ module ApplicationHelper
     "http://#{request.host_with_port}#{image_path(source)}"
   end
 
+
+  def facebook_like(url)
+    "<div class=\"fb-like\" 
+         data-href=\"#{url}\" 
+         data-send=\"true\" 
+         data-layout=\"button_count\" 
+         data-width=\"200\" 
+         data-show-faces=\"false\" 
+         data-font=\"tahoma\">
+    </div>"
+  end  
 end

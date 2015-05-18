@@ -12,12 +12,6 @@
   %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport" }/
   %meta{:name => "description", :content => t('og.description')}
   %meta{:name => "keywords", :content => "scan me, qr code generator free, qr code, create qr code, qr code business card generator, qr code create, create your own qr code, qr code iphone, qr code business card, qr code applications, free qr code, quick response code, friend scan me, personalized qr code, qr code marketing, qr code creation, qr code generation, qr code android, qr code download, qr code maker, qr code vcard generator"}
-  %meta{:content => "friendscan.com", :property => "og:site_name"}/
-  %meta{:content => t('og.description'), :property => "og:description"}/
-  %meta{:content => t('og.title'), :property => "og:title"}/
-  %meta{:content => "company", :property => "og:type"}/
-  %meta{:content => "http://friendscan.me/assets/facebook-icon.png", :property => "og:image"}/
-  %meta{:content => "http://friendscan.me", :property => "og:url"}/
-  %meta{:content => "131951090214210", :property => "fb:app_id"}/
+  = render partial: 'og_tags'
   %title #{title}
   

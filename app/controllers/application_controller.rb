@@ -3,8 +3,16 @@ class ApplicationController < ActionController::Base
   has_mobile_fu
   helper_method :signed_in?, :current_user 
   before_filter :set_locale
+  before_filter :set_og_tags
 
   private
+
+  def set_og_tags
+    @og_description = t('og.description')
+    @og_title = t('og.title')
+    @og_url =  "http://friendscan.me"
+    @og_icon = "http://friendscan.me/assets/facebook-icon.png"
+  end
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]

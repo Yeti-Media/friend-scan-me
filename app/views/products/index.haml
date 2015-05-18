@@ -1,0 +1,20 @@
+.top_bar
+  =link_to image_tag("fsm_logo_topbar.png"), "/", :"data-ajax" => "false"
+#wrap
+  .starburst
+    = render :partial => 'flash', :locals => {:flash => flash}
+    = render :partial => 'topnav', :locals => { :current_page => 'show' }
+    .vcard-container
+      .layer
+        %h1
+          Products
+          = link_to "New", new_product_path
+        %ul
+          - @products.each do |product|
+            %li
+              = link_to(product.name, product)
+              |
+              Likes:
+              = product.likes
+              |
+              = link_to("Edit", edit_product_path(product))

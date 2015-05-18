@@ -29,6 +29,10 @@ gem 'settingslogic'
 gem 'zazzle'
 gem 'mobile-fu'
 gem "airbrake"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem "fog", "~> 1.3.1"
+gem 'rmagick', :require => 'RMagick'
+
 
 # Use unicorn as the web server
 gem 'unicorn'

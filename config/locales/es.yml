@@ -25,6 +25,7 @@ es:
    edit: Editar
    sign_out: "Salir"
    show: "Código QR"
+   products: "Productos"
   cards:
     show:
       who_is_scanning_you: "Quien te esta escaneando?"
@@ -59,4 +60,5 @@ es:
       link_to_linkedin: "Perfil en Linkedin"
       link_to_instagram: "Síguelo en Instagram"
       link_to_github: "Perfil en Github"
-
+  products:
+    form: "URL del Producto (opcional):"
